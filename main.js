@@ -1,4 +1,4 @@
-import './portfolio/style.css';
+// import './portfolio/style.css';
 import './portfolio/portfolio.data.js';
 
 import * as THREE from '/three/Three.js';
