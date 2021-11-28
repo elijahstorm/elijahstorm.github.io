@@ -1,7 +1,7 @@
-// import './portfolio/style.css';
+import './portfolio/style.css';
 import './portfolio/portfolio.data.js';
 
-import * as THREE from '/three/Three.js';
+import * as THREE from '/three/three.module.js';
 
 
 const scene = new THREE.Scene();
