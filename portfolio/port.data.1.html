@@ -1,0 +1,78 @@
+<div class="w3-padding-64 show-link-on-hover portfolio-ease">
+  <h3>Chess AI (Solo) <a href="/ai/chess/"><i class="fa fa-link portfolio-ease w3-hover-opacity port-hidden"></i></a></h3>
+  <h6>
+    A relatively simple AI test project I made just to experiment with AI.
+    As a long time avid chess player, I've always wanted to break down and
+    figure out how Chess Engines worked. I am currently creating this as a
+    side project, and I expect to be done by May 24th - 31th.
+    <br />
+    <br />
+    Using iterative deepening and advanced pruning techniques, the AI engine
+    currently picks what it thinks is the best move, while looking 6 moves
+    ahead in 100ms (suprisingly impressive speeds); however, my evaluate function
+    is not as accurate as I would like. This chess AI by no means boasts being
+    the best in the world, and will most likely fall to an engine like Stockfish.
+    <br />
+    <br />
+    I recently redeigned the interface, and used multi-threaded, delayed computation
+    to provide a smoother user experience and allow a beautifully integrated Evaluation
+    bar that will act and adjust even on the Players turn. Before, the CPU intensive search
+    function would lock the page until it finished searching the millions of lines that
+    it might need to get a clear idea of the position before moving. Again, I was
+    suprised by how well the results turned out, because I was worried it would
+    delay the Search function by so much that it would be agonizingly slow. However,
+    there was little to no noticable slowdown issue from having the Multi-Threaded Delay Search
+    approach, to not having it.
+    <br />
+    <br />
+    My next current goal is to evaulate down unstable capturing lines so that
+    the horizion effect of heuristic AI does not affect my engine as much.
+    My biggest roadblock is fine-tuning the heatmaps and tactic evaulations.
+    A good chess player will have a good understanding of tactics, and my AI
+    just brute forces evaulations, and therefore misses tactics and processes
+    them slowly.
+    <br />
+    <br />
+    I usually work this in my free time, so it's a bit slow to
+    finish :)
+  </h6>
+  <section class="w3-row-padding w3-center">
+    <img src="portfolio/imgs/chess/play.png" onclick="onClick(this)" class="w3-card portfolio-ease portfolio-smallScreenNoStretch w3-hover-opacity portfolio-maxHeight lazyload" alt="The game board is created and drawn programmatically using FEN input">
+
+    <img src="portfolio/imgs/chess/code.png" onclick="onClick(this)" class="w3-card portfolio-ease portfolio-smallScreenNoStretch w3-hover-opacity portfolio-maxHeight lazyload" alt="An overview of the code in ATOM text editor">
+
+    <img src="portfolio/imgs/chess/debug.png" onclick="onClick(this)" class="w3-card portfolio-ease portfolio-smallScreenNoStretch w3-hover-opacity portfolio-maxHeight lazyload" alt="The game with Debug mode enabled">
+
+    <img src="portfolio/imgs/chess/aicode.png" onclick="onClick(this)" class="w3-card portfolio-ease portfolio-smallScreenNoStretch w3-hover-opacity portfolio-maxHeight lazyload" alt="Code from the AI section of the project">
+  </section>
+</div>
+
+<div class="w3-padding-64 show-link-on-hover portfolio-ease">
+  <h3>Game - ThunderLite (Solo) <a href="https://thunderlite.herokuapp.com/"><i class="fa fa-link portfolio-ease w3-hover-opacity port-hidden"></i></a></h3>
+  <h6>
+    This is a live, online, multiplayer game that I created back in 2018 based
+    off of a slightly popular online game from the late 2000s that I played.
+    I was always fascinated how the game worked and I wanted to recreate it,
+    but never got around to it until after High School. The original game
+    has long since been abandoned by its creators, and the community fell
+    apart. I thought it would be a fun and harmless project to recreate
+    something I once found so much joy in!
+    <br />
+    <br />
+    Coded entirely in HTML5, JavaScript and Node.js, I didn't stop at making
+    the game and it's Engine. I decided to make a user database and include
+    user profiles, with custom information and details! Also a fun level-up
+    system. I used MongoDB and Socket.io to make a live playable game that was
+    cross-platform for mobile and desktop users. I also created an AI that
+    actively found great moves and kept the offline play interesting as well!
+  </h6>
+  <section class="w3-row-padding w3-center">
+    <img src="portfolio/imgs/thunderlite/mobile0.png" onclick="onClick(this)" class="w3-card portfolio-ease portfolio-smallScreenNoStretch w3-hover-opacity portfolio-maxHeight lazyload" alt="ThunderLite on Mobile">
+
+    <img src="portfolio/imgs/thunderlite/gameplay0.png" onclick="onClick(this)" class="w3-card portfolio-ease portfolio-smallScreenNoStretch w3-hover-opacity portfolio-maxHeight lazyload" alt="ThunderLite on Desktop">
+
+    <img src="portfolio/imgs/thunderlite/gameplay2.png" onclick="onClick(this)" class="w3-card portfolio-ease portfolio-smallScreenNoStretch w3-hover-opacity portfolio-maxHeight lazyload" alt="Gameplay Weather">
+
+    <img src="portfolio/imgs/thunderlite/mobile2.png" onclick="onClick(this)" class="w3-card portfolio-ease portfolio-smallScreenNoStretch w3-hover-opacity portfolio-maxHeight lazyload" alt="ThunderLite Chat">
+  </section>
+</div>
