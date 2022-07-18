@@ -1,0 +1,15 @@
+AWS Cloud experience Experience: 2 Years  - Last Used: 2020
+UGC Content delivery Mobile Application. We used AWS Cloud products via API calls. We used Amazon Rekognition along with Cloudinary storage to host images and videos for our users, and regulate content (no inappropriate user-generated content). Our user information was hosted on Amazon Document Database. In 2021, I did a lot of the same, but with Google Firebase products to do the same thing. ^^
+
+Front-end JavaScript frameworks experience Experience: 5 Years  - Last Used: 2021
+React.js, Vue.js, Tensorflow.js, Flutter Web builds. Currently I am working on a short, side project with my girlfriend. The project is a small TODO Calendar app. As a way for her to socially connect with her friend’s via streaming TODO list changes between each other's phones. Any completed activity can be reacted to and commented on, as a way to motivate each other to finish big, and small, tasks. I am using Flutter to make native mobile, and React.js and for the web-facing apps. Because I don't like Flutter's web output, but it makes for a very good Native build. I prefer to use Flutter for Native apps and React.js for web-facing apps. When I say web-facing, I mean "Intended to be opened in a browser like Chrome or Safari".
+
+CI/CD, and Devops experience Experience: 7 Years  - Last Used: 2021
+GitHub Actions is a common way I automate my code-delivery pipeline. Test Driven code is 100% essential for consumer-facing products. My last work experience, our team followed the SOLID programming principles philosophy. This allowed everyone’s submitted code to follow a general guideline, and be efficiently updated, tested, and problems to be limited, and isolatable. S: Single responsibility. O: Open–closed. L: Liskov substitution. I: Interface segregation. D: Dependency inversion. Ever since High School, I used learned the importance of these coding philosophies. When I first learned it, we were working on a series of Raspberry Pi programming projects, such as building a light timing devices, and home mobile power controller, and these techniques were very important because the scope of the projects quickly became so large that we would have been lost without proper coding testing and DevOps. Every team I have worked in since then has used some form of DevOps, test-driven development, or data-driven development.
+
+You can view my 100% responsive and interactive website online. This was built with just CSS and Vanilla JavaScript. When I built this, I did not use any framework like React.js or Vue.js, (etc.) but it shows my technical abilities to get the job done even without it. I do showcase my other projects using frameworks in the portfolio, as well.
+
+https://elijahstorm.herokuapp.com/
+
+Thesedays I think of remaking it using a JS framework, but I haven’t had a reason to focus on that yet.
+1515 characters remaining

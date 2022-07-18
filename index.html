@@ -1,32 +1,615 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elijah Storm | Portfolio</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="/portfolio/style.css">
-  </head>
+<html>
+  <title>Elijah Storm - Welcome</title>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="title" content="Full-Stack and Ai Developing" />
+  <meta
+    name="description"
+    content="Quick website and app development starting at $150. I also have Ai passion projects for your entertainment."
+  />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elijahstorm.herokuapp.com/" />
+  <meta property="og:title" content="Full-Stack and Ai Developing" />
+  <meta
+    property="og:description"
+    content="Quick website and app development starting at $150. I also have Ai passion projects for your entertainment."
+  />
+  <meta
+    property="og:image"
+    content="https://elijahstorm.herokuapp.com/includes/img/me/korea/small.korea.photoshoot.jpg"
+  />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://elijahstorm.herokuapp.com/" />
+  <meta property="twitter:title" content="Full-Stack and Ai Developing" />
+  <meta
+    property="twitter:description"
+    content="Quick website and app development starting at $150. I also have Ai passion projects for your entertainment."
+  />
+  <meta
+    property="twitter:image"
+    content="https://elijahstorm.herokuapp.com/includes/img/me/korea/small.korea.photoshoot.jpg"
+  />
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="includes/fa/css/all.min.css" />
+  <link rel="stylesheet" href="ai/bees/bees.css" />
+
+  <link rel="stylesheet" href="portfolio/display/style.css" />
+  <link rel="stylesheet" href="includes/css/main.css" />
+  <link rel="stylesheet" href="glass_card.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+  <script defer src="/socket.io/socket.io.js"></script>
+  <script defer type="module" src="client.js"></script>
+
   <body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top" style="background: #00000022">
+      <div class="w3-bar" id="myNavbar">
+        <a
+          class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right portfolio-ease w3-hover-blue"
+          href="javascript:void(0);"
+          onclick="toggleFunction()"
+          title="Toggle Navigation Menu"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+        <a
+          href="#home"
+          class="w3-bar-item w3-button portfolio-ease w3-hover-blue"
+          >HOME</a
+        >
+        <a
+          href="#about"
+          class="w3-bar-item w3-button portfolio-ease w3-hover-blue w3-hide-small"
+          ><i class="fa fa-user"></i>&nbsp;&nbsp; ABOUT</a
+        >
+        <a
+          href="#portfolio"
+          class="w3-bar-item w3-button portfolio-ease w3-hover-blue w3-hide-small"
+          ><i class="fa fa-th"></i>&nbsp;&nbsp; PORTFOLIO</a
+        >
+        <a
+          href="#contact"
+          class="w3-bar-item w3-button portfolio-ease w3-hover-blue w3-hide-small"
+          ><i class="fa fa-envelope"></i>&nbsp;&nbsp; CONTACT</a
+        >
+        <a
+          href="pricing"
+          class="w3-bar-item w3-button portfolio-ease w3-hover-blue w3-hide-small"
+          ><i class="fa fa-money"></i>&nbsp;&nbsp; PRICING</a
+        >
+      </div>
 
-    <canvas id="bg"></canvas>
+      <!-- Navbar on small screens -->
+      <div
+        id="nav-drop-down"
+        class="w3-bar-block w3-white w3-hide-large w3-hide-medium portfolio-ease invisible"
+      >
+        <a
+          href="#about"
+          class="w3-bar-item w3-button portfolio-ease w3-hover-blue"
+          onclick="toggleFunction()"
+          >ABOUT</a
+        >
+        <a
+          href="#portfolio"
+          class="w3-bar-item w3-button portfolio-ease w3-hover-blue"
+          onclick="toggleFunction()"
+          >PORTFOLIO</a
+        >
+        <a
+          href="#contact"
+          class="w3-bar-item w3-button portfolio-ease w3-hover-blue"
+          onclick="toggleFunction()"
+          >CONTACT</a
+        >
+        <a
+          href="pricing"
+          class="w3-bar-item w3-button portfolio-ease w3-hover-blue"
+          onclick="toggleFunction()"
+          >PRICING</a
+        >
+      </div>
+    </div>
 
-    <main>
-      <div class="w3-content w3-container w3-padding-64">
+    <!-- First Parallax Image with Logo Text -->
+    <div id="home" class="bgimg-1 w3-display-container noselect">
+      <div
+        id="logo-image"
+        class="w3-center w3-display-middle"
+        style="
+          white-space: nowrap;
+          width: 40%;
+          transform: translate(-50%, calc(-50% + 70px));
+        "
+      >
+        <span class="w3-padding-large w3-xlarge w3-wide w3-animate-opacity">
+          <!-- <img id="follow-mouse" class="lazyload portfolio-logo" src="includes/img/me/circle-background.png"/> -->
+          <!-- <span class="w3-hide-small w3-hide-large">PORTFOLIO</span> -->
+          <br />
+          <img src="includes/img/logo/tor-logo.png" />
+        </span>
+        <p class="short-info">
+          <strong class="showcase"> Frontend Specialist </strong>
+          <br />
+          <span>
+            Making the end-user experience look great and feel great.
+          </span>
+        </p>
+      </div>
 
-        <div id="portfolio-content"></div>
+      <div class="short-info-small">
+        <p>
+          <strong class="showcase"> Frontend Specialist </strong>
+          <br />
+          <span>
+            Making the end-user experience look great and feel great.
+          </span>
+        </p>
+      </div>
 
-        <div class="w3-content w3-container w3-padding-32 w3-center">
-          <div id="portfolio-show-more" class="w3-button w3-green w3-hover-blue portfolio-ease showcase">
-            SHOW MORE
+      <div
+        class="w3-xlarge w3-opacity w3-hover-opacity-off portfolio-ease portfolio-icon-header-main"
+      >
+        <!-- <a href="https://www.facebook.com/elijah.s.houk/"><i class="fab fa-facebook" style="margin: 5px;"></i></a> -->
+        <a href="https://github.com/elijahstormmusic/"
+          ><i class="fab fa-github" style="margin: 5px"></i
+        ></a>
+        <a href="https://angel.co/u/elijah-storm/"
+          ><i class="fab fa-angellist" style="margin: 5px"></i
+        ></a>
+        <a href="https://www.instagram.com/elijah.storm/"
+          ><i class="fab fa-instagram" style="margin: 5px"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/elijah-storm/"
+          ><i class="fab fa-linkedin" style="margin: 5px"></i
+        ></a>
+      </div>
+    </div>
+
+    <div id="ai" class="w3-container w3-white w3-padding-32 w3-center">
+      <div class="w3-content w3-padding-64 w3-row">
+        <div class="w3-col m2">&nbsp;</div>
+        <div class="w3-col l8 m8 s12">
+          <h5 class="showcase">MY web ai projects</h5>
+          <hr
+            style="
+              color: grey;
+              background-color: grey;
+              height: 1px;
+              border-width: 0;
+            "
+          />
+          <div class="w3-row">
+            <div class="w3-col l3 m6 s6 w3-padding">
+              <div class="ai-showcase-circle">
+                <a href="ai/snake">
+                  <img src="ai/snake/circle-showcase.png" />
+                </a>
+              </div>
+            </div>
+            <div class="w3-col l3 m6 s6 w3-padding">
+              <div class="ai-showcase-circle">
+                <a href="ai/chess">
+                  <img src="ai/chess/circle-showcase.png" />
+                </a>
+              </div>
+            </div>
+            <div class="w3-col l3 m6 s6 w3-padding">
+              <div class="ai-showcase-circle">
+                <a href="ai/handwriting">
+                  <img src="ai/handwriting/circle-showcase.png" />
+                </a>
+              </div>
+            </div>
+            <div class="w3-col l3 m6 s6 w3-padding">
+              <div class="ai-showcase-circle">
+                <a href="ai/bees">
+                  <img src="ai/bees/circle-showcase.png" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Container (Portfolio Section) -->
+    <div id="portfolio" class="w3-container w3-padding-64 darken-background">
+      <canvas id="bg" style="z-index: -1"></canvas>
+
+      <div class="w3-content w3-padding-32 w3-row">
+        <div class="w3-center w3-col m2">&nbsp;</div>
+        <div class="w3-center w3-col l8 m8">
+          <h5 class="showcase">My recent work</h5>
+          <hr
+            style="
+              color: beige;
+              background-color: beige;
+              height: 1px;
+              border-width: 0;
+            "
+          />
+        </div>
+      </div>
+
+      <div id="portfolio-content"></div>
+
+      <div class="w3-center w3-padding-32">
+        <button
+          id="portfolio-show-more"
+          class="w3-card w3-small w3-button glass-card showcase portfolio-ease"
+        >
+          Show More
+        </button>
+      </div>
+    </div>
+
+    <!-- Container (About Me Section) -->
+    <div class="top-border-highlight-background w3-padding-64">&nbsp;</div>
+
+    <div
+      class="w3-container top-border-highlight-content-overlap darken-background fade-out"
+    >
+      <div id="about" class="w3-content w3-padding-32 fg-content">
+        <div class="w3-row w3-padding-16 w3-panel" style="margin-bottom: 0px">
+          <div class="w3-col m1 l2 s4">&nbsp;</div>
+          <div class="w3-col m3 l3 s4 my-photo-circle">
+            <img src="includes/img/me/small.face.cropped.png" />
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div
+            class="w3-col m7 l5 w3-padding w3-padding-16 low-child-padding w3-hide-small"
+          >
+            <br />
+            <h1>I'm Elijah Storm</h1>
+            <h3 class="showcase w3-text-black">I love Ai and Web Design!</h3>
+            <br />
+            <p>
+              I specialize in Front End Web and Mobile development. Also I have
+              a wide range of skills and interests involving tech and Ai.
+              Recently I have taught students Python and JavaScript, part time,
+              in South Korea.
+            </p>
+          </div>
+        </div>
+        <div class="w3-hide-medium w3-hide-large w3-center">
+          <div class="w3-padding low-child-padding">
+            <br />
+            <h1>I'm Elijah Storm</h1>
+            <h3 class="showcase w3-text-black">I love Ai and Web Design!</h3>
+            <br />
+            <br />
+            <p class="w3-left-align small-screen-extra-spacing">
+              I specialize in Front End Web and Mobile development. Also I have
+              a wide range of skills and interests involving tech and Ai.
+              Recently I have taught students Python and JavaScript, part time,
+              in South Korea.
+            </p>
           </div>
         </div>
 
+        <!-- <br class="w3-hide-medium w3-hide-large" /> -->
+
+        <div class="w3-row skills-circles">
+          <div class="w3-col w3-hide-medium l2 w3-hide-small">&nbsp;</div>
+          <div class="w3-col m3 l2 s3">
+            <div class="w3-button glass-card portfolio-ease">
+              <span> Logo Design </span>
+            </div>
+          </div>
+          <div class="w3-col m3 l2 s3">
+            <div class="w3-button glass-card portfolio-ease">
+              <span> UIUX Branding </span>
+            </div>
+          </div>
+          <div class="w3-col m3 l2 s3">
+            <div class="w3-button glass-card portfolio-ease">
+              <span>
+                Server-side
+                <br />
+                Backend
+              </span>
+            </div>
+          </div>
+          <div class="w3-col m3 l2 s3">
+            <div class="w3-button glass-card portfolio-ease">
+              <span>
+                App
+                <br class="w3-hide-medium w3-hide-large" />
+                Development
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-row vert-indent">
+          <div class="w3-col m2 l2 s2">&nbsp;</div>
+          <div class="w3-col l8 m8 s8 w3-center">
+            <h6 class="showcase" style="font-size: 20px">My Skills</h6>
+          </div>
+        </div>
+
+        <div class="w3-row vert-indent">
+          <div class="w3-col l2 w3-hide-medium w3-hide-small">&nbsp;</div>
+          <div class="w3-col l2 m6 s6 w3-padding">
+            <h6>
+              <strong>Front End Design</strong>
+            </h6>
+            <section class="card">
+              <p>Flutter & React</p>
+              <p>TypeScript</p>
+              <p>Node.js / JavaScript</p>
+              <p>TensorFlow.js</p>
+              <p>Three.js</p>
+              <p>CSS3 / HTML5</p>
+            </section>
+          </div>
+          <div class="w3-col l2 m6 s6 w3-padding">
+            <h6>
+              <strong>Backend Development</strong>
+            </h6>
+            <section class="card">
+              <p>Firestore / Firebase</p>
+              <p>Python</p>
+              <p>MySQL</p>
+              <p>AWS Cloud and Databases</p>
+              <p>MongoDB</p>
+              <p>Java / J2EE</p>
+              <p>C++</p>
+            </section>
+          </div>
+          <div class="w3-col l2 m6 s6 w3-padding">
+            <h6>
+              <strong>Korean Language</strong>
+            </h6>
+            <section class="card">
+              <p>Dongkuk University - Level 2 Diploma</p>
+              <p>6 Months of living in Korea in a working environment</p>
+              <p>
+                Teaching coding to students in Korea:
+                <b>Flutter, Python, JavaScript</b>
+              </p>
+            </section>
+          </div>
+          <div class="w3-col l2 m6 s6 w3-padding">
+            <h6>
+              <strong>Personal Skills</strong>
+            </h6>
+            <section class="card">
+              <p>Self-starting attitude</p>
+              <p>Extreme Motivation</p>
+              <p>Strong and passionate learner</p>
+              <p>Communication is key</p>
+            </section>
+          </div>
+        </div>
+
+        <div class="w3-row w3-padding-64">
+          <div class="w3-col s12 m12 l12 w3-center">
+            <a href="resume">
+              <button
+                class="w3-card w3-small w3-button glass-card showcase portfolio-ease"
+              >
+                Read My Resume
+              </button>
+            </a>
+          </div>
+        </div>
       </div>
-    </main>
 
-    <script type="module" src="/main.js"></script>
+      <div id="contact" class="w3-container">
+        <div class="floating-content w3-content">
+          <div class="w3-row w3-padding-64">
+            <div class="w3-col l2 w3-hide-small w3-hide-medium">&nbsp;</div>
 
+            <div class="w3-col m6 l4 s12 blurred-image">
+              <img
+                src="portfolio/imgs/pictures/me/faceshot-blur-bottom.png"
+                class="w3-card lazyload"
+              />
+
+              <section>
+                <span>
+                  <i class="fa fa-map-marker fa-fw w3-margin-right"></i>
+                  <span> Lawrence, Kansas </span>
+                </span>
+                <span>
+                  <i class="fa fa-phone fa-fw w3-margin-right"></i>
+                  <span> +1 (785) 917 - 8458 </span>
+                </span>
+                <span>
+                  <i class="fa fa-envelope fa-fw w3-margin-right"></i>
+                  <span> elijahstormai@gmail.com </span>
+                </span>
+              </section>
+            </div>
+
+            <div class="w3-col m6 l4 s12 w3-panel form">
+              <div class="top-block w3-hide-small">&nbsp;</div>
+
+              <p>
+                <strong
+                  id="contact-error"
+                  class="w3-red w3-padding w3-round"
+                  style="display: none"
+                ></strong>
+              </p>
+
+              <strong> I'd love your feedback! </strong>
+
+              <input
+                id="contact-name"
+                type="text"
+                class="glass-card"
+                placeholder="Name"
+              />
+              <input
+                id="contact-email"
+                type="email"
+                class="glass-card"
+                placeholder="Email"
+              />
+              <input
+                id="contact-message"
+                type="text"
+                class="w3-margin-bottom glass-card"
+                placeholder="Message"
+                maxlength="500"
+                rows="5"
+              />
+              <button
+                id="send-message-btn"
+                class="w3-margin-top w3-small w3-button glass-card showcase"
+              >
+                Send
+              </button>
+            </div>
+
+            <div class="w3-col m2 l2 w3-hide-small">&nbsp;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="bees"></div>
+
+    <!-- Modal for full size images on click-->
+    <div
+      id="modal01"
+      class="w3-modal w3-black"
+      onclick="this.style.display='none'"
+    >
+      <span
+        class="w3-button w3-large w3-black w3-display-topright"
+        title="Close Modal Image"
+        ><i class="fa fa-remove"></i
+      ></span>
+      <div
+        class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"
+      >
+        <img id="img01" class="w3-image lazyload" />
+        <p id="caption01" class="w3-opacity w3-large"></p>
+      </div>
+    </div>
+    <div
+      id="modal02"
+      class="w3-modal w3-black"
+      onclick="this.style.display='none'"
+    >
+      <span
+        class="w3-button w3-large w3-black w3-display-topright"
+        title="Close Modal Image"
+        ><i class="fa fa-remove"></i
+      ></span>
+      <div
+        class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"
+      >
+        <video id="video02" class="w3-image"></video>
+        <p id="caption02" class="w3-opacity w3-large"></p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="w3-center w3-black w3-padding-64 portfolio-ease"
+      style="margin-top: 500px"
+    >
+      <a href="#home" id="toTopNavBtn" class="button portfolio-ease">
+        To the top
+        <i class="fa fa-arrow-up w3-margin-left"></i>
+      </a>
+      <div class="w3-section social-links">
+        <!-- <a href="https://www.facebook.com/elijah.s.houk/"><i class="fab fa-facebook portfolio-ease w3-opacity w3-hover-opacity-off" style="margin: 5px;"></i></a> -->
+        <a href="https://github.com/elijahstormmusic/"
+          ><i
+            class="fab fa-github portfolio-ease w3-opacity w3-hover-opacity-off"
+            style="margin: 5px"
+          ></i
+        ></a>
+        <a href="https://angel.co/u/elijah-storm/"
+          ><i
+            class="fab fa-angellist portfolio-ease w3-opacity w3-hover-opacity-off"
+            style="margin: 5px"
+          ></i
+        ></a>
+        <a href="https://www.instagram.com/elijah.storm/"
+          ><i
+            class="fab fa-instagram portfolio-ease w3-opacity w3-hover-opacity-off"
+            style="margin: 5px"
+          ></i
+        ></a>
+        <a href="https://www.linkedin.com/in/elijah-storm/"
+          ><i
+            class="fab fa-linkedin portfolio-ease w3-opacity w3-hover-opacity-off"
+            style="margin: 5px"
+          ></i
+        ></a>
+      </div>
+    </footer>
+
+    <script>
+      // Modal Image Gallery
+      function onClick(element) {
+        const tagname = element.tagName.toLowerCase()
+
+        if (tagname == 'img') {
+          document.getElementById('img01').src = element.src
+          document.getElementById('modal01').style.display = 'block'
+          let captionText = document.getElementById('caption01')
+          captionText.innerHTML = element.alt
+        } else if (tagname == 'video') {
+          document.getElementById('video02').src = element.src
+          document.getElementById('modal02').style.display = 'block'
+          let captionText = document.getElementById('caption02')
+          captionText.innerHTML = element.alt
+        }
+      }
+
+      // Change style of navbar on scroll
+      window.onscroll = function () {
+        myFunction()
+      }
+      function myFunction() {
+        const navbar = document.getElementById('myNavbar')
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          navbar.className = 'w3-bar' + ' w3-card' + ' w3-animate-top'
+        } else {
+          navbar.className = navbar.className.replace(
+            ' w3-card w3-animate-top',
+            ''
+          )
+        }
+      }
+
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function toggleFunction() {
+        const mobile_nav = document.getElementById('nav-drop-down')
+        if (mobile_nav.classList.contains('shown')) {
+          mobile_nav.classList.remove('shown')
+        } else {
+          mobile_nav.classList.add('shown')
+        }
+      }
+    </script>
   </body>
 </html>

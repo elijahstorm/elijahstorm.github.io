@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../includes/fonts/Roboto-BlackItalic.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+body,p,h1,h2,h3,h4,h5,h6 {
+  font-family: "Roboto";
+  font-style: normal;
+}
+.ar-italic,h1,h2,h3,h4,h5,h6 {
+  font-style: italic !important;
+}
+
+body{
+  margin: 0px;
+}
+
+#main-container, #container, #pageFrame{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+}

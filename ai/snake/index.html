@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<title>Elijah Storm - AI Snake</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="title" content="Full-Stack and Ai Developing">
+<meta name="description" content="Quick website and app development starting at $150. I also have Ai passion projects for your entertainment.">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://elijahstorm.herokuapp.com/">
+<meta property="og:title" content="Full-Stack and Ai Developing">
+<meta property="og:description" content="Quick website and app development starting at $150. I also have Ai passion projects for your entertainment.">
+<meta property="og:image" content="https://elijahstorm.herokuapp.com/includes/img/me/korea/small.korea.photoshoot.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://elijahstorm.herokuapp.com/">
+<meta property="twitter:title" content="Full-Stack and Ai Developing">
+<meta property="twitter:description" content="Quick website and app development starting at $150. I also have Ai passion projects for your entertainment.">
+<meta property="twitter:image" content="https://elijahstorm.herokuapp.com/includes/img/me/korea/small.korea.photoshoot.jpg">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="../../includes/fa/css/all.min.css">
+<link rel="stylesheet" href="../../includes/css/main.css" />
+<link rel="stylesheet" href="../showcase.css" />
+<link rel="stylesheet" href="snake.css" />
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+<body>
+
+<div class="w3-container" style="text-align: center;">
+  <div id="exit-nav-back-button">
+    <a href="..">
+      <div class="w3-round-large w3-hover-red w3-card w3-padding w3-margin ease hover-show">
+        <i class="fa fa-arrow-left"></i>
+      </div>
+    </a>
+  </div>
+
+  <div>
+    <center>
+      <h1>JavaScript 🐍 Ai</h1>
+      <h4>By Elijah Storm</h4>
+    </center>
+  </div>
+
+  <div id="loader" class="w3-container w3-padding-64" style="display: inline-block;">
+    <center>
+      <div class="loader"></div>
+    </center>
+    <span id="loader-status" class="flash">downloading data</span>
+  </div>
+
+  <div id="snakes" class="w3-card w3-round-large w3-padding w3-margin"></div>
+
+  <div id="board-container" class="w3-container" style="display: none; margin: auto; text-align: center;">
+
+    <div id="help-dialog" class="showcase slow-animation w3-card w3-margin-top no-select w3-round-large glass-card">
+      <div class="frost-bg">
+        <svg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'>
+          <filter id='noiseFilter2'>
+            <feTurbulence
+            type='fractalNoise'
+            baseFrequency='0.65'
+            numOctaves='3'
+            stitchTiles='stitch'/>
+          </filter>
+
+          <rect width='100%' height='100%' filter='url(#noiseFilter2)'/>
+        </svg>
+      </div>
+
+      <h5 style="margin-bottom: 0px;">
+        infomation
+      </h5>
+
+      <div class="w3-padding card-text w3-hide-small">
+        <p>
+          Each of the 20 Snake games are apart of a simulated generation.
+        </p>
+
+        <p>
+          To use evolutionary learning, after each generation, we select the
+          best snakes to breed. Their children will repeat the process.
+        </p>
+
+        <p>
+          After a few generations, you will notice a few distinct 'strategies'.
+        </p>
+      </div>
+
+      <div class="w3-padding card-text w3-hide-large w3-hide-medium">
+        <p>
+          The bees' Ai will try to bring pollen to the hive while Zombie Flies try and kill the bees.
+        </p>
+
+        <p>
+          The AI will learn to maximize the pollen reward each run.
+        </p>
+      </div>
+
+      <div id="info-exit-button" class="card-tip-button">
+        <i class="w3-text-red fa fa-window-close"></i>
+      </div>
+    </div>
+
+    <div id="main-card-fade-away" class="showcase slow-animation w3-card w3-margin-top no-select w3-round-large glass-card" style="text-align: left;">
+      <div class="frost-bg">
+        <svg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'>
+          <filter id='noiseFilter'>
+            <feTurbulence
+            type='fractalNoise'
+            baseFrequency='0.65'
+            numOctaves='3'
+            stitchTiles='stitch'/>
+          </filter>
+
+          <rect width='100%' height='100%' filter='url(#noiseFilter)'/>
+        </svg>
+      </div>
+
+      <div class="w3-padding">
+        <br />
+        <span class="w3-half" style="text-overflow: ellipsis;">
+          Score:
+          <br />
+          <span id="output-text" class="card-info">?</span>
+        </span>
+        <span class="w3-half" style="text-overflow: ellipsis;">
+          Generation:
+          <br />
+          <span id="generation-text" class="card-info">?</span>
+        </span>
+        <br />
+        <br />
+        <span class="w3-half" style="text-overflow: ellipsis;">
+          Status:
+          <br />
+          <span id="status-text" class="card-info">?</span>
+        </span>
+        <span class="w3-half" style="text-overflow: ellipsis;">
+          Reward:
+          <br />
+          <span id="reward-text" class="card-info">?</span>
+        </span>
+        <br />
+        <br />
+        <br />
+        <br />
+        <span style="font-size: xx-small;">
+          <span id="hiding-card-timer">?</span> hud disappears
+        </span>
+      </div>
+
+      <div id="info-button" class="card-tip-button">
+        <i class="fa fa-info-circle"></i>
+      </div>
+    </div>
+
+    <div id="halt-canvas" class="showcase slow-animation w3-button w3-card w3-red w3-hover-blue portfolio-ease w3-round-large w3-padding w3-margin-top" style="width: 100%;">
+      STOP
+    </div>
+
+  </div>
+</div>
+
+<script defer type="module" src='client.js'></script>
+</body>
+</html>

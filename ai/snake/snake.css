@@ -1,0 +1,62 @@
+
+html {
+  overflow-y: scroll !important;
+}
+
+#snakes {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+}
+#snakes>canvas {
+  margin: 4px 8px;
+}
+
+.canvas-boarder {
+  border: 2px solid;
+  margin: auto;
+}
+
+#debug-controller {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+#main-card-fade-away {
+  width: 420px;
+}
+
+.slow-animation {
+  transition: all ease-in-out 1s !important;
+}
+
+.card-tip-button {
+  position: absolute;
+  right: 8px;
+  bottom: 2px;
+  cursor: pointer;
+  font-size: large;
+}
+
+#help-dialog {
+  position: absolute;
+  transform: scale(2);
+  opacity: 0;
+  width: 420px;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 37.5em) {
+  #main-card-fade-away {
+    width: 200px;
+    height: 200px;
+    font-size: 8px !important;
+  }
+
+  #help-dialog {
+    width: 200px;
+    height: 200px;
+    font-size: 8px !important;
+  }
+}

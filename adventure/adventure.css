@@ -1,0 +1,56 @@
+
+
+
+.book-1 {
+  background-color: #4CAF50cc !important;
+  color: white;
+}
+.book-2 {
+  background-color: #f44336cc !important;
+  color: white;
+}
+.book-3 {
+  background-color: #2196F3cc !important;
+  color: white;
+}
+.book-4 {
+  background-color: #9c27b0cc !important;
+  color: white;
+}
+.book-5 {
+  background-color: #ffeb3bcc !important;
+}
+.btwn-book {
+  background-color: #00000000 !important;
+  height: 1050px;
+}
+
+
+
+  /* borrowed from ROOT/ai/showcase.css */
+#exit-nav-back-button {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  font-size: large;
+  z-index: 100;
+}
+.ease {
+  transition: all .5s ease;
+}
+
+#bees {
+  position: fixed;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  scroll-behavior: smooth;
+}

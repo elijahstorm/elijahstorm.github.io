@@ -1,0 +1,7 @@
+
+#handwriting-board {
+  transform: scale(4) translate(-22px, 22px);
+}
+#handwriting-board-container {
+  transform: translateX(71px);
+}

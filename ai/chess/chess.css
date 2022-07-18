@@ -1,0 +1,15 @@
+
+.chess-eval {
+  overflow: hidden;
+}
+#eval-black, #eval-text {
+  transition: all .8s ease;
+}
+#board-eval {
+  transition: background-color .8s ease;
+}
+
+.chess-card-green {
+	background-color: #262726 !important;
+	color: #9f93a0 !important;
+}

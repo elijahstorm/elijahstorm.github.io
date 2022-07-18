@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<title>Elijah Storm - AI Number Detector</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="title" content="Full-Stack and Ai Developing">
+<meta name="description" content="Quick website and app development starting at $150. I also have Ai passion projects for your entertainment.">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://elijahstorm.herokuapp.com/">
+<meta property="og:title" content="Full-Stack and Ai Developing">
+<meta property="og:description" content="Quick website and app development starting at $150. I also have Ai passion projects for your entertainment.">
+<meta property="og:image" content="https://elijahstorm.herokuapp.com/includes/img/me/korea/small.korea.photoshoot.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://elijahstorm.herokuapp.com/">
+<meta property="twitter:title" content="Full-Stack and Ai Developing">
+<meta property="twitter:description" content="Quick website and app development starting at $150. I also have Ai passion projects for your entertainment.">
+<meta property="twitter:image" content="https://elijahstorm.herokuapp.com/includes/img/me/korea/small.korea.photoshoot.jpg">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="../../includes/fa/css/all.min.css">
+<link rel="stylesheet" href="../../includes/css/main.css" />
+<link rel="stylesheet" href="../showcase.css" />
+<link rel="stylesheet" href="handwriting.css" />
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+<body>
+
+<div class="w3-container" style="text-align: center;">
+  <div id="exit-nav-back-button">
+    <a href="..">
+      <div class="w3-round-large w3-hover-red w3-card w3-padding w3-margin ease hover-show">
+        <i class="fa fa-arrow-left"></i>
+      </div>
+    </a>
+  </div>
+
+  <div>
+    <center>
+      <h1>JavaScript AI Number Detector</h1>
+      <h4>By Elijah Storm</h4>
+    </center>
+  </div>
+
+  <div id="loader" class="w3-container w3-padding-64" style="display: inline-block;">
+    <center>
+      <div class="loader"></div>
+    </center>
+    <span id="loader-status" class="flash">downloading data</span>
+  </div>
+
+  <div id="handwriting-board-container" class="w3-container" style="display: none; margin: auto; text-align: center;">
+
+    <div id="handwriting-board" class="w3-card w3-round-large w3-padding w3-margin" style="display: inline-block;">
+      <canvas id="input-canvas" width="28" height="28" style="border:2px solid;"></canvas>
+    </div>
+
+    <div class="w3-right">
+      <div class="w3-card no-select w3-round-large w3-padding w3-margin" style="width: 100%;">
+        Result:
+        <span id="output-text">?</span>
+        <hr />
+        Currently down for maitenence.
+        <br />
+        In the process of updating the Ai code.
+        <br />
+        - Elijah, Nov 15, 2021
+      </div>
+
+      <div id="clear-canvas" class="w3-button w3-card w3-blue w3-hover-green portfolio-ease w3-round-large w3-padding w3-margin" style="width: 100%;">
+        Clear
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script defer type="module" src='client.js'></script>
+</body>
+</html>

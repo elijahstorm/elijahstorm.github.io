@@ -1,0 +1,483 @@
+
+body,h1,h2,h3,h4,h5,h6,p,span,footer,strong {
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: "Lato", sans-serif; */
+}
+strong {
+  font-weight: 700;
+}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+
+.top-border-highlight-background {
+  background: white;
+  border-bottom-style: solid;
+  border-bottom-color: #ffb400;
+  border-bottom-width: 10px;
+  position: relative;
+  left: 0;
+  z-index: -1;
+  right: 0;
+  height: 200px
+}
+.top-border-highlight-content-overlap>* {
+  position: relative;
+  top: -200px;
+}
+@media (max-width: 37.5em) {
+  .top-border-highlight-background {
+    height: 380px
+  }
+  .top-border-highlight-content-overlap>* {
+    top: -380px;
+  }
+}
+.darken-background {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.5)
+  );
+}
+.darken-background.fade-out {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.0)
+  );
+}
+
+
+#about {
+  background: transparent;
+  font-size: smaller;
+  color: white;
+}
+#about>.fg-content {
+  position: relative;
+}
+#about .low-child-padding * {
+  margin: 0;
+}
+#about section.card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ffb400;
+  color: white;
+  padding: 16px;
+}
+#about strong,
+#about h1 {
+  color: #ffb400;
+}
+#about h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+#about h3 {
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+}
+#about p,
+#about h6 {
+  font-size: 10px;
+  color: white;
+  font-weight: bold;
+}
+#about .vert-indent {
+  font-size: 12px;
+}
+@media (min-width: 993px) {
+  #about .vert-indent>div>h6 {
+    min-height: 36px;
+  }
+}
+@media (max-width: 37.5em) {
+  #about p,
+  #about h6 {
+    font-size: 12px;
+  }
+  #about .vert-indent:nth-child(1) {
+    margin-top: 32px;
+  }
+}
+#about .showcase {
+  letter-spacing: normal;
+}
+#about .my-photo-circle img {
+  border-radius: 180px;
+  background: #321702;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 9px 20px 0px rgb(102 102 102 / 26%);
+  -moz-box-shadow: 2px 9px 20px 0px rgb(102 102 102 / 26%);
+  box-shadow: 2px 9px 20px 0px rgb(102 102 102 / 26%);
+}
+#about .my-photo-circle>div:nth-child(2),
+#about .my-photo-circle>div:nth-child(3) {
+  content: '';
+  width: 10px;
+  height: 30px;
+  position: absolute;
+  background: #ffb400;
+  display: none;
+  transform: translate(-196px, 14px)rotate(133deg);
+}
+#about .my-photo-circle>div:nth-child(3) {
+  transform: translate(-211px, 30px)rotate(126deg);
+}
+#about>div.skills-circles .glass-card {
+  border: solid;
+  border-radius: 180px;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0;
+  margin: 15px;
+  width: calc(100% - 30px);
+  aspect-ratio: 1;
+  font-size: inherit;
+  line-height: inherit;
+}
+#about>div.skills-circles .glass-card>* {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#about>div.skills-circles>*:nth-child(odd) .glass-card {
+  border-color: #ffb400;
+  color: #ffb400;
+}
+@media (max-width: 34.5em) {
+  div#about>div.w3-hide-medium.w3-hide-large>div>
+  p.small-screen-extra-spacing {
+    margin-top: 20px;
+  }
+  #about>div.skills-circles .glass-card {
+    font-size: 10px;
+  }
+}
+@media (max-width: 31.25em) {
+  div#about>div.w3-hide-medium.w3-hide-large>div>
+  p.small-screen-extra-spacing {
+    margin-top: 50px;
+  }
+  #about > div:nth-child(5) > div.s6 > p,
+  #about > div:nth-child(5) > div.s6 > h6 {
+    font-size: 11px;
+  }
+}
+@media (max-width: 25em) {
+  div#about>div.w3-hide-medium.w3-hide-large>div>
+  p.small-screen-extra-spacing {
+    margin-top: 100px;
+  }
+  #about > div:nth-child(5) > div.s6 {
+    width: 100% !important;
+  }
+  #about > div:nth-child(5) > div.s6 > p,
+  #about > div:nth-child(5) > div.s6 > h6 {
+    font-size: 12px;
+  }
+  #about>div.skills-circles>div.s3 {
+    width: 49.999%;
+  }
+}
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+textarea {
+  resize: none !important;
+}
+
+#myNavbar {
+  color: white;
+}
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('../img/backgrounds/bg0.jpg');
+  min-height: 100%;
+  background-position-y: bottom;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("../img/backgrounds/bg2.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("../img/backgrounds/bg3.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.portfolio-ease w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 100em) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+/* @media (max-width: 100em) {
+  #logo-image {
+    transform: translate(-50%,-50%)scale(.5);
+  }
+} */
+
+
+#logo-image>.short-info {
+  color: white;
+  position: relative;
+  top: -40px;
+  opacity: .5;
+}
+#logo-image>.short-info>span {
+  position: relative;
+  top: 10px;
+}
+@media (max-width: 75em) {
+  #logo-image>.short-info {
+    position: relative;
+    top: -10px;
+  }
+  #logo-image>.short-info>span {
+    position: relative;
+    top: 0;
+  }
+}
+.short-info-small {
+  display: none;
+}
+@media (max-width: 56.25em) {
+  #logo-image>.short-info {
+    display: none;
+  }
+  .short-info-small {
+    display: inline-block;
+    /* color: white; */
+    text-align: center;
+    height: 400px;
+    width: 100%;
+  }
+  .short-info-small>p {
+    position: relative;
+    top: 325px;
+  }
+}
+@media (max-width: 31.25em) {
+  .short-info-small {
+    font-size: 11px;
+  }
+}
+@media (max-width: 25em) {
+  #logo-image>.short-info {
+    position: relative;
+    top: 0;
+  }
+}
+
+
+
+
+
+.fade-imgs img {
+  /* position: absolute; */
+  -webkit-animation-name: fade;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 6s;
+  animation-name: fade;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+}
+
+.fade-imgs img:nth-of-type(1) {
+  animation-delay: 3s;
+}
+.fade-imgs img:nth-of-type(2) {
+  animation-delay: 0s;
+  transform: translateY(-100%);
+}
+
+@keyframes fade {
+  0% {
+    opacity:1;
+  }
+  50% {
+    opacity:1;
+  }
+  60% {
+    opacity:0;
+  }
+  80% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.i-container {
+  position: relative;
+  width: 37%; /* The size you want */
+}
+.i-container:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%; /* The padding depends on the width, not on the height, so with a padding-bottom of 100% you will get a square */
+}
+
+.i-container img {
+  position: absolute; /* Take your picture out of the flow */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; /* Make the picture taking the size of it's parent */
+  width: 100%; /* This if for the object-fit */
+  height: 100%; /* This if for the object-fit */
+  object-fit: cover; /* Equivalent of the background-size: cover; of a background-image */
+  object-position: center;
+}
+
+.portfolio-ease {
+  transition: all ease .5s;
+}
+
+.show-link-on-hover:hover .port-hidden {
+  opacity: 1 !important;
+}
+.port-hidden {
+  opacity: 0;
+}
+.show-link-on-hover img {
+  cursor: pointer;
+}
+.portfolio-logo {
+  transform: translateY(-3px);
+  max-width: 180px;
+  transition: all 0.3s ease-out 1s;
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.portfolio-iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 100%;
+}
+.portfolio-responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: none;
+}
+iframe {
+  overflow: hidden;
+}
+
+.invisible {
+  opacity: 0;
+  position: absolute;
+  top: -220px;
+  left: 0;
+  right: 0;
+}
+.invisible.shown {
+  opacity: 1;
+  top: 43px;
+}
+
+footer {
+  z-index: -1;
+  border-top-style: solid;
+  border-top-color: #ffb400;
+  border-top-width: 5px;
+}
+@media (max-width: 37.5em) {
+  footer .social-links i {
+    font-size: 32px;
+  }
+}
+footer i.fa {
+  font-size: 24px;
+}
+footer a {
+  text-decoration: none;
+}
+footer .button {
+  text-transform: uppercase;
+  color: #ffb400;
+}
+
+.portfolio-icon-header-main {
+  position: absolute;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  top: 80px;
+  right: 0px;
+}
+.portfolio-icon-header-main {
+  color: #d3d3d3;
+}
+.portfolio-icon-header-main a {
+  display: block;
+  padding: 8px;
+  margin: 18px;
+}
+@media (max-width: 25em) {
+  .portfolio-icon-header-main a {
+    margin: 0px;
+  }
+}
+@media (min-width: 100.0625em) {
+  .portfolio-icon-header-main>a {
+    padding: 12px 8px;
+    font-size: 40px;
+  }
+  .portfolio-icon-header-main {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    font-size: 64px !important;
+    float: none;
+    position: absolute;
+    right: unset;
+    top: calc(50% + 250px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    padding: 8px 16px;
+  }
+  .portfolio-icon-header-main a {
+    display: inline;
+    padding: 4px;
+    margin: 0;
+  }
+}

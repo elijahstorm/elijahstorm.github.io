@@ -1,0 +1,191 @@
+
+#debug-controller {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+#main-card-fade-away {
+  width: 420px;
+}
+
+.slow-animation {
+  transition: all ease-in-out 1s !important;
+}
+
+.card-tip-button {
+  position: absolute;
+  right: 8px;
+  bottom: 2px;
+  cursor: pointer;
+  font-size: large;
+}
+
+#help-dialog {
+  position: absolute;
+  transform: scale(2);
+  opacity: 0;
+  width: 420px;
+  overflow: hidden;
+}
+
+.actor-casing {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 40px;
+  height: 40px;
+  transition: all ease-in-out 1.2s;
+}
+.actor-spawner {
+  transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
+  transform: scale(0, 0);
+  opacity: 0;
+}
+.actor-filter {
+  transition: all ease .3s;
+  width: 100%;
+}
+.actor-img {
+  transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
+  width: 100%;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .actor-img {
+    transform: scale(.6);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .actor-img {
+    transform: scale(.5);
+  }
+
+  #main-card-fade-away {
+    width: 200px;
+    height: 200px;
+    font-size: 8px !important;
+  }
+
+  #help-dialog {
+    width: 200px;
+    height: 200px;
+    font-size: 8px !important;
+  }
+}
+
+.actor-honeycomb, .actor-abstract-honeycomb {
+  width: 150px;
+  height: 150px;
+}
+.actor-flying-up {
+  transform: scale(.6);
+}
+.actor-fatty {
+  transition: all 3s cubic-bezier(.62,.27,.66,1.07);
+}
+.actor-normal-animation {
+  transform-origin: 40% 80%;
+  animation: dance 8s ease-out infinite;
+}
+.actor-fatty-animation {
+  animation: floaty 3.6s infinite;
+}
+.actor-flying-up-animation {
+  animation: fly 2.6s infinite;
+}
+
+[class^="actor-flower-"][class$="animation"] {
+  transform-origin: 50% 100%;
+  animation: waves 10s infinite;
+}
+[class^="actor-lilly-"][class$="animation"] {
+  transform-origin: 50% 100%;
+  animation: forward-wave 10s infinite;
+}
+
+
+@keyframes floaty {
+  0%, 100% {
+    transform: translateY(0)scaleX(1);
+  }
+  10% {
+    transform: translateY(-10px)scaleX(.85);
+  }
+  50% {
+    transform: translateY(-5px)scaleX(1);
+  }
+  60% {
+    transform: translateY(-15px)scaleX(.8);
+  }
+}
+@keyframes fly {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes waves {
+  0%, 30%, 50%, 55%, 82%, 97%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(7deg); }
+  40% { transform: rotate(3deg); }
+  70% { transform: rotate(5deg); }
+  90% { transform: rotate(10deg); }
+}
+@keyframes dance {
+  0%, 12.5%, 25%, 37.5%, 43.75%, 56.25%, 68.75%, 81.25%, 90.625%, 100% { transform: rotate(5deg); }
+  6.25%, 18.75%, 31.25%, 40.625%, 50%, 62.5%, 75%, 87.5%, 93.75% { transform: rotate(-5deg); }
+}
+@keyframes forward-wave {
+  0%, 30%, 50%, 55%, 82%, 97%, 100% { transform: rotateX(0deg); }
+  20% { transform: rotateX(20deg); }
+  40% { transform: rotateX(35deg); }
+  70% { transform: rotateX(29deg); }
+  90% { transform: rotateX(30deg); }
+}
+
+
+#shapes {
+  position: absolute;
+  transition: all ease .5s;
+  transform: translate(0px, 80px)scale(1.5);
+
+}
+
+#shape1 {
+  position: absolute;
+  transition: all ease .5s;
+  transform: translate(200px, -60px);
+
+  width: 100px;
+  height: 100px;
+  border-radius: 60px;
+  background: rgb(119,33,243);
+  background: radial-gradient(circle, rgba(119,33,243,1) 17%, rgba(101,69,247,1) 41%, rgba(234,69,247,1) 95%);
+}
+
+#shape2 {
+  position: absolute;
+  transition: all ease .5s;
+  transform: translate(-20px, 55px);
+
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background: rgb(33,150,243);
+  background: linear-gradient(90deg, rgba(33,150,243,1) 0%, rgba(55,155,171,1) 20%, rgba(87,217,237,1) 83%, rgba(33,150,243,1) 100%);
+}
+
+#shape3 {
+  position: absolute;
+  transition: all ease .5s;
+  transform: translate(110px, -50px);
+
+  width: 30px;
+  height: 30px;
+  border-radius: 60px;
+  background: rgb(243,33,219);
+  background: linear-gradient(90deg, rgba(243,33,219,1) 0%, rgba(237,87,103,1) 83%);
+}
