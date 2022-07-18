@@ -360,7 +360,6 @@
   <!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green portfolio-ease">w3.css</a></p> -->
 </footer>
 
-<script src="/socket.io/socket.io.js"></script>
 <script>
 
 let chosen_type;
@@ -445,8 +444,6 @@ function finalSendMessageView() {
 }
 
 
-socket = io();
-
 
 function validateEmail(email) {
 	if(!email)return false;
@@ -484,12 +481,12 @@ function CONTACT(form) {
 		return false;
 	}
 
-	socket.emit("email", {
-		email: sender,
-		name: name,
-		body: chosen_type + ' / ' + body,
-    type: 'work_request',
-	});
+	// socket.emit("email", {
+	// 	email: sender,
+	// 	name: name,
+	// 	body: chosen_type + ' / ' + body,
+  //   type: 'work_request',
+	// });
 
 	return true;
 }

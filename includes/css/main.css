@@ -1,17 +1,26 @@
-
-body,h1,h2,h3,h4,h5,h6,p,span,footer,strong {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+footer,
+strong {
   font-family: 'Montserrat', sans-serif;
   /* font-family: "Lato", sans-serif; */
 }
 strong {
   font-weight: 700;
 }
-body, html {
+body,
+html {
   height: 100%;
-  color: #777;
+  color: #0000009c;
   line-height: 1.8;
 }
-
 
 .top-border-highlight-background {
   background: white;
@@ -22,41 +31,37 @@ body, html {
   left: 0;
   z-index: -1;
   right: 0;
-  height: 200px
+  height: 200px;
 }
-.top-border-highlight-content-overlap>* {
+.top-border-highlight-content-overlap > * {
   position: relative;
   top: -200px;
 }
 @media (max-width: 37.5em) {
   .top-border-highlight-background {
-    height: 380px
+    height: 380px;
   }
-  .top-border-highlight-content-overlap>* {
+  .top-border-highlight-content-overlap > * {
     top: -380px;
   }
 }
 .darken-background {
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.5)
-  );
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
 }
 .darken-background.fade-out {
   background: linear-gradient(
     rgba(0, 0, 0, 0.7),
     rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.0)
+    rgba(0, 0, 0, 0)
   );
 }
-
 
 #about {
   background: transparent;
   font-size: smaller;
   color: white;
 }
-#about>.fg-content {
+#about > .fg-content {
   position: relative;
 }
 #about .low-child-padding * {
@@ -92,7 +97,7 @@ body, html {
   font-size: 12px;
 }
 @media (min-width: 993px) {
-  #about .vert-indent>div>h6 {
+  #about .vert-indent > div > h6 {
     min-height: 36px;
   }
 }
@@ -116,20 +121,20 @@ body, html {
   -moz-box-shadow: 2px 9px 20px 0px rgb(102 102 102 / 26%);
   box-shadow: 2px 9px 20px 0px rgb(102 102 102 / 26%);
 }
-#about .my-photo-circle>div:nth-child(2),
-#about .my-photo-circle>div:nth-child(3) {
+#about .my-photo-circle > div:nth-child(2),
+#about .my-photo-circle > div:nth-child(3) {
   content: '';
   width: 10px;
   height: 30px;
   position: absolute;
   background: #ffb400;
   display: none;
-  transform: translate(-196px, 14px)rotate(133deg);
+  transform: translate(-196px, 14px) rotate(133deg);
 }
-#about .my-photo-circle>div:nth-child(3) {
-  transform: translate(-211px, 30px)rotate(126deg);
+#about .my-photo-circle > div:nth-child(3) {
+  transform: translate(-211px, 30px) rotate(126deg);
 }
-#about>div.skills-circles .glass-card {
+#about > div.skills-circles .glass-card {
   border: solid;
   border-radius: 180px;
   border-width: 2px;
@@ -141,28 +146,32 @@ body, html {
   font-size: inherit;
   line-height: inherit;
 }
-#about>div.skills-circles .glass-card>* {
+#about > div.skills-circles .glass-card > * {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#about>div.skills-circles>*:nth-child(odd) .glass-card {
+#about > div.skills-circles > *:nth-child(odd) .glass-card {
   border-color: #ffb400;
   color: #ffb400;
 }
 @media (max-width: 34.5em) {
-  div#about>div.w3-hide-medium.w3-hide-large>div>
-  p.small-screen-extra-spacing {
+  div#about
+    > div.w3-hide-medium.w3-hide-large
+    > div
+    > p.small-screen-extra-spacing {
     margin-top: 20px;
   }
-  #about>div.skills-circles .glass-card {
+  #about > div.skills-circles .glass-card {
     font-size: 10px;
   }
 }
 @media (max-width: 31.25em) {
-  div#about>div.w3-hide-medium.w3-hide-large>div>
-  p.small-screen-extra-spacing {
+  div#about
+    > div.w3-hide-medium.w3-hide-large
+    > div
+    > p.small-screen-extra-spacing {
     margin-top: 50px;
   }
   #about > div:nth-child(5) > div.s6 > p,
@@ -171,8 +180,10 @@ body, html {
   }
 }
 @media (max-width: 25em) {
-  div#about>div.w3-hide-medium.w3-hide-large>div>
-  p.small-screen-extra-spacing {
+  div#about
+    > div.w3-hide-medium.w3-hide-large
+    > div
+    > p.small-screen-extra-spacing {
     margin-top: 100px;
   }
   #about > div:nth-child(5) > div.s6 {
@@ -182,23 +193,24 @@ body, html {
   #about > div:nth-child(5) > div.s6 > h6 {
     font-size: 12px;
   }
-  #about>div.skills-circles>div.s3 {
+  #about > div.skills-circles > div.s3 {
     width: 49.999%;
   }
 }
 
-
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -214,29 +226,36 @@ textarea {
 }
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('../img/backgrounds/bg0.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url('../img/backgrounds/bg0.jpg');
   min-height: 100%;
   background-position-y: bottom;
 }
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-  background-image: url("../img/backgrounds/bg2.jpg");
+  background-image: url('../img/backgrounds/bg2.jpg');
   min-height: 400px;
 }
 
 /* Third image (Contact) */
 .bgimg-3 {
-  background-image: url("../img/backgrounds/bg3.jpg");
+  background-image: url('../img/backgrounds/bg3.jpg');
   min-height: 400px;
 }
 
-.w3-wide {letter-spacing: 10px;}
-.portfolio-ease w3-hover-opacity {cursor: pointer;}
+.w3-wide {
+  letter-spacing: 10px;
+}
+.portfolio-ease w3-hover-opacity {
+  cursor: pointer;
+}
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 100em) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
     background-attachment: scroll;
     min-height: 400px;
   }
@@ -248,23 +267,22 @@ textarea {
   }
 } */
 
-
-#logo-image>.short-info {
+#logo-image > .short-info {
   color: white;
   position: relative;
   top: -40px;
-  opacity: .5;
+  opacity: 0.5;
 }
-#logo-image>.short-info>span {
+#logo-image > .short-info > span {
   position: relative;
   top: 10px;
 }
 @media (max-width: 75em) {
-  #logo-image>.short-info {
+  #logo-image > .short-info {
     position: relative;
     top: -10px;
   }
-  #logo-image>.short-info>span {
+  #logo-image > .short-info > span {
     position: relative;
     top: 0;
   }
@@ -273,17 +291,17 @@ textarea {
   display: none;
 }
 @media (max-width: 56.25em) {
-  #logo-image>.short-info {
+  #logo-image > .short-info {
     display: none;
   }
   .short-info-small {
     display: inline-block;
-    /* color: white; */
+    color: #fff9;
     text-align: center;
     height: 400px;
     width: 100%;
   }
-  .short-info-small>p {
+  .short-info-small > p {
     position: relative;
     top: 325px;
   }
@@ -294,15 +312,11 @@ textarea {
   }
 }
 @media (max-width: 25em) {
-  #logo-image>.short-info {
+  #logo-image > .short-info {
     position: relative;
     top: 0;
   }
 }
-
-
-
-
 
 .fade-imgs img {
   /* position: absolute; */
@@ -324,19 +338,19 @@ textarea {
 
 @keyframes fade {
   0% {
-    opacity:1;
+    opacity: 1;
   }
   50% {
-    opacity:1;
+    opacity: 1;
   }
   60% {
-    opacity:0;
+    opacity: 0;
   }
   80% {
-    opacity:0;
+    opacity: 0;
   }
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
@@ -345,7 +359,7 @@ textarea {
   width: 37%; /* The size you want */
 }
 .i-container:after {
-  content: "";
+  content: '';
   display: block;
   padding-bottom: 100%; /* The padding depends on the width, not on the height, so with a padding-bottom of 100% you will get a square */
 }
@@ -363,7 +377,7 @@ textarea {
 }
 
 .portfolio-ease {
-  transition: all ease .5s;
+  transition: all ease 0.5s;
 }
 
 .show-link-on-hover:hover .port-hidden {
@@ -458,7 +472,7 @@ footer .button {
   }
 }
 @media (min-width: 100.0625em) {
-  .portfolio-icon-header-main>a {
+  .portfolio-icon-header-main > a {
     padding: 12px 8px;
     font-size: 40px;
   }

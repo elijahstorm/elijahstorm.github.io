@@ -2,12 +2,11 @@
 // Copywrite April 5, 2020
 // for use only in Elijah Storm's Portfolio Project
 
-import {Canvas} from '/ai/snake/canvas.js';
-import {Population} from '/ai/snake/population.js';
+import { Canvas } from '/ai/snake/canvas.js'
+import { Population } from '/ai/snake/population.js'
 
-'use strict';
+;('use strict')
 
-
-window.onload = function() {
-	new Population();
-};
+window.onload = function () {
+  new Population()
+}
