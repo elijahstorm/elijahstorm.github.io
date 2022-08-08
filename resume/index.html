@@ -8,46 +8,147 @@
 <meta name="description" content="Quick website and app development starting at $150. I also have Ai passion projects for your entertainment.">
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://elijahstorm.herokuapp.com/">
+<meta property="og:url" content="https://elijahstorm.github.io/">
 <meta property="og:title" content="Full-Stack and Ai Developing">
 <meta property="og:description" content="Quick website and app development starting at $150. I also have Ai passion projects for your entertainment.">
-<meta property="og:image" content="https://elijahstorm.herokuapp.com/includes/img/me/korea/small.korea.photoshoot.jpg">
+<meta property="og:image" content="https://elijahstorm.github.io/includes/img/me/korea/small.korea.photoshoot.jpg">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://elijahstorm.herokuapp.com/">
+<meta property="twitter:url" content="https://elijahstorm.github.io/">
 <meta property="twitter:title" content="Full-Stack and Ai Developing">
 <meta property="twitter:description" content="Quick website and app development starting at $150. I also have Ai passion projects for your entertainment.">
-<meta property="twitter:image" content="https://elijahstorm.herokuapp.com/includes/img/me/korea/small.korea.photoshoot.jpg">
+<meta property="twitter:image" content="https://elijahstorm.github.io/includes/img/me/korea/small.korea.photoshoot.jpg">
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="../includes/fa/css/all.min.css">
+<script src="https://kit.fontawesome.com/ae1856160e.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../portfolio/display/style.css" />
 <link rel="stylesheet" href="../includes/css/main.css">
+<link rel="stylesheet" href="../glass_card.css" />
 <link rel="stylesheet" href="resume.css">
+
 <body>
 
-  <div class="w3-top">
-    <div class="w3-bar" id="myNavbar">
-      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-        <i class="fa fa-bars"></i>
-      </a>
-      <a href=".." class="w3-bar-item w3-button">HOME</a>
-      <a href="..#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-      <a href="..#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top" style="background: #00000022">
+      <div class="w3-bar" id="myNavbar">
+        <a
+          class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right portfolio-ease w3-hover-blue"
+          href="javascript:void(0);"
+          onclick="toggleFunction()"
+          title="Toggle Navigation Menu"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+        <a
+          href="../"
+          class="w3-bar-item w3-button portfolio-ease w3-hover-blue"
+          >HOME</a
+        >
+        <a
+          href="../#about"
+          class="w3-bar-item w3-button portfolio-ease w3-hover-blue w3-hide-small"
+          ><i class="fa fa-user"></i>&nbsp;&nbsp; ABOUT</a
+        >
+        <a
+          href="../#portfolio"
+          class="w3-bar-item w3-button portfolio-ease w3-hover-blue w3-hide-small"
+          ><i class="fa fa-th"></i>&nbsp;&nbsp; PORTFOLIO</a
+        >
+        <a
+          href="../#contact"
+          class="w3-bar-item w3-button portfolio-ease w3-hover-blue w3-hide-small"
+          ><i class="fa fa-envelope"></i>&nbsp;&nbsp; CONTACT</a
+        >
+        <a
+          href="../pricing"
+          class="w3-bar-item w3-button portfolio-ease w3-hover-blue w3-hide-small"
+          ><i class="fa-solid fa-money-bill-1-wave"></i></i>&nbsp;&nbsp; PRICING</a
+        >
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div
+        id="nav-drop-down"
+        class="w3-bar-block w3-white w3-hide-large w3-hide-medium portfolio-ease invisible"
+      >
+        <a
+          href="../#about"
+          class="w3-bar-item w3-button portfolio-ease w3-hover-blue"
+          onclick="toggleFunction()"
+          >ABOUT</a
+        >
+        <a
+          href="../#portfolio"
+          class="w3-bar-item w3-button portfolio-ease w3-hover-blue"
+          onclick="toggleFunction()"
+          >PORTFOLIO</a
+        >
+        <a
+          href="../#contact"
+          class="w3-bar-item w3-button portfolio-ease w3-hover-blue"
+          onclick="toggleFunction()"
+          >CONTACT</a
+        >
+        <a
+          href="../pricing"
+          class="w3-bar-item w3-button portfolio-ease w3-hover-blue"
+          onclick="toggleFunction()"
+          >PRICING</a
+        >
+      </div>
     </div>
 
-    <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-      <a href="..#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-      <a href="..#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    </div>
-  </div>
+    <!-- First Parallax Image with Logo Text -->
+    <div id="home" class="bgimg-1 w3-display-container noselect">
+      <div
+        id="logo-image"
+        class="w3-center w3-display-middle"
+        style="white-space: nowrap; width: 40%"
+      >
+        <span class="w3-padding-large w3-xlarge w3-wide w3-animate-opacity">
+          <!-- <img id="follow-mouse" class="lazyload portfolio-logo" src="../includes/img/me/circle-background.png"/> -->
+          <!-- <span class="w3-hide-small w3-hide-large">PORTFOLIO</span> -->
+          <br />
+          <img src="../includes/img/logo/tor-logo.png" />
+        </span>
+        <p class="short-info">
+          <strong class="showcase"> Frontend Specialist </strong>
+          <br />
+          <span>
+            Making the end-user experience look great and feel great.
+          </span>
+        </p>
+      </div>
 
-  <div class="bgimg-1 w3-display-container w3-opacity-min noselect" id="home">
-    <div class="w3-display-middle" style="white-space:nowrap;">
-      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><img src="../includes/img/logo/blue pink logo.png" style="transform:translateY(-3px);max-width: 180px" /> <span class="w3-hide-small">RESUME</span></span>
+      <div class="short-info-small">
+        <p>
+          <strong class="showcase"> Frontend Specialist </strong>
+          <br />
+          <span>
+            Making the end-user experience look great and feel great.
+          </span>
+        </p>
+      </div>
+
+      <div
+        class="w3-xlarge w3-opacity w3-hover-opacity-off portfolio-ease portfolio-icon-header-main"
+      >
+        <!-- <a href="https://www.facebook.com/elijah.s.houk/"><i class="fab fa-facebook" style="margin: 5px;"></i></a> -->
+        <a href="https://github.com/elijahstorm/"
+          ><i class="fab fa-github" style="margin: 5px"></i
+        ></a>
+        <a href="https://angel.co/u/elijah-storm/"
+          ><i class="fab fa-angellist" style="margin: 5px"></i
+        ></a>
+        <a href="https://www.instagram.com/elijah.storm/"
+          ><i class="fab fa-instagram" style="margin: 5px"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/elijah-storm/"
+          ><i class="fab fa-linkedin" style="margin: 5px"></i
+        ></a>
+      </div>
     </div>
-  </div>
 
   <div class="w3-content w3-container w3-padding-64" id="resume">
     <div class="w3-row-padding w3-center w3-section portfolio-iframe-container" style="height: 1000px;">
@@ -69,7 +170,9 @@
       <div id="subjects_to_learn" class="w3-content question">
         <div class="question-header show-link-on-hover">
           <a href="#subjects_to_learn"></a>
-          <h3 class="w3-round-large w3-padding">
+          <div class="bg w3-round-large"></div>
+          <div class="bg fadeout w3-round-large"></div>
+          <h3 class="w3-padding w3-round-large">
             What are some of subjects you are reading / studying / learning / playing with in your free time?
 
             <a href="#subjects_to_learn">
@@ -88,7 +191,9 @@
         <div id="ideal_work_enviorn" class="w3-content question">
         <div class="question-header show-link-on-hover">
           <a href="#ideal_work_enviorn"></a>
-          <h3 class="w3-round-large w3-padding">
+          <div class="bg w3-round-large"></div>
+          <div class="bg fadeout w3-round-large"></div>
+          <h3 class="w3-padding w3-round-large">
             What is your ideal work environment that enables you to do your best work?
 
             <a href="#ideal_work_enviorn">
@@ -107,7 +212,9 @@
       <div id="obstacles" class="w3-content question">
         <div class="question-header show-link-on-hover">
           <a href="#obstacles"></a>
-          <h3 class="w3-round-large w3-padding">
+          <div class="bg w3-round-large"></div>
+          <div class="bg fadeout w3-round-large"></div>
+          <h3 class="w3-padding w3-round-large">
             What is an obstacle you've faced in life or code and how did you overcome it?
 
             <a href="#obstacles">
@@ -129,7 +236,9 @@
       <div id="technical_solution" class="w3-content question">
         <div class="question-header show-link-on-hover">
           <a href="#technical_solution"></a>
-          <h3 class="w3-round-large w3-padding">
+          <div class="bg w3-round-large"></div>
+          <div class="bg fadeout w3-round-large"></div>
+          <h3 class="w3-padding w3-round-large">
             What is a technical solution that you’ve built that you are proud of?
 
             <a href="#technical_solution">
@@ -139,17 +248,24 @@
         </div>
 
         <p class="response w3-padding">
-          <b>
-            <a href="https://visual-ai-dashboard.web.app/#/dash_main">
-              https://visual-ai-dashboard.web.app/#/dash_main
-            </a>
-          </b>
+          Outside of private company work that I can't show the code for, I have some personal projects that I like to do: This project is a fun one! I worked with my girlfriend, who is a UX designer. I'm proud of this code because I love making things look pixel perfect, and elegant in simplicity for the user! I also am proud of myself because I came up with some unique solutions to handling the data to streamline the development process as well--making revisions and adding features into the future a lot easier. It's still got a bit more work to be finished, but it's 90% done.
           <br />
           <br />
-          This is a solo, fun, personal project that I integrated with Firebase to make a fully functioning data backup system. The intentions are to make something that can hold and manage Ai training data / labels / weights and biases / etc. that can be managed across teams (managed by team managers) and allow for independent (non-team / personal) data to be managed.
+          I worked in Flutter to make a cross-platform app that felt extremely simple to use. As well as an equal, separate web client written in SvelteKit for handling sharing/linking data so users can quickly share their content with anyone on the web--even if they don't have the app downloaded. Using Firebase for Authentication, Firestore for data, and Cloud Storage for media uploads.
           <br />
           <br />
-          The vision was to make a backend system that operates with the efficiency and flexibility that AWS or Google Firebase systems can do for the development process. But specifically with a focus on Ai. The next thing I want to add to it, is a visual Ai system where you can hook your computer to a camera and train systems with object recognition straight from the app itself. (this isn't implemented yet.)
+          The idea was to make an app that felt as light as a feather to use, but had a lot of sturdy features and customization. As well as integrates a social element that is non-competitive to mainstream social apps, but can work as as a nice addition to peoples' daily lives. We wanted to provide a simple place for users to share their daily life, their accomplishments, or work together and put plans in motion with their friends using our teams feature!
+          <br />
+          <br />
+          Flutter Code: <a href="https://github.com/elijahstorm/haja">https://github.com/elijahstorm/haja</a>
+          SvelteKit Code: <a href="https://github.com/elijahstorm/haja-sveltekit">https://github.com/elijahstorm/haja-sveltekit</a>
+          <br />
+          <br />
+          Web rendered App: <a href="https://haja-web.herokuapp.com/">https://haja-web.herokuapp.com/</a>
+          Web Client: <a href="https://haja-project.web.app/">https://haja-project.web.app/</a>
+          <br />
+          <br />
+          I'm in the process of updating this project to Flutter 3.0, and then releasing to the Apple and Android app stores, and Windows, Linux, MacOS clients. Flutter allows a single codebase to work as the framework for all of these platforms, and you can target single platforms with just a bit of extra code.
         </p>
 
         <hr class="w3-padding" />
@@ -158,7 +274,9 @@
       <div id="excited" class="w3-content question">
         <div class="question-header show-link-on-hover">
           <a href="#excited"></a>
-          <h3 class="w3-round-large w3-padding">
+          <div class="bg w3-round-large"></div>
+          <div class="bg fadeout w3-round-large"></div>
+          <h3 class="w3-padding w3-round-large">
             What gets you excited and fired up about life? And on the flip side, what are some of your fears?
 
             <a href="#excited">
@@ -177,7 +295,9 @@
       <div id="favorite_culture" class="w3-content question">
         <div class="question-header show-link-on-hover">
           <a href="#favorite_culture"></a>
-          <h3 class="w3-round-large w3-padding">
+          <div class="bg w3-round-large"></div>
+          <div class="bg fadeout w3-round-large"></div>
+          <h3 class="w3-padding w3-round-large">
             If you could bring one aspect (cultural, team, etc) from a past job to this job what would it be?
 
             <a href="#favorite_culture">
@@ -196,7 +316,9 @@
       <div id="coworkers_ease" class="w3-content question">
         <div class="question-header show-link-on-hover">
           <a href="#coworkers_ease"></a>
-          <h3 class="w3-round-large w3-padding">
+          <div class="bg w3-round-large"></div>
+          <div class="bg fadeout w3-round-large"></div>
+          <h3 class="w3-padding w3-round-large">
             How do you work cross-functionally with developers, copywriters, project managers, etc
 
             <a href="#coworkers_ease">
@@ -222,17 +344,42 @@
 
   </div>
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity portfolio-ease w3-hover-opacity-off">
-  <a href=".." class="w3-button w3-light-grey portfolio-ease"><i class="fa fa-arrow-up w3-margin-right"></i>Main Page</a>
-  <div class="w3-xlarge w3-section">
-    <a href="https://www.facebook.com/elijah.s.houk/"><i class="fab fa-facebook portfolio-ease w3-hover-opacity" style="margin: 5px;"></i></a>
-    <a href="https://github.com/elijahstorm/"><i class="fab fa-github portfolio-ease w3-hover-opacity" style="margin: 5px;"></i></a>
-    <a href="https://www.instagram.com/elijah.storm/"><i class="fab fa-instagram portfolio-ease w3-hover-opacity" style="margin: 5px;"></i></a>
-    <a href="https://www.linkedin.com/in/elijah-storm/"><i class="fab fa-linkedin portfolio-ease w3-hover-opacity" style="margin: 5px;"></i></a>
-  </div>
-  <!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green portfolio-ease">w3.css</a></p> -->
-</footer>
+    <!-- Footer -->
+    <footer
+      class="w3-center w3-black w3-padding-32 portfolio-ease"
+    >
+      <a href="../" id="toTopNavBtn" class="button portfolio-ease">
+        <img src="../includes/img/to-the-top.png" style="width: 250px" />
+      </a>
+
+      <div class="w3-section social-links" style="font-size: 40px">
+        <!-- <a href="https://www.facebook.com/elijah.s.houk/"><i class="fab fa-facebook portfolio-ease w3-opacity w3-hover-opacity-off" style="margin: 5px;"></i></a> -->
+        <a href="https://github.com/elijahstorm/"
+          ><i
+            class="fab fa-github portfolio-ease w3-opacity w3-hover-opacity-off"
+            style="margin: 5px"
+          ></i
+        ></a>
+        <a href="https://angel.co/u/elijah-storm/"
+          ><i
+            class="fab fa-angellist portfolio-ease w3-opacity w3-hover-opacity-off"
+            style="margin: 5px"
+          ></i
+        ></a>
+        <a href="https://www.instagram.com/elijah.storm/"
+          ><i
+            class="fab fa-instagram portfolio-ease w3-opacity w3-hover-opacity-off"
+            style="margin: 5px"
+          ></i
+        ></a>
+        <a href="https://www.linkedin.com/in/elijah-storm/"
+          ><i
+            class="fab fa-linkedin portfolio-ease w3-opacity w3-hover-opacity-off"
+            style="margin: 5px"
+          ></i
+        ></a>
+      </div>
+    </footer>
 
 <script>
 
@@ -269,14 +416,15 @@ const elementInView = (el, dividend = 1) => {
 
 
 const animateScrollElement = async (element) => {
-  await new Promise(resolve => setTimeout(resolve, 2000));
+  await new Promise(resolve => setTimeout(resolve, 1000));
 
   if (!elementInView(firstScrollElements, 1.25)) return;
 
   animation_done = true;
-  element.classList.add('bounce-in');
+  element.classList.add('selected');
+  
   await new Promise(resolve => setTimeout(resolve, 2000));
-  element.classList.remove('bounce-in');
+  element.classList.remove('selected');
 };
 
 let animation_done = false;

@@ -290,13 +290,15 @@ textarea {
 .short-info-small {
   display: none;
 }
+.short-info-small p {
+  color: #fff9;
+}
 @media (max-width: 56.25em) {
   #logo-image > .short-info {
     display: none;
   }
   .short-info-small {
     display: inline-block;
-    color: #fff9;
     text-align: center;
     height: 400px;
     width: 100%;
