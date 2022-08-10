@@ -100,12 +100,147 @@ const doungdoungei = new NormalBeeActor(
 
 NormalBeeActor.start_ai()
 
-setTimeout(() => {
-  eunbyeul.speech = 'Click one of us to go on an adventure'
+const quotes = [
+  {
+    quote: "Don't worry, be happy.",
+    person: 'Bobby McFerrin',
+  },
+  {
+    quote: 'Hakuna Matata… means no worries!',
+    person: 'Elton John and Tim Rice',
+  },
+  {
+    quote: 'I smile because I have no idea what is going on.',
+    person: 'Unknown',
+  },
+  {
+    quote: 'There is only one happiness in this life, to love and be loved.',
+    person: 'George Sand',
+  },
+  {
+    quote:
+      'Blessed are they who can laugh at themselves for they shall never cease to be amused.',
+    person: 'Unknown',
+  },
+  {
+    quote: 'Hope is the only thing stronger than fear.',
+    person: 'Suzanne Collins',
+  },
+  {
+    quote: 'The poorest man is he whose only wealth is money.',
+    person: 'Unknown',
+  },
+  {
+    quote: 'The most simple things can bring the most happiness.',
+    person: 'Izabella Scorupco',
+  },
+  {
+    quote:
+      "Now and then it's good to pause in our pursuit of happiness and just be happy.",
+    person: 'Guillaume Apollinaire',
+  },
+  {
+    quote: "Don't cry because it is over, smile because it happened.",
+    person: 'Dr. Seuss',
+  },
+  {
+    quote:
+      'For every minute you are angry you lose sixty seconds of happiness.',
+    person: 'Ralph Waldo Emerson',
+  },
+  {
+    quote: 'Happiness is a warm puppy.',
+    person: 'Charles Schulz',
+  },
+  {
+    quote: 'Sanity and happiness are an impossible combination.',
+    person: 'Mark Twain',
+  },
+  {
+    quote:
+      "If it weren't for the mistakes I've made, I wouldn't be where I am today.",
+    person: 'Unknown',
+  },
+  {
+    quote: 'Celebrate every tiny victory.',
+    person: 'Unknown',
+  },
+  {
+    quote: 'If you cannot do great things, do small things in a great way.',
+    person: 'Napoleon Hill',
+  },
+  {
+    quote:
+      "If you think nobody cares if you're alive, try missing a couple of car payments.",
+    person: 'Unknown',
+  },
+  {
+    quote:
+      "There's nothing that can help you understand your beliefs more than trying to explain them to an inquisitive child.",
+    person: 'Frank A. Clark',
+  },
+  {
+    quote: 'Whatever you are, be a good one.',
+    person: 'Abraham Lincoln',
+  },
+  {
+    quote: 'Winning is not everything, but wanting to win is.',
+    person: 'Vince Lombardi',
+  },
+  {
+    quote: 'Wherever you go, go with all your heart.',
+    person: 'Confucius',
+  },
+  {
+    quote: 'Just keep swimming, just keep swimming.',
+    person: 'Dory, Finding Nemo',
+  },
+  {
+    quote: "It always seems impossible until it's done.",
+    person: 'Nelson Mandela',
+  },
+  {
+    quote:
+      'Be faithful in small things because it is in them that your strength lies.',
+    person: 'Mother Teresa',
+  },
+  {
+    quote: 'Life is either a great adventure or nothing.',
+    person: 'Helen Keller',
+  },
+  {
+    quote: "If you're not part of the solution, be part of the problem!",
+    person: 'Unknown',
+  },
+  {
+    quote: 'The first five days after the weekend are always the hardest.',
+    person: 'Unknown',
+  },
+  {
+    quote:
+      'Just when the caterpillar thought her life was over, she began to fly.',
+    person: 'Barbara Haines Howett',
+  },
+]
+
+const beeConverse = (iteration = 0) => {
+  const bee = Math.random() > 0.5 ? eunbyeul : doungdoungei
+
+  const quote = quotes[Math.floor(quotes.length * Math.random())]
+  bee.speech =
+    quote.person == 'Unknown' ? quote.quote : `${quote.quote} - ${quote.person}`
+
   setTimeout(() => {
-    eunbyeul.speech = null
+    bee.speech = null
+
+    setTimeout(
+      () => beeConverse(Math.min(iteration + 1, 10)),
+      Math.random() * 5000 * iteration + 5000
+    )
   }, 5000)
-}, 5000)
+}
+
+setTimeout(beeConverse, 5000)
 
 const flowers = []
 const bees = [eunbyeul, doungdoungei]
@@ -123,7 +258,7 @@ document.body.onscroll = () => {
 
 bees.forEach((bee) => {
   bee.onclick = () => {
-    window.location = '/adventure'
+    // window.location = '/adventure'
   }
   bee.sight_distance = 1000
 })
