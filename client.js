@@ -258,7 +258,7 @@ document.body.onscroll = () => {
 
 bees.forEach((bee) => {
   bee.onclick = () => {
-    // window.location = '/adventure'
+    window.location = '/ai/bees'
   }
   bee.sight_distance = 1000
 })
