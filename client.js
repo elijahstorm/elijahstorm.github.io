@@ -1,6 +1,6 @@
 /// Code written and created by Elijah Storm
-// Copywrite April 5, 2020
-// for use only in Elijah Storm's Portfolio Project
+// April 5, 2020
+// updated in July 2022
 
 import '/portfolio/portfolio.data.js'
 import { CinematicBackground } from '/portfolio/display/main.js'
@@ -10,7 +10,7 @@ import { Flowers } from '/ai/bees/flowers.js'
 const CINEMATIC_BACKGROUND = new CinematicBackground()
 
 function validateEmail(email) {
-  // /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+  ;/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 }
 function CONTACT() {
   const err = (msg) => {
@@ -35,6 +35,17 @@ function CONTACT() {
   err('')
   document.getElementById('contact-error').style.display = 'none'
 
+  Email.send({
+    Host: 'smtp.gmail.com',
+    Username: 'elijahstormmusic@gmail.com',
+    Password: 'ieykcfljrmxdgvct',
+    To: 'elijahstormai@gmail.com',
+    From: 'elijahstormmusic@gmail.com',
+    Subject: `Work request from ${name}`,
+    Body: body,
+  }).then(function (message) {
+    alert('mail sent successfully')
+  })
   //   socket.emit('email', {
   //     email: sender,
   //     name: name,
