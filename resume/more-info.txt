@@ -9,7 +9,7 @@ The idea was to make an app that felt as light as a feather to use, but had a lo
 Flutter Code: https://github.com/elijahstorm/haja
 SvelteKit Code: https://github.com/elijahstorm/haja-sveltekit
 
-Web rendered App: https://haja-web.herokuapp.com/
+Web rendered App: https://elijahstorm.github.io/haja-web
 Web Client: https://haja-project.web.app/
 
 I'm in the process of updating this project to Flutter 3.0, and then releasing to the Apple and Android app stores, and Windows, Linux, MacOS clients. Flutter allows a single codebase to work as the framework for all of these platforms, and you can target single platforms with just a bit of extra code.
