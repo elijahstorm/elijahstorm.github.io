@@ -1,16 +1,5 @@
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-footer,
-strong {
+* {
   font-family: 'Montserrat', sans-serif;
-  /* font-family: "Lato", sans-serif; */
 }
 strong {
   font-weight: 700;
@@ -261,17 +250,11 @@ textarea {
   }
 }
 
-/* @media (max-width: 100em) {
-  #logo-image {
-    transform: translate(-50%,-50%)scale(.5);
-  }
-} */
-
 #logo-image > .short-info {
   color: white;
   position: relative;
   top: -40px;
-  opacity: 0.5;
+  opacity: 0.65;
 }
 #logo-image > .short-info > span {
   position: relative;

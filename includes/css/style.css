@@ -1,21 +1,25 @@
 @font-face {
   font-family: 'Roboto';
-  src: url('../includes/fonts/Roboto-BlackItalic.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('../includes/fonts/Roboto-BlackItalic.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
-body,p,h1,h2,h3,h4,h5,h6 {
-  font-family: "Roboto";
-  font-style: normal;
-}
-.ar-italic,h1,h2,h3,h4,h5,h6 {
+.ar-italic,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-style: italic !important;
 }
 
-body{
+body {
   margin: 0px;
 }
 
-#main-container, #container, #pageFrame{
+#main-container,
+#container,
+#pageFrame {
   position: absolute;
   left: 0px;
   top: 0px;

@@ -177,7 +177,13 @@
   text-transform: uppercase;
 }
 
+#ai .bee-color {
+  color: #ffb400 !important;
+  font-weight: bold;
+}
+
 .ai-showcase-container {
+  padding: 2rem 0;
   margin: auto;
   text-align: center;
   display: grid;
