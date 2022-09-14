@@ -1,15 +1,13 @@
-
-
 .frost-bg {
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: .1;
+  opacity: 0.1;
   mix-blend-mode: overlay;
 }
 .showcase {
   text-transform: uppercase;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
 }
 
 .glass-card {
@@ -35,18 +33,16 @@
   color: white !important;
 }
 
-.glass-card>.title {
+.glass-card > .title {
   margin: 0;
 }
-
 
 /**
  * The "shine" element
  */
 
 .glass-card:after {
-
-  animation: shine 5s ease-in-out  infinite;
+  animation: shine 5s ease-in-out infinite;
   animation-fill-mode: forwards;
   content: '';
   position: absolute;
@@ -63,12 +59,11 @@
     rgba(255, 255, 255, 0.13) 0%,
     rgba(255, 255, 255, 0.13) 77%,
     rgba(255, 255, 255, 0.5) 92%,
-    rgba(255, 255, 255, 0.0) 100%
+    rgba(255, 255, 255, 0) 100%
   );
 }
 
 /* Hover state - trigger effect */
-
 
 /* Active state */
 
@@ -76,7 +71,7 @@
   opacity: 0;
 }
 
-@keyframes shine{
+@keyframes shine {
   10% {
     opacity: 1;
     top: -30%;
@@ -93,11 +88,27 @@
   }
 }
 
+@keyframes shine-large {
+  10% {
+    opacity: 1;
+    top: -30%;
+    left: 30%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+  }
+  100% {
+    opacity: 0;
+    top: -30%;
+    left: 30%;
+    transition-property: left, top, opacity;
+  }
+}
 
 .actor-dialog .actor-dialog-text {
-  transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
+  transition: all 400ms cubic-bezier(0.47, 1.64, 0.41, 0.8);
   opacity: 0;
-  transform: scale(0)translate(-30%, 10px);
+  transform: scale(0) translate(-30%, 10px);
   visibility: hidden;
   width: 120px;
   background-color: black;
@@ -135,5 +146,5 @@
 .actor-dialog.show-tip .actor-dialog-text {
   opacity: 1;
   visibility: visible;
-  transform: scale(1)translate(-30%, 10px);
+  transform: scale(1) translate(-30%, 10px);
 }
