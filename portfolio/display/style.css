@@ -53,27 +53,15 @@
 #portfolio-content > div > div.arrow-left.flip {
   text-align: left;
 }
-#portfolio-content > div > div.arrow-left.push-right {
-  margin-top: 200px;
-}
-#portfolio-content > div > div.tall {
-  min-height: 650px;
-}
-#portfolio-content > div > div.tall * {
-  vertical-align: middle;
-}
 #portfolio-content > div > div.arrow-left > i,
 #portfolio-content > div > div.arrow-left > img {
-  max-width: 70px;
-  margin-top: 100px;
-  font-size: 64px;
+  max-width: 15rem;
   cursor: pointer;
 }
-@media (max-width: 37.5em) {
-  #portfolio-content > div > div.arrow-left > i,
-  #portfolio-content > div > div.arrow-left > img {
-    margin-top: 100px;
-  }
+#portfolio-content .flex {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 #portfolio-content > div > div.arrow-left.flip > i,
 #portfolio-content > div > div.arrow-left.flip > img {
@@ -176,6 +164,12 @@
   font-weight: bold;
   text-transform: uppercase;
 }
+.floating-content .form #contact-message {
+  height: 6em;
+  border-radius: 1em;
+  text-align: unset;
+  padding: 0 1em;
+}
 
 #ai .bee-color {
   color: #ffb400 !important;
@@ -189,9 +183,48 @@
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
+  position: relative;
 }
 
-.ai-showcase-container > .glass-card {
+.ai-showcase-container .lazy-slide-in:hover {
+  background: #568efd00 !important;
+}
+.ai-showcase-container .lazy-slide-in {
+  animation: colorCycle 15s ease 1s infinite;
+  border-radius: 1rem;
+}
+.ai-showcase-container .lazy-slide-in.color-2 {
+  animation-delay: 2s;
+}
+.ai-showcase-container .lazy-slide-in.color-3 {
+  animation-delay: 2s;
+}
+.ai-showcase-container .lazy-slide-in.color-4 {
+  animation-delay: 3s;
+}
+
+@keyframes colorCycle {
+  0% {
+    background-color: #ffb400aa;
+  }
+  20% {
+    background-color: #e03742aa;
+  }
+  40% {
+    background-color: #f02ebfaa;
+  }
+  60% {
+    background-color: #7bc6ffaa;
+  }
+  80% {
+    background-color: #7bffbdaa;
+  }
+  100% {
+    background-color: #ffb400aa;
+  }
+}
+
+.ai-showcase-container .glass-card {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 3fr 1fr;
@@ -204,7 +237,6 @@
   letter-spacing: 0.2rem;
   backdrop-filter: blur(20px) brightness(50%);
   aspect-ratio: 16 / 11;
-  background: rgb(255, 255, 255);
   background: linear-gradient(
     160deg,
     rgba(255, 255, 255, 0.39923224568138194) 0%,

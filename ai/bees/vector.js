@@ -4,736 +4,735 @@
  * @requires constants
  */
 
+/**
+ * @module Constants
+ * @submodule Constants
+ * @for p5
+ */
 
- /**
-  * @module Constants
-  * @submodule Constants
-  * @for p5
-  */
+const _PI = Math.PI
 
- const _PI = Math.PI;
+/**
+ * Version of this p5.js.
+ * @property {String} VERSION
+ * @final
+ */
+export const VERSION =
+  'VERSION_CONST_WILL_BE_REPLACED_BY_BROWSERIFY_BUILD_PROCESS'
 
- /**
-  * Version of this p5.js.
-  * @property {String} VERSION
-  * @final
-  */
- export const VERSION =
-   'VERSION_CONST_WILL_BE_REPLACED_BY_BROWSERIFY_BUILD_PROCESS';
+// GRAPHICS RENDERER
+/**
+ * The default, two-dimensional renderer.
+ * @property {String} P2D
+ * @final
+ */
+export const P2D = 'p2d'
+/**
+ * One of the two render modes in p5.js: P2D (default renderer) and WEBGL
+ * Enables 3D render by introducing the third dimension: Z
+ * @property {String} WEBGL
+ * @final
+ */
+export const WEBGL = 'webgl'
 
- // GRAPHICS RENDERER
- /**
-  * The default, two-dimensional renderer.
-  * @property {String} P2D
-  * @final
-  */
- export const P2D = 'p2d';
- /**
-  * One of the two render modes in p5.js: P2D (default renderer) and WEBGL
-  * Enables 3D render by introducing the third dimension: Z
-  * @property {String} WEBGL
-  * @final
-  */
- export const WEBGL = 'webgl';
+// ENVIRONMENT
+/**
+ * @property {String} ARROW
+ * @final
+ */
+export const ARROW = 'default'
+/**
+ * @property {String} CROSS
+ * @final
+ */
+export const CROSS = 'crosshair'
+/**
+ * @property {String} HAND
+ * @final
+ */
+export const HAND = 'pointer'
+/**
+ * @property {String} MOVE
+ * @final
+ */
+export const MOVE = 'move'
+/**
+ * @property {String} TEXT
+ * @final
+ */
+export const TEXT = 'text'
+/**
+ * @property {String} WAIT
+ * @final
+ */
+export const WAIT = 'wait'
 
- // ENVIRONMENT
- /**
-  * @property {String} ARROW
-  * @final
-  */
- export const ARROW = 'default';
- /**
-  * @property {String} CROSS
-  * @final
-  */
- export const CROSS = 'crosshair';
- /**
-  * @property {String} HAND
-  * @final
-  */
- export const HAND = 'pointer';
- /**
-  * @property {String} MOVE
-  * @final
-  */
- export const MOVE = 'move';
- /**
-  * @property {String} TEXT
-  * @final
-  */
- export const TEXT = 'text';
- /**
-  * @property {String} WAIT
-  * @final
-  */
- export const WAIT = 'wait';
+// TRIGONOMETRY
 
- // TRIGONOMETRY
+/**
+ * HALF_PI is a mathematical constant with the value
+ * 1.57079632679489661923. It is half the ratio of the
+ * circumference of a circle to its diameter. It is useful in
+ * combination with the trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.
+ *
+ * @property {Number} HALF_PI
+ * @final
+ *
+ * @example
+ * <div><code>
+ * arc(50, 50, 80, 80, 0, HALF_PI);
+ * </code></div>
+ *
+ * @alt
+ * 80x80 white quarter-circle with curve toward bottom right of canvas.
+ */
+export const HALF_PI = _PI / 2
+/**
+ * PI is a mathematical constant with the value
+ * 3.14159265358979323846. It is the ratio of the circumference
+ * of a circle to its diameter. It is useful in combination with
+ * the trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.
+ *
+ * @property {Number} PI
+ * @final
+ *
+ * @example
+ * <div><code>
+ * arc(50, 50, 80, 80, 0, PI);
+ * </code></div>
+ *
+ * @alt
+ * white half-circle with curve toward bottom of canvas.
+ */
+export const PI = _PI
+/**
+ * QUARTER_PI is a mathematical constant with the value 0.7853982.
+ * It is one quarter the ratio of the circumference of a circle to
+ * its diameter. It is useful in combination with the trigonometric
+ * functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.
+ *
+ * @property {Number} QUARTER_PI
+ * @final
+ *
+ * @example
+ * <div><code>
+ * arc(50, 50, 80, 80, 0, QUARTER_PI);
+ * </code></div>
+ *
+ * @alt
+ * white eighth-circle rotated about 40 degrees with curve bottom right canvas.
+ */
+export const QUARTER_PI = _PI / 4
+/**
+ * TAU is an alias for TWO_PI, a mathematical constant with the
+ * value 6.28318530717958647693. It is twice the ratio of the
+ * circumference of a circle to its diameter. It is useful in
+ * combination with the trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.
+ *
+ * @property {Number} TAU
+ * @final
+ *
+ * @example
+ * <div><code>
+ * arc(50, 50, 80, 80, 0, TAU);
+ * </code></div>
+ *
+ * @alt
+ * 80x80 white ellipse shape in center of canvas.
+ */
+export const TAU = _PI * 2
+/**
+ * TWO_PI is a mathematical constant with the value
+ * 6.28318530717958647693. It is twice the ratio of the
+ * circumference of a circle to its diameter. It is useful in
+ * combination with the trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.
+ *
+ * @property {Number} TWO_PI
+ * @final
+ *
+ * @example
+ * <div><code>
+ * arc(50, 50, 80, 80, 0, TWO_PI);
+ * </code></div>
+ *
+ * @alt
+ * 80x80 white ellipse shape in center of canvas.
+ */
+export const TWO_PI = _PI * 2
+/**
+ * Constant to be used with <a href="#/p5/angleMode">angleMode()</a> function, to set the mode which
+ * p5.js interprets and calculates angles (either DEGREES or RADIANS).
+ * @property {String} DEGREES
+ * @final
+ *
+ * @example
+ * <div class='norender'><code>
+ * function setup() {
+ *   angleMode(DEGREES);
+ * }
+ * </code></div>
+ */
+export const DEGREES = 'degrees'
+/**
+ * Constant to be used with <a href="#/p5/angleMode">angleMode()</a> function, to set the mode which
+ * p5.js interprets and calculates angles (either RADIANS or DEGREES).
+ * @property {String} RADIANS
+ * @final
+ *
+ * @example
+ * <div class='norender'><code>
+ * function setup() {
+ *   angleMode(RADIANS);
+ * }
+ * </code></div>
+ */
+export const RADIANS = 'radians'
+export const DEG_TO_RAD = _PI / 180.0
+export const RAD_TO_DEG = 180.0 / _PI
 
- /**
-  * HALF_PI is a mathematical constant with the value
-  * 1.57079632679489661923. It is half the ratio of the
-  * circumference of a circle to its diameter. It is useful in
-  * combination with the trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.
-  *
-  * @property {Number} HALF_PI
-  * @final
-  *
-  * @example
-  * <div><code>
-  * arc(50, 50, 80, 80, 0, HALF_PI);
-  * </code></div>
-  *
-  * @alt
-  * 80x80 white quarter-circle with curve toward bottom right of canvas.
-  */
- export const HALF_PI = _PI / 2;
- /**
-  * PI is a mathematical constant with the value
-  * 3.14159265358979323846. It is the ratio of the circumference
-  * of a circle to its diameter. It is useful in combination with
-  * the trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.
-  *
-  * @property {Number} PI
-  * @final
-  *
-  * @example
-  * <div><code>
-  * arc(50, 50, 80, 80, 0, PI);
-  * </code></div>
-  *
-  * @alt
-  * white half-circle with curve toward bottom of canvas.
-  */
- export const PI = _PI;
- /**
-  * QUARTER_PI is a mathematical constant with the value 0.7853982.
-  * It is one quarter the ratio of the circumference of a circle to
-  * its diameter. It is useful in combination with the trigonometric
-  * functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.
-  *
-  * @property {Number} QUARTER_PI
-  * @final
-  *
-  * @example
-  * <div><code>
-  * arc(50, 50, 80, 80, 0, QUARTER_PI);
-  * </code></div>
-  *
-  * @alt
-  * white eighth-circle rotated about 40 degrees with curve bottom right canvas.
-  */
- export const QUARTER_PI = _PI / 4;
- /**
-  * TAU is an alias for TWO_PI, a mathematical constant with the
-  * value 6.28318530717958647693. It is twice the ratio of the
-  * circumference of a circle to its diameter. It is useful in
-  * combination with the trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.
-  *
-  * @property {Number} TAU
-  * @final
-  *
-  * @example
-  * <div><code>
-  * arc(50, 50, 80, 80, 0, TAU);
-  * </code></div>
-  *
-  * @alt
-  * 80x80 white ellipse shape in center of canvas.
-  */
- export const TAU = _PI * 2;
- /**
-  * TWO_PI is a mathematical constant with the value
-  * 6.28318530717958647693. It is twice the ratio of the
-  * circumference of a circle to its diameter. It is useful in
-  * combination with the trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.
-  *
-  * @property {Number} TWO_PI
-  * @final
-  *
-  * @example
-  * <div><code>
-  * arc(50, 50, 80, 80, 0, TWO_PI);
-  * </code></div>
-  *
-  * @alt
-  * 80x80 white ellipse shape in center of canvas.
-  */
- export const TWO_PI = _PI * 2;
- /**
-  * Constant to be used with <a href="#/p5/angleMode">angleMode()</a> function, to set the mode which
-  * p5.js interprets and calculates angles (either DEGREES or RADIANS).
-  * @property {String} DEGREES
-  * @final
-  *
-  * @example
-  * <div class='norender'><code>
-  * function setup() {
-  *   angleMode(DEGREES);
-  * }
-  * </code></div>
-  */
- export const DEGREES = 'degrees';
- /**
-  * Constant to be used with <a href="#/p5/angleMode">angleMode()</a> function, to set the mode which
-  * p5.js interprets and calculates angles (either RADIANS or DEGREES).
-  * @property {String} RADIANS
-  * @final
-  *
-  * @example
-  * <div class='norender'><code>
-  * function setup() {
-  *   angleMode(RADIANS);
-  * }
-  * </code></div>
-  */
- export const RADIANS = 'radians';
- export const DEG_TO_RAD = _PI / 180.0;
- export const RAD_TO_DEG = 180.0 / _PI;
+// SHAPE
+/**
+ * @property {String} CORNER
+ * @final
+ */
+export const CORNER = 'corner'
+/**
+ * @property {String} CORNERS
+ * @final
+ */
+export const CORNERS = 'corners'
+/**
+ * @property {String} RADIUS
+ * @final
+ */
+export const RADIUS = 'radius'
+/**
+ * @property {String} RIGHT
+ * @final
+ */
+export const RIGHT = 'right'
+/**
+ * @property {String} LEFT
+ * @final
+ */
+export const LEFT = 'left'
+/**
+ * @property {String} CENTER
+ * @final
+ */
+export const CENTER = 'center'
+/**
+ * @property {String} TOP
+ * @final
+ */
+export const TOP = 'top'
+/**
+ * @property {String} BOTTOM
+ * @final
+ */
+export const BOTTOM = 'bottom'
+/**
+ * @property {String} BASELINE
+ * @final
+ * @default alphabetic
+ */
+export const BASELINE = 'alphabetic'
+/**
+ * @property {Number} POINTS
+ * @final
+ * @default 0x0000
+ */
+export const POINTS = 0x0000
+/**
+ * @property {Number} LINES
+ * @final
+ * @default 0x0001
+ */
+export const LINES = 0x0001
+/**
+ * @property {Number} LINE_STRIP
+ * @final
+ * @default 0x0003
+ */
+export const LINE_STRIP = 0x0003
+/**
+ * @property {Number} LINE_LOOP
+ * @final
+ * @default 0x0002
+ */
+export const LINE_LOOP = 0x0002
+/**
+ * @property {Number} TRIANGLES
+ * @final
+ * @default 0x0004
+ */
+export const TRIANGLES = 0x0004
+/**
+ * @property {Number} TRIANGLE_FAN
+ * @final
+ * @default 0x0006
+ */
+export const TRIANGLE_FAN = 0x0006
+/**
+ * @property {Number} TRIANGLE_STRIP
+ * @final
+ * @default 0x0005
+ */
+export const TRIANGLE_STRIP = 0x0005
+/**
+ * @property {String} QUADS
+ * @final
+ */
+export const QUADS = 'quads'
+/**
+ * @property {String} QUAD_STRIP
+ * @final
+ * @default quad_strip
+ */
+export const QUAD_STRIP = 'quad_strip'
+/**
+ * @property {String} TESS
+ * @final
+ * @default tess
+ */
+export const TESS = 'tess'
+/**
+ * @property {String} CLOSE
+ * @final
+ */
+export const CLOSE = 'close'
+/**
+ * @property {String} OPEN
+ * @final
+ */
+export const OPEN = 'open'
+/**
+ * @property {String} CHORD
+ * @final
+ */
+export const CHORD = 'chord'
+/**
+ * @property {String} PIE
+ * @final
+ */
+export const PIE = 'pie'
+/**
+ * @property {String} PROJECT
+ * @final
+ * @default square
+ */
+export const PROJECT = 'square' // PEND: careful this is counterintuitive
+/**
+ * @property {String} SQUARE
+ * @final
+ * @default butt
+ */
+export const SQUARE = 'butt'
+/**
+ * @property {String} ROUND
+ * @final
+ */
+export const ROUND = 'round'
+/**
+ * @property {String} BEVEL
+ * @final
+ */
+export const BEVEL = 'bevel'
+/**
+ * @property {String} MITER
+ * @final
+ */
+export const MITER = 'miter'
 
- // SHAPE
- /**
-  * @property {String} CORNER
-  * @final
-  */
- export const CORNER = 'corner';
- /**
-  * @property {String} CORNERS
-  * @final
-  */
- export const CORNERS = 'corners';
- /**
-  * @property {String} RADIUS
-  * @final
-  */
- export const RADIUS = 'radius';
- /**
-  * @property {String} RIGHT
-  * @final
-  */
- export const RIGHT = 'right';
- /**
-  * @property {String} LEFT
-  * @final
-  */
- export const LEFT = 'left';
- /**
-  * @property {String} CENTER
-  * @final
-  */
- export const CENTER = 'center';
- /**
-  * @property {String} TOP
-  * @final
-  */
- export const TOP = 'top';
- /**
-  * @property {String} BOTTOM
-  * @final
-  */
- export const BOTTOM = 'bottom';
- /**
-  * @property {String} BASELINE
-  * @final
-  * @default alphabetic
-  */
- export const BASELINE = 'alphabetic';
- /**
-  * @property {Number} POINTS
-  * @final
-  * @default 0x0000
-  */
- export const POINTS = 0x0000;
- /**
-  * @property {Number} LINES
-  * @final
-  * @default 0x0001
-  */
- export const LINES = 0x0001;
- /**
-  * @property {Number} LINE_STRIP
-  * @final
-  * @default 0x0003
-  */
- export const LINE_STRIP = 0x0003;
- /**
-  * @property {Number} LINE_LOOP
-  * @final
-  * @default 0x0002
-  */
- export const LINE_LOOP = 0x0002;
- /**
-  * @property {Number} TRIANGLES
-  * @final
-  * @default 0x0004
-  */
- export const TRIANGLES = 0x0004;
- /**
-  * @property {Number} TRIANGLE_FAN
-  * @final
-  * @default 0x0006
-  */
- export const TRIANGLE_FAN = 0x0006;
- /**
-  * @property {Number} TRIANGLE_STRIP
-  * @final
-  * @default 0x0005
-  */
- export const TRIANGLE_STRIP = 0x0005;
- /**
-  * @property {String} QUADS
-  * @final
-  */
- export const QUADS = 'quads';
- /**
-  * @property {String} QUAD_STRIP
-  * @final
-  * @default quad_strip
-  */
- export const QUAD_STRIP = 'quad_strip';
- /**
-  * @property {String} TESS
-  * @final
-  * @default tess
-  */
- export const TESS = 'tess';
- /**
-  * @property {String} CLOSE
-  * @final
-  */
- export const CLOSE = 'close';
- /**
-  * @property {String} OPEN
-  * @final
-  */
- export const OPEN = 'open';
- /**
-  * @property {String} CHORD
-  * @final
-  */
- export const CHORD = 'chord';
- /**
-  * @property {String} PIE
-  * @final
-  */
- export const PIE = 'pie';
- /**
-  * @property {String} PROJECT
-  * @final
-  * @default square
-  */
- export const PROJECT = 'square'; // PEND: careful this is counterintuitive
- /**
-  * @property {String} SQUARE
-  * @final
-  * @default butt
-  */
- export const SQUARE = 'butt';
- /**
-  * @property {String} ROUND
-  * @final
-  */
- export const ROUND = 'round';
- /**
-  * @property {String} BEVEL
-  * @final
-  */
- export const BEVEL = 'bevel';
- /**
-  * @property {String} MITER
-  * @final
-  */
- export const MITER = 'miter';
+// COLOR
+/**
+ * @property {String} RGB
+ * @final
+ */
+export const RGB = 'rgb'
+/**
+ * HSB (hue, saturation, brightness) is a type of color model.
+ * You can learn more about it at
+ * <a href="https://learnui.design/blog/the-hsb-color-system-practicioners-primer.html">HSB</a>.
+ *
+ * @property {String} HSB
+ * @final
+ */
+export const HSB = 'hsb'
+/**
+ * @property {String} HSL
+ * @final
+ */
+export const HSL = 'hsl'
 
- // COLOR
- /**
-  * @property {String} RGB
-  * @final
-  */
- export const RGB = 'rgb';
- /**
-  * HSB (hue, saturation, brightness) is a type of color model.
-  * You can learn more about it at
-  * <a href="https://learnui.design/blog/the-hsb-color-system-practicioners-primer.html">HSB</a>.
-  *
-  * @property {String} HSB
-  * @final
-  */
- export const HSB = 'hsb';
- /**
-  * @property {String} HSL
-  * @final
-  */
- export const HSL = 'hsl';
+// DOM EXTENSION
+/**
+ * AUTO allows us to automatically set the width or height of an element (but not both),
+ * based on the current height and width of the element. Only one parameter can
+ * be passed to the <a href="/#/p5.Element/size">size</a> function as AUTO, at a time.
+ *
+ * @property {String} AUTO
+ * @final
+ */
+export const AUTO = 'auto'
 
- // DOM EXTENSION
- /**
-  * AUTO allows us to automatically set the width or height of an element (but not both),
-  * based on the current height and width of the element. Only one parameter can
-  * be passed to the <a href="/#/p5.Element/size">size</a> function as AUTO, at a time.
-  *
-  * @property {String} AUTO
-  * @final
-  */
- export const AUTO = 'auto';
+/**
+ * @property {Number} ALT
+ * @final
+ */
+// INPUT
+export const ALT = 18
+/**
+ * @property {Number} BACKSPACE
+ * @final
+ */
+export const BACKSPACE = 8
+/**
+ * @property {Number} CONTROL
+ * @final
+ */
+export const CONTROL = 17
+/**
+ * @property {Number} DELETE
+ * @final
+ */
+export const DELETE = 46
+/**
+ * @property {Number} DOWN_ARROW
+ * @final
+ */
+export const DOWN_ARROW = 40
+/**
+ * @property {Number} ENTER
+ * @final
+ */
+export const ENTER = 13
+/**
+ * @property {Number} ESCAPE
+ * @final
+ */
+export const ESCAPE = 27
+/**
+ * @property {Number} LEFT_ARROW
+ * @final
+ */
+export const LEFT_ARROW = 37
+/**
+ * @property {Number} OPTION
+ * @final
+ */
+export const OPTION = 18
+/**
+ * @property {Number} RETURN
+ * @final
+ */
+export const RETURN = 13
+/**
+ * @property {Number} RIGHT_ARROW
+ * @final
+ */
+export const RIGHT_ARROW = 39
+/**
+ * @property {Number} SHIFT
+ * @final
+ */
+export const SHIFT = 16
+/**
+ * @property {Number} TAB
+ * @final
+ */
+export const TAB = 9
+/**
+ * @property {Number} UP_ARROW
+ * @final
+ */
+export const UP_ARROW = 38
 
- /**
-  * @property {Number} ALT
-  * @final
-  */
- // INPUT
- export const ALT = 18;
- /**
-  * @property {Number} BACKSPACE
-  * @final
-  */
- export const BACKSPACE = 8;
- /**
-  * @property {Number} CONTROL
-  * @final
-  */
- export const CONTROL = 17;
- /**
-  * @property {Number} DELETE
-  * @final
-  */
- export const DELETE = 46;
- /**
-  * @property {Number} DOWN_ARROW
-  * @final
-  */
- export const DOWN_ARROW = 40;
- /**
-  * @property {Number} ENTER
-  * @final
-  */
- export const ENTER = 13;
- /**
-  * @property {Number} ESCAPE
-  * @final
-  */
- export const ESCAPE = 27;
- /**
-  * @property {Number} LEFT_ARROW
-  * @final
-  */
- export const LEFT_ARROW = 37;
- /**
-  * @property {Number} OPTION
-  * @final
-  */
- export const OPTION = 18;
- /**
-  * @property {Number} RETURN
-  * @final
-  */
- export const RETURN = 13;
- /**
-  * @property {Number} RIGHT_ARROW
-  * @final
-  */
- export const RIGHT_ARROW = 39;
- /**
-  * @property {Number} SHIFT
-  * @final
-  */
- export const SHIFT = 16;
- /**
-  * @property {Number} TAB
-  * @final
-  */
- export const TAB = 9;
- /**
-  * @property {Number} UP_ARROW
-  * @final
-  */
- export const UP_ARROW = 38;
+// RENDERING
+/**
+ * @property {String} BLEND
+ * @final
+ * @default source-over
+ */
+export const BLEND = 'source-over'
+/**
+ * @property {String} REMOVE
+ * @final
+ * @default destination-out
+ */
+export const REMOVE = 'destination-out'
+/**
+ * @property {String} ADD
+ * @final
+ * @default lighter
+ */
+export const ADD = 'lighter'
+//ADD: 'add', //
+//SUBTRACT: 'subtract', //
+/**
+ * @property {String} DARKEST
+ * @final
+ */
+export const DARKEST = 'darken'
+/**
+ * @property {String} LIGHTEST
+ * @final
+ * @default lighten
+ */
+export const LIGHTEST = 'lighten'
+/**
+ * @property {String} DIFFERENCE
+ * @final
+ */
+export const DIFFERENCE = 'difference'
+/**
+ * @property {String} SUBTRACT
+ * @final
+ */
+export const SUBTRACT = 'subtract'
+/**
+ * @property {String} EXCLUSION
+ * @final
+ */
+export const EXCLUSION = 'exclusion'
+/**
+ * @property {String} MULTIPLY
+ * @final
+ */
+export const MULTIPLY = 'multiply'
+/**
+ * @property {String} SCREEN
+ * @final
+ */
+export const SCREEN = 'screen'
+/**
+ * @property {String} REPLACE
+ * @final
+ * @default copy
+ */
+export const REPLACE = 'copy'
+/**
+ * @property {String} OVERLAY
+ * @final
+ */
+export const OVERLAY = 'overlay'
+/**
+ * @property {String} HARD_LIGHT
+ * @final
+ */
+export const HARD_LIGHT = 'hard-light'
+/**
+ * @property {String} SOFT_LIGHT
+ * @final
+ */
+export const SOFT_LIGHT = 'soft-light'
+/**
+ * @property {String} DODGE
+ * @final
+ * @default color-dodge
+ */
+export const DODGE = 'color-dodge'
+/**
+ * @property {String} BURN
+ * @final
+ * @default color-burn
+ */
+export const BURN = 'color-burn'
 
- // RENDERING
- /**
-  * @property {String} BLEND
-  * @final
-  * @default source-over
-  */
- export const BLEND = 'source-over';
- /**
-  * @property {String} REMOVE
-  * @final
-  * @default destination-out
-  */
- export const REMOVE = 'destination-out';
- /**
-  * @property {String} ADD
-  * @final
-  * @default lighter
-  */
- export const ADD = 'lighter';
- //ADD: 'add', //
- //SUBTRACT: 'subtract', //
- /**
-  * @property {String} DARKEST
-  * @final
-  */
- export const DARKEST = 'darken';
- /**
-  * @property {String} LIGHTEST
-  * @final
-  * @default lighten
-  */
- export const LIGHTEST = 'lighten';
- /**
-  * @property {String} DIFFERENCE
-  * @final
-  */
- export const DIFFERENCE = 'difference';
- /**
-  * @property {String} SUBTRACT
-  * @final
-  */
- export const SUBTRACT = 'subtract';
- /**
-  * @property {String} EXCLUSION
-  * @final
-  */
- export const EXCLUSION = 'exclusion';
- /**
-  * @property {String} MULTIPLY
-  * @final
-  */
- export const MULTIPLY = 'multiply';
- /**
-  * @property {String} SCREEN
-  * @final
-  */
- export const SCREEN = 'screen';
- /**
-  * @property {String} REPLACE
-  * @final
-  * @default copy
-  */
- export const REPLACE = 'copy';
- /**
-  * @property {String} OVERLAY
-  * @final
-  */
- export const OVERLAY = 'overlay';
- /**
-  * @property {String} HARD_LIGHT
-  * @final
-  */
- export const HARD_LIGHT = 'hard-light';
- /**
-  * @property {String} SOFT_LIGHT
-  * @final
-  */
- export const SOFT_LIGHT = 'soft-light';
- /**
-  * @property {String} DODGE
-  * @final
-  * @default color-dodge
-  */
- export const DODGE = 'color-dodge';
- /**
-  * @property {String} BURN
-  * @final
-  * @default color-burn
-  */
- export const BURN = 'color-burn';
+// FILTERS
+/**
+ * @property {String} THRESHOLD
+ * @final
+ */
+export const THRESHOLD = 'threshold'
+/**
+ * @property {String} GRAY
+ * @final
+ */
+export const GRAY = 'gray'
+/**
+ * @property {String} OPAQUE
+ * @final
+ */
+export const OPAQUE = 'opaque'
+/**
+ * @property {String} INVERT
+ * @final
+ */
+export const INVERT = 'invert'
+/**
+ * @property {String} POSTERIZE
+ * @final
+ */
+export const POSTERIZE = 'posterize'
+/**
+ * @property {String} DILATE
+ * @final
+ */
+export const DILATE = 'dilate'
+/**
+ * @property {String} ERODE
+ * @final
+ */
+export const ERODE = 'erode'
+/**
+ * @property {String} BLUR
+ * @final
+ */
+export const BLUR = 'blur'
 
- // FILTERS
- /**
-  * @property {String} THRESHOLD
-  * @final
-  */
- export const THRESHOLD = 'threshold';
- /**
-  * @property {String} GRAY
-  * @final
-  */
- export const GRAY = 'gray';
- /**
-  * @property {String} OPAQUE
-  * @final
-  */
- export const OPAQUE = 'opaque';
- /**
-  * @property {String} INVERT
-  * @final
-  */
- export const INVERT = 'invert';
- /**
-  * @property {String} POSTERIZE
-  * @final
-  */
- export const POSTERIZE = 'posterize';
- /**
-  * @property {String} DILATE
-  * @final
-  */
- export const DILATE = 'dilate';
- /**
-  * @property {String} ERODE
-  * @final
-  */
- export const ERODE = 'erode';
- /**
-  * @property {String} BLUR
-  * @final
-  */
- export const BLUR = 'blur';
+// TYPOGRAPHY
+/**
+ * @property {String} NORMAL
+ * @final
+ */
+export const NORMAL = 'normal'
+/**
+ * @property {String} ITALIC
+ * @final
+ */
+export const ITALIC = 'italic'
+/**
+ * @property {String} BOLD
+ * @final
+ */
+export const BOLD = 'bold'
+/**
+ * @property {String} BOLDITALIC
+ * @final
+ */
+export const BOLDITALIC = 'bold italic'
+/**
+ * @property {String} CHAR
+ * @final
+ */
+export const CHAR = 'CHAR'
+/**
+ * @property {String} WORD
+ * @final
+ */
+export const WORD = 'WORD'
 
- // TYPOGRAPHY
- /**
-  * @property {String} NORMAL
-  * @final
-  */
- export const NORMAL = 'normal';
- /**
-  * @property {String} ITALIC
-  * @final
-  */
- export const ITALIC = 'italic';
- /**
-  * @property {String} BOLD
-  * @final
-  */
- export const BOLD = 'bold';
- /**
-  * @property {String} BOLDITALIC
-  * @final
-  */
- export const BOLDITALIC = 'bold italic';
- /**
-  * @property {String} CHAR
-  * @final
-  */
- export const CHAR = 'CHAR';
- /**
-  * @property {String} WORD
-  * @final
-  */
- export const WORD = 'WORD';
+// TYPOGRAPHY-INTERNAL
+export const _DEFAULT_TEXT_FILL = '#000000'
+export const _DEFAULT_LEADMULT = 1.25
+export const _CTX_MIDDLE = 'middle'
 
- // TYPOGRAPHY-INTERNAL
- export const _DEFAULT_TEXT_FILL = '#000000';
- export const _DEFAULT_LEADMULT = 1.25;
- export const _CTX_MIDDLE = 'middle';
+// VERTICES
+/**
+ * @property {String} LINEAR
+ * @final
+ */
+export const LINEAR = 'linear'
+/**
+ * @property {String} QUADRATIC
+ * @final
+ */
+export const QUADRATIC = 'quadratic'
+/**
+ * @property {String} BEZIER
+ * @final
+ */
+export const BEZIER = 'bezier'
+/**
+ * @property {String} CURVE
+ * @final
+ */
+export const CURVE = 'curve'
 
- // VERTICES
- /**
-  * @property {String} LINEAR
-  * @final
-  */
- export const LINEAR = 'linear';
- /**
-  * @property {String} QUADRATIC
-  * @final
-  */
- export const QUADRATIC = 'quadratic';
- /**
-  * @property {String} BEZIER
-  * @final
-  */
- export const BEZIER = 'bezier';
- /**
-  * @property {String} CURVE
-  * @final
-  */
- export const CURVE = 'curve';
+// WEBGL DRAWMODES
+/**
+ * @property {String} STROKE
+ * @final
+ */
+export const STROKE = 'stroke'
+/**
+ * @property {String} FILL
+ * @final
+ */
+export const FILL = 'fill'
+/**
+ * @property {String} TEXTURE
+ * @final
+ */
+export const TEXTURE = 'texture'
+/**
+ * @property {String} IMMEDIATE
+ * @final
+ */
+export const IMMEDIATE = 'immediate'
 
- // WEBGL DRAWMODES
- /**
-  * @property {String} STROKE
-  * @final
-  */
- export const STROKE = 'stroke';
- /**
-  * @property {String} FILL
-  * @final
-  */
- export const FILL = 'fill';
- /**
-  * @property {String} TEXTURE
-  * @final
-  */
- export const TEXTURE = 'texture';
- /**
-  * @property {String} IMMEDIATE
-  * @final
-  */
- export const IMMEDIATE = 'immediate';
+// WEBGL TEXTURE MODE
+// NORMAL already exists for typography
+/**
+ * @property {String} IMAGE
+ * @final
+ */
+export const IMAGE = 'image'
 
- // WEBGL TEXTURE MODE
- // NORMAL already exists for typography
- /**
-  * @property {String} IMAGE
-  * @final
-  */
- export const IMAGE = 'image';
+// WEBGL TEXTURE WRAP AND FILTERING
+// LINEAR already exists above
+/**
+ * @property {String} NEAREST
+ * @final
+ */
+export const NEAREST = 'nearest'
+/**
+ * @property {String} REPEAT
+ * @final
+ */
+export const REPEAT = 'repeat'
+/**
+ * @property {String} CLAMP
+ * @final
+ */
+export const CLAMP = 'clamp'
+/**
+ * @property {String} MIRROR
+ * @final
+ */
+export const MIRROR = 'mirror'
 
- // WEBGL TEXTURE WRAP AND FILTERING
- // LINEAR already exists above
- /**
-  * @property {String} NEAREST
-  * @final
-  */
- export const NEAREST = 'nearest';
- /**
-  * @property {String} REPEAT
-  * @final
-  */
- export const REPEAT = 'repeat';
- /**
-  * @property {String} CLAMP
-  * @final
-  */
- export const CLAMP = 'clamp';
- /**
-  * @property {String} MIRROR
-  * @final
-  */
- export const MIRROR = 'mirror';
+// DEVICE-ORIENTATION
+/**
+ * @property {String} LANDSCAPE
+ * @final
+ */
+export const LANDSCAPE = 'landscape'
+/**
+ * @property {String} PORTRAIT
+ * @final
+ */
+export const PORTRAIT = 'portrait'
 
- // DEVICE-ORIENTATION
- /**
-  * @property {String} LANDSCAPE
-  * @final
-  */
- export const LANDSCAPE = 'landscape';
- /**
-  * @property {String} PORTRAIT
-  * @final
-  */
- export const PORTRAIT = 'portrait';
+// DEFAULTS
+export const _DEFAULT_STROKE = '#000000'
+export const _DEFAULT_FILL = '#FFFFFF'
 
- // DEFAULTS
- export const _DEFAULT_STROKE = '#000000';
- export const _DEFAULT_FILL = '#FFFFFF';
+/**
+ * @property {String} GRID
+ * @final
+ */
+export const GRID = 'grid'
 
- /**
-  * @property {String} GRID
-  * @final
-  */
- export const GRID = 'grid';
+/**
+ * @property {String} AXES
+ * @final
+ */
+export const AXES = 'axes'
 
- /**
-  * @property {String} AXES
-  * @final
-  */
- export const AXES = 'axes';
+/**
+ * @property {String} LABEL
+ * @final
+ */
+export const LABEL = 'label'
+/**
+ * @property {String} FALLBACK
+ * @final
+ */
+export const FALLBACK = 'fallback'
 
- /**
-  * @property {String} LABEL
-  * @final
-  */
- export const LABEL = 'label';
- /**
-  * @property {String} FALLBACK
-  * @final
-  */
- export const FALLBACK = 'fallback';
-
- class p5 {
+class p5 {
   constructor(sketch, node, sync) {
     //////////////////////////////////////////////
     // PUBLIC p5 PROPERTIES AND METHODS
@@ -866,22 +865,22 @@
     // PRIVATE p5 PROPERTIES AND METHODS
     //////////////////////////////////////////////
 
-    this._setupDone = false;
+    this._setupDone = false
     // for handling hidpi
-    this._pixelDensity = Math.ceil(window.devicePixelRatio) || 1;
-    this._userNode = node;
-    this._curElement = null;
-    this._elements = [];
-    this._glAttributes = null;
-    this._requestAnimId = 0;
-    this._preloadCount = 0;
-    this._isGlobal = false;
-    this._loop = true;
-    this._initializeInstanceVariables();
+    this._pixelDensity = Math.ceil(window.devicePixelRatio) || 1
+    this._userNode = node
+    this._curElement = null
+    this._elements = []
+    this._glAttributes = null
+    this._requestAnimId = 0
+    this._preloadCount = 0
+    this._isGlobal = false
+    this._loop = true
+    this._initializeInstanceVariables()
     this._defaultCanvasSize = {
       width: 100,
-      height: 100
-    };
+      height: 100,
+    }
     this._events = {
       // keep track of user-events for unregistering later
       mousemove: null,
@@ -900,117 +899,116 @@
       touchmove: null,
       touchend: null,
       resize: null,
-      blur: null
-    };
-    this._millisStart = -1;
+      blur: null,
+    }
+    this._millisStart = -1
 
     // States used in the custom random generators
-    this._lcg_random_state = null;
-    this._gaussian_previous = false;
+    this._lcg_random_state = null
+    this._gaussian_previous = false
 
-    this._events.wheel = null;
-    this._loadingScreenId = 'p5_loading';
+    this._events.wheel = null
+    this._loadingScreenId = 'p5_loading'
 
     // Allows methods to be registered on an instance that
     // are instance-specific.
-    this._registeredMethods = {};
-    const methods = Object.getOwnPropertyNames(p5.prototype._registeredMethods);
+    this._registeredMethods = {}
+    const methods = Object.getOwnPropertyNames(p5.prototype._registeredMethods)
 
     for (const prop of methods) {
-      this._registeredMethods[prop] = p5.prototype._registeredMethods[
-        prop
-      ].slice();
+      this._registeredMethods[prop] =
+        p5.prototype._registeredMethods[prop].slice()
     }
 
     if (window.DeviceOrientationEvent) {
-      this._events.deviceorientation = null;
+      this._events.deviceorientation = null
     }
     if (window.DeviceMotionEvent && !window._isNodeWebkit) {
-      this._events.devicemotion = null;
+      this._events.devicemotion = null
     }
 
     this._start = () => {
       // Find node if id given
       if (this._userNode) {
         if (typeof this._userNode === 'string') {
-          this._userNode = document.getElementById(this._userNode);
+          this._userNode = document.getElementById(this._userNode)
         }
       }
 
-      const context = this._isGlobal ? window : this;
+      const context = this._isGlobal ? window : this
       if (context.preload) {
         // Setup loading screen
         // Set loading screen into dom if not present
         // Otherwise displays and removes user provided loading screen
-        let loadingScreen = document.getElementById(this._loadingScreenId);
+        let loadingScreen = document.getElementById(this._loadingScreenId)
         if (!loadingScreen) {
-          loadingScreen = document.createElement('div');
-          loadingScreen.innerHTML = 'Loading...';
-          loadingScreen.style.position = 'absolute';
-          loadingScreen.id = this._loadingScreenId;
-          const node = this._userNode || document.body;
-          node.appendChild(loadingScreen);
+          loadingScreen = document.createElement('div')
+          loadingScreen.innerHTML = 'Loading...'
+          loadingScreen.style.position = 'absolute'
+          loadingScreen.id = this._loadingScreenId
+          const node = this._userNode || document.body
+          node.appendChild(loadingScreen)
         }
-        const methods = this._preloadMethods;
+        const methods = this._preloadMethods
         for (const method in methods) {
           // default to p5 if no object defined
-          methods[method] = methods[method] || p5;
-          let obj = methods[method];
+          methods[method] = methods[method] || p5
+          let obj = methods[method]
           //it's p5, check if it's global or instance
           if (obj === p5.prototype || obj === p5) {
             if (this._isGlobal) {
-              window[method] = this._wrapPreload(this, method);
+              window[method] = this._wrapPreload(this, method)
             }
-            obj = this;
+            obj = this
           }
-          this._registeredPreloadMethods[method] = obj[method];
-          obj[method] = this._wrapPreload(obj, method);
+          this._registeredPreloadMethods[method] = obj[method]
+          obj[method] = this._wrapPreload(obj, method)
         }
 
-        context.preload();
-        this._runIfPreloadsAreDone();
+        context.preload()
+        this._runIfPreloadsAreDone()
       } else {
-        this._setup();
-        this._draw();
+        this._setup()
+        this._draw()
       }
-    };
+    }
 
-    this._runIfPreloadsAreDone = function() {
-      const context = this._isGlobal ? window : this;
+    this._runIfPreloadsAreDone = function () {
+      const context = this._isGlobal ? window : this
       if (context._preloadCount === 0) {
-        const loadingScreen = document.getElementById(context._loadingScreenId);
+        const loadingScreen = document.getElementById(context._loadingScreenId)
         if (loadingScreen) {
-          loadingScreen.parentNode.removeChild(loadingScreen);
+          loadingScreen.parentNode.removeChild(loadingScreen)
         }
         if (!this._setupDone) {
-          this._lastFrameTime = window.performance.now();
-          context._setup();
-          context._draw();
+          this._lastFrameTime = window.performance.now()
+          context._setup()
+          context._draw()
         }
       }
-    };
+    }
 
-    this._decrementPreload = function() {
-      const context = this._isGlobal ? window : this;
+    this._decrementPreload = function () {
+      const context = this._isGlobal ? window : this
       if (typeof context.preload === 'function') {
-        context._setProperty('_preloadCount', context._preloadCount - 1);
-        context._runIfPreloadsAreDone();
+        context._setProperty('_preloadCount', context._preloadCount - 1)
+        context._runIfPreloadsAreDone()
       }
-    };
+    }
 
-    this._wrapPreload = function(obj, fnName) {
+    this._wrapPreload = function (obj, fnName) {
       return (...args) => {
         //increment counter
-        this._incrementPreload();
+        this._incrementPreload()
         //call original function
-        return this._registeredPreloadMethods[fnName].apply(obj, args);
-      };
-    };
+        return this._registeredPreloadMethods[fnName].apply(obj, args)
+      }
+    }
 
-    this._incrementPreload = function() {
-      const context = this._isGlobal ? window : this;
-      context._setProperty('_preloadCount', context._preloadCount + 1);
-    };
+    this._incrementPreload = function () {
+      const context = this._isGlobal ? window : this
+      context._setProperty('_preloadCount', context._preloadCount + 1)
+    }
 
     this._setup = () => {
       // Always create a default canvas.
@@ -1020,49 +1018,49 @@
         this._defaultCanvasSize.width,
         this._defaultCanvasSize.height,
         'p2d'
-      );
+      )
 
       // return preload functions to their normal vals if switched by preload
-      const context = this._isGlobal ? window : this;
+      const context = this._isGlobal ? window : this
       if (typeof context.preload === 'function') {
         for (const f in this._preloadMethods) {
-          context[f] = this._preloadMethods[f][f];
+          context[f] = this._preloadMethods[f][f]
           if (context[f] && this) {
-            context[f] = context[f].bind(this);
+            context[f] = context[f].bind(this)
           }
         }
       }
 
       // Record the time when sketch starts
-      this._millisStart = window.performance.now();
+      this._millisStart = window.performance.now()
 
       // Short-circuit on this, in case someone used the library in "global"
       // mode earlier
       if (typeof context.setup === 'function') {
-        context.setup();
+        context.setup()
       }
 
       // unhide any hidden canvases that were created
-      const canvases = document.getElementsByTagName('canvas');
+      const canvases = document.getElementsByTagName('canvas')
 
       for (const k of canvases) {
         if (k.dataset.hidden === 'true') {
-          k.style.visibility = '';
-          delete k.dataset.hidden;
+          k.style.visibility = ''
+          delete k.dataset.hidden
         }
       }
 
-      this._lastFrameTime = window.performance.now();
-      this._setupDone = true;
+      this._lastFrameTime = window.performance.now()
+      this._setupDone = true
       if (this._accessibleOutputs.grid || this._accessibleOutputs.text) {
-        this._updateAccsOutput();
+        this._updateAccsOutput()
       }
-    };
+    }
 
     this._draw = () => {
-      const now = window.performance.now();
-      const time_since_last = now - this._lastFrameTime;
-      const target_time_between_frames = 1000 / this._targetFrameRate;
+      const now = window.performance.now()
+      const time_since_last = now - this._lastFrameTime
+      const target_time_between_frames = 1000 / this._targetFrameRate
 
       // only draw if we really need to; don't overextend the browser.
       // draw if we're within 5ms of when our next frame should paint
@@ -1072,45 +1070,45 @@
       // in sync with the browser. note that we have to draw once even
       // if looping is off, so we bypass the time delay if that
       // is the case.
-      const epsilon = 5;
+      const epsilon = 5
       if (
         !this._loop ||
         time_since_last >= target_time_between_frames - epsilon
       ) {
         //mandatory update values(matrixes and stack)
-        this.redraw();
-        this._frameRate = 1000.0 / (now - this._lastFrameTime);
-        this.deltaTime = now - this._lastFrameTime;
-        this._setProperty('deltaTime', this.deltaTime);
-        this._lastFrameTime = now;
+        this.redraw()
+        this._frameRate = 1000.0 / (now - this._lastFrameTime)
+        this.deltaTime = now - this._lastFrameTime
+        this._setProperty('deltaTime', this.deltaTime)
+        this._lastFrameTime = now
 
         // If the user is actually using mouse module, then update
         // coordinates, otherwise skip. We can test this by simply
         // checking if any of the mouse functions are available or not.
         // NOTE : This reflects only in complete build or modular build.
         if (typeof this._updateMouseCoords !== 'undefined') {
-          this._updateMouseCoords();
+          this._updateMouseCoords()
 
           //reset delta values so they reset even if there is no mouse event to set them
           // for example if the mouse is outside the screen
-          this._setProperty('movedX', 0);
-          this._setProperty('movedY', 0);
+          this._setProperty('movedX', 0)
+          this._setProperty('movedY', 0)
         }
       }
 
       // get notified the next time the browser gives us
       // an opportunity to draw.
       if (this._loop) {
-        this._requestAnimId = window.requestAnimationFrame(this._draw);
+        this._requestAnimId = window.requestAnimationFrame(this._draw)
       }
-    };
+    }
 
     this._setProperty = (prop, value) => {
-      this[prop] = value;
+      this[prop] = value
       if (this._isGlobal) {
-        window[prop] = value;
+        window[prop] = value
       }
-    };
+    }
 
     /**
      * Removes the entire p5 sketch. This will remove the canvas and any
@@ -1138,141 +1136,141 @@
      *
      */
     this.remove = () => {
-      const loadingScreen = document.getElementById(this._loadingScreenId);
+      const loadingScreen = document.getElementById(this._loadingScreenId)
       if (loadingScreen) {
-        loadingScreen.parentNode.removeChild(loadingScreen);
+        loadingScreen.parentNode.removeChild(loadingScreen)
         // Add 1 to preload counter to prevent the sketch ever executing setup()
-        this._incrementPreload();
+        this._incrementPreload()
       }
       if (this._curElement) {
         // stop draw
-        this._loop = false;
+        this._loop = false
         if (this._requestAnimId) {
-          window.cancelAnimationFrame(this._requestAnimId);
+          window.cancelAnimationFrame(this._requestAnimId)
         }
 
         // unregister events sketch-wide
         for (const ev in this._events) {
-          window.removeEventListener(ev, this._events[ev]);
+          window.removeEventListener(ev, this._events[ev])
         }
 
         // remove DOM elements created by p5, and listeners
         for (const e of this._elements) {
           if (e.elt && e.elt.parentNode) {
-            e.elt.parentNode.removeChild(e.elt);
+            e.elt.parentNode.removeChild(e.elt)
           }
           for (const elt_ev in e._events) {
-            e.elt.removeEventListener(elt_ev, e._events[elt_ev]);
+            e.elt.removeEventListener(elt_ev, e._events[elt_ev])
           }
         }
 
         // call any registered remove functions
-        const self = this;
-        this._registeredMethods.remove.forEach(f => {
+        const self = this
+        this._registeredMethods.remove.forEach((f) => {
           if (typeof f !== 'undefined') {
-            f.call(self);
+            f.call(self)
           }
-        });
+        })
       }
       // remove window bound properties and methods
       if (this._isGlobal) {
         for (const p in p5.prototype) {
           try {
-            delete window[p];
+            delete window[p]
           } catch (x) {
-            window[p] = undefined;
+            window[p] = undefined
           }
         }
         for (const p2 in this) {
           if (this.hasOwnProperty(p2)) {
             try {
-              delete window[p2];
+              delete window[p2]
             } catch (x) {
-              window[p2] = undefined;
+              window[p2] = undefined
             }
           }
         }
-        p5.instance = null;
+        p5.instance = null
       }
-    };
+    }
 
     // call any registered init functions
-    this._registeredMethods.init.forEach(function(f) {
+    this._registeredMethods.init.forEach(function (f) {
       if (typeof f !== 'undefined') {
-        f.call(this);
+        f.call(this)
       }
-    }, this);
+    }, this)
     // Set up promise preloads
-    this._setupPromisePreloads();
+    this._setupPromisePreloads()
 
-    const friendlyBindGlobal = this._createFriendlyGlobalFunctionBinder();
+    const friendlyBindGlobal = this._createFriendlyGlobalFunctionBinder()
 
     // If the user has created a global setup or draw function,
     // assume "global" mode and make everything global (i.e. on the window)
     if (!sketch) {
-      this._isGlobal = true;
-      p5.instance = this;
+      this._isGlobal = true
+      p5.instance = this
       // Loop through methods on the prototype and attach them to the window
       for (const p in p5.prototype) {
         if (typeof p5.prototype[p] === 'function') {
-          const ev = p.substring(2);
+          const ev = p.substring(2)
           if (!this._events.hasOwnProperty(ev)) {
             if (Math.hasOwnProperty(p) && Math[p] === p5.prototype[p]) {
               // Multiple p5 methods are just native Math functions. These can be
               // called without any binding.
-              friendlyBindGlobal(p, p5.prototype[p]);
+              friendlyBindGlobal(p, p5.prototype[p])
             } else {
-              friendlyBindGlobal(p, p5.prototype[p].bind(this));
+              friendlyBindGlobal(p, p5.prototype[p].bind(this))
             }
           }
         } else {
-          friendlyBindGlobal(p, p5.prototype[p]);
+          friendlyBindGlobal(p, p5.prototype[p])
         }
       }
       // Attach its properties to the window
       for (const p2 in this) {
         if (this.hasOwnProperty(p2)) {
-          friendlyBindGlobal(p2, this[p2]);
+          friendlyBindGlobal(p2, this[p2])
         }
       }
     } else {
       // Else, the user has passed in a sketch closure that may set
       // user-provided 'setup', 'draw', etc. properties on this instance of p5
-      sketch(this);
+      sketch(this)
 
       // Run a check to see if the user has misspelled 'setup', 'draw', etc
       // detects capitalization mistakes only ( Setup, SETUP, MouseClicked, etc)
-      p5._checkForUserDefinedFunctions(this);
+      p5._checkForUserDefinedFunctions(this)
     }
 
     // Bind events to window (not using container div bc key events don't work)
 
     for (const e in this._events) {
-      const f = this[`_on${e}`];
+      const f = this[`_on${e}`]
       if (f) {
-        const m = f.bind(this);
-        window.addEventListener(e, m, { passive: false });
-        this._events[e] = m;
+        const m = f.bind(this)
+        window.addEventListener(e, m, { passive: false })
+        this._events[e] = m
       }
     }
 
     const focusHandler = () => {
-      this._setProperty('focused', true);
-    };
+      this._setProperty('focused', true)
+    }
     const blurHandler = () => {
-      this._setProperty('focused', false);
-    };
-    window.addEventListener('focus', focusHandler);
-    window.addEventListener('blur', blurHandler);
+      this._setProperty('focused', false)
+    }
+    window.addEventListener('focus', focusHandler)
+    window.addEventListener('blur', blurHandler)
     this.registerMethod('remove', () => {
-      window.removeEventListener('focus', focusHandler);
-      window.removeEventListener('blur', blurHandler);
-    });
+      window.removeEventListener('focus', focusHandler)
+      window.removeEventListener('blur', blurHandler)
+    })
 
     if (document.readyState === 'complete') {
-      this._start();
+      this._start()
     } else {
-      window.addEventListener('load', this._start.bind(this), false);
+      window.addEventListener('load', this._start.bind(this), false)
     }
   }
 
@@ -1281,37 +1279,37 @@
       text: false,
       grid: false,
       textLabel: false,
-      gridLabel: false
-    };
+      gridLabel: false,
+    }
 
-    this._styles = [];
+    this._styles = []
 
-    this._bezierDetail = 20;
-    this._curveDetail = 20;
+    this._bezierDetail = 20
+    this._curveDetail = 20
 
-    this._colorMode = constants.RGB;
+    this._colorMode = constants.RGB
     this._colorMaxes = {
       rgb: [255, 255, 255, 255],
       hsb: [360, 100, 100, 1],
-      hsl: [360, 100, 100, 1]
-    };
+      hsl: [360, 100, 100, 1],
+    }
 
-    this._downKeys = {}; //Holds the key codes of currently pressed keys
+    this._downKeys = {} //Holds the key codes of currently pressed keys
   }
 
   registerPreloadMethod(fnString, obj) {
     // obj = obj || p5.prototype;
     if (!p5.prototype._preloadMethods.hasOwnProperty(fnString)) {
-      p5.prototype._preloadMethods[fnString] = obj;
+      p5.prototype._preloadMethods[fnString] = obj
     }
   }
 
   registerMethod(name, m) {
-    const target = this || p5.prototype;
+    const target = this || p5.prototype
     if (!target._registeredMethods.hasOwnProperty(name)) {
-      target._registeredMethods[name] = [];
+      target._registeredMethods[name] = []
     }
-    target._registeredMethods[name].push(m);
+    target._registeredMethods[name].push(m)
   }
 
   // create a function which provides a standardized process for binding
@@ -1320,15 +1318,15 @@
   // can be used in scenarios like unit testing where the window object
   // might not exist
   _createFriendlyGlobalFunctionBinder(options = {}) {
-    const globalObject = options.globalObject || window;
-    const log = options.log || console.log.bind(console);
+    const globalObject = options.globalObject || window
+    const log = options.log || console.log.bind(console)
     const propsToForciblyOverwrite = {
       // p5.print actually always overwrites an existing global function,
       // albeit one that is very unlikely to be used:
       //
       //   https://developer.mozilla.org/en-US/docs/Web/API/Window/print
-      print: true
-    };
+      print: true,
+    }
 
     return (prop, value) => {
       if (
@@ -1348,7 +1346,7 @@
           //   https://github.com/processing/p5.js/issues/1317
 
           if (prop in globalObject && !(prop in propsToForciblyOverwrite)) {
-            throw new Error(`global "${prop}" already exists`);
+            throw new Error(`global "${prop}" already exists`)
           }
 
           // It's possible that this might throw an error because there
@@ -1360,35 +1358,35 @@
             configurable: true,
             enumerable: true,
             get() {
-              return value;
+              return value
             },
             set(newValue) {
               Object.defineProperty(globalObject, prop, {
                 configurable: true,
                 enumerable: true,
                 value: newValue,
-                writable: true
-              });
+                writable: true,
+              })
               log(
                 `You just changed the value of "${prop}", which was a p5 function. This could cause problems later if you're not careful.`
-              );
-            }
-          });
+              )
+            },
+          })
         } catch (e) {
-          let message = `p5 had problems creating the global function "${prop}", possibly because your code is already using that name as a variable. You may want to rename your variable to something else.`;
-          p5._friendlyError(message, prop);
-          globalObject[prop] = value;
+          let message = `p5 had problems creating the global function "${prop}", possibly because your code is already using that name as a variable. You may want to rename your variable to something else.`
+          p5._friendlyError(message, prop)
+          globalObject[prop] = value
         }
       } else {
-        globalObject[prop] = value;
+        globalObject[prop] = value
       }
-    };
+    }
   }
 }
 
 // This is a pointer to our global mode p5 instance, if we're in
 // global mode.
-p5.instance = null;
+p5.instance = null
 
 /**
  * Allows for the friendly error system (FES) to be turned off when creating a sketch,
@@ -1406,11 +1404,11 @@ p5.instance = null;
  * }
  * </code></div>
  */
-p5.disableFriendlyErrors = false;
+p5.disableFriendlyErrors = false
 
 // attach constants to p5 prototype
 for (const k in constants) {
-  p5.prototype[k] = constants[k];
+  p5.prototype[k] = constants[k]
 }
 
 // functions that cause preload to wait
@@ -1424,12 +1422,12 @@ p5.prototype._preloadMethods = {
   loadTable: p5.prototype,
   loadFont: p5.prototype,
   loadModel: p5.prototype,
-  loadShader: p5.prototype
-};
+  loadShader: p5.prototype,
+}
 
-p5.prototype._registeredMethods = { init: [], pre: [], post: [], remove: [] };
+p5.prototype._registeredMethods = { init: [], pre: [], post: [], remove: [] }
 
-p5.prototype._registeredPreloadMethods = {};
+p5.prototype._registeredPreloadMethods = {}
 /**
  * A class to describe a two or three dimensional vector, specifically
  * a Euclidean (also known as geometric) vector. A vector is an entity
@@ -1471,36 +1469,36 @@ p5.prototype._registeredPreloadMethods = {};
  * 2 white ellipses. One center-left the other bottom right and off canvas
  */
 p5.Vector = function Vector() {
-  let x, y, z;
+  let x, y, z
   // This is how it comes in with createVector()
   if (arguments[0] instanceof p5) {
     // save reference to p5 if passed in
-    this.p5 = arguments[0];
-    x = arguments[1][0] || 0;
-    y = arguments[1][1] || 0;
-    z = arguments[1][2] || 0;
+    this.p5 = arguments[0]
+    x = arguments[1][0] || 0
+    y = arguments[1][1] || 0
+    z = arguments[1][2] || 0
     // This is what we'll get with new p5.Vector()
   } else {
-    x = arguments[0] || 0;
-    y = arguments[1] || 0;
-    z = arguments[2] || 0;
+    x = arguments[0] || 0
+    y = arguments[1] || 0
+    z = arguments[2] || 0
   }
   /**
    * The x component of the vector
    * @property x {Number}
    */
-  this.x = x;
+  this.x = x
   /**
    * The y component of the vector
    * @property y {Number}
    */
-  this.y = y;
+  this.y = y
   /**
    * The z component of the vector
    * @property z {Number}
    */
-  this.z = z;
-};
+  this.z = z
+}
 
 /**
  * Returns a string representation of a vector v by calling String(v)
@@ -1549,8 +1547,8 @@ p5.Vector = function Vector() {
  * </div>
  */
 p5.Vector.prototype.toString = function p5VectorToString() {
-  return `p5.Vector Object : [${this.x}, ${this.y}, ${this.z}]`;
-};
+  return `p5.Vector Object : [${this.x}, ${this.y}, ${this.z}]`
+}
 
 /**
  * Sets the x, y, and z component of the vector using two or three separate
@@ -1618,22 +1616,22 @@ p5.Vector.prototype.toString = function p5VectorToString() {
  */
 p5.Vector.prototype.set = function set(x, y, z) {
   if (x instanceof p5.Vector) {
-    this.x = x.x || 0;
-    this.y = x.y || 0;
-    this.z = x.z || 0;
-    return this;
+    this.x = x.x || 0
+    this.y = x.y || 0
+    this.z = x.z || 0
+    return this
   }
   if (x instanceof Array) {
-    this.x = x[0] || 0;
-    this.y = x[1] || 0;
-    this.z = x[2] || 0;
-    return this;
+    this.x = x[0] || 0
+    this.y = x[1] || 0
+    this.z = x[2] || 0
+    return this
   }
-  this.x = x || 0;
-  this.y = y || 0;
-  this.z = z || 0;
-  return this;
-};
+  this.x = x || 0
+  this.y = y || 0
+  this.z = z || 0
+  return this
+}
 
 /**
  * Gets a copy of the vector, returns a <a href="#/p5.Vector">p5.Vector</a> object.
@@ -1652,11 +1650,11 @@ p5.Vector.prototype.set = function set(x, y, z) {
  */
 p5.Vector.prototype.copy = function copy() {
   if (this.p5) {
-    return new p5.Vector(this.p5, [this.x, this.y, this.z]);
+    return new p5.Vector(this.p5, [this.x, this.y, this.z])
   } else {
-    return new p5.Vector(this.x, this.y, this.z);
+    return new p5.Vector(this.x, this.y, this.z)
   }
-};
+}
 
 /**
  * Adds x, y, and z components to a vector, adds one vector to another, or
@@ -1742,46 +1740,46 @@ p5.Vector.prototype.copy = function copy() {
  */
 p5.Vector.prototype.add = function add(x, y, z) {
   if (x instanceof p5.Vector) {
-    this.x += x.x || 0;
-    this.y += x.y || 0;
-    this.z += x.z || 0;
-    return this;
+    this.x += x.x || 0
+    this.y += x.y || 0
+    this.z += x.z || 0
+    return this
   }
   if (x instanceof Array) {
-    this.x += x[0] || 0;
-    this.y += x[1] || 0;
-    this.z += x[2] || 0;
-    return this;
+    this.x += x[0] || 0
+    this.y += x[1] || 0
+    this.z += x[2] || 0
+    return this
   }
-  this.x += x || 0;
-  this.y += y || 0;
-  this.z += z || 0;
-  return this;
-};
+  this.x += x || 0
+  this.y += y || 0
+  this.z += z || 0
+  return this
+}
 
 /// HELPERS FOR REMAINDER METHOD
-const calculateRemainder2D = function(xComponent, yComponent) {
+const calculateRemainder2D = function (xComponent, yComponent) {
   if (xComponent !== 0) {
-    this.x = this.x % xComponent;
+    this.x = this.x % xComponent
   }
   if (yComponent !== 0) {
-    this.y = this.y % yComponent;
+    this.y = this.y % yComponent
   }
-  return this;
-};
+  return this
+}
 
-const calculateRemainder3D = function(xComponent, yComponent, zComponent) {
+const calculateRemainder3D = function (xComponent, yComponent, zComponent) {
   if (xComponent !== 0) {
-    this.x = this.x % xComponent;
+    this.x = this.x % xComponent
   }
   if (yComponent !== 0) {
-    this.y = this.y % yComponent;
+    this.y = this.y % yComponent
   }
   if (zComponent !== 0) {
-    this.z = this.z % zComponent;
+    this.z = this.z % zComponent
   }
-  return this;
-};
+  return this
+}
 /**
  * Gives remainder of a vector when it is divided by another vector.
  * See examples for more context.
@@ -1819,52 +1817,52 @@ const calculateRemainder3D = function(xComponent, yComponent, zComponent) {
 p5.Vector.prototype.rem = function rem(x, y, z) {
   if (x instanceof p5.Vector) {
     if (Number.isFinite(x.x) && Number.isFinite(x.y) && Number.isFinite(x.z)) {
-      const xComponent = parseFloat(x.x);
-      const yComponent = parseFloat(x.y);
-      const zComponent = parseFloat(x.z);
-      calculateRemainder3D.call(this, xComponent, yComponent, zComponent);
+      const xComponent = parseFloat(x.x)
+      const yComponent = parseFloat(x.y)
+      const zComponent = parseFloat(x.z)
+      calculateRemainder3D.call(this, xComponent, yComponent, zComponent)
     }
   } else if (x instanceof Array) {
-    if (x.every(element => Number.isFinite(element))) {
+    if (x.every((element) => Number.isFinite(element))) {
       if (x.length === 2) {
-        calculateRemainder2D.call(this, x[0], x[1]);
+        calculateRemainder2D.call(this, x[0], x[1])
       }
       if (x.length === 3) {
-        calculateRemainder3D.call(this, x[0], x[1], x[2]);
+        calculateRemainder3D.call(this, x[0], x[1], x[2])
       }
     }
   } else if (arguments.length === 1) {
     if (Number.isFinite(arguments[0]) && arguments[0] !== 0) {
-      this.x = this.x % arguments[0];
-      this.y = this.y % arguments[0];
-      this.z = this.z % arguments[0];
-      return this;
+      this.x = this.x % arguments[0]
+      this.y = this.y % arguments[0]
+      this.z = this.z % arguments[0]
+      return this
     }
   } else if (arguments.length === 2) {
-    const vectorComponents = [...arguments];
-    if (vectorComponents.every(element => Number.isFinite(element))) {
+    const vectorComponents = [...arguments]
+    if (vectorComponents.every((element) => Number.isFinite(element))) {
       if (vectorComponents.length === 2) {
         calculateRemainder2D.call(
           this,
           vectorComponents[0],
           vectorComponents[1]
-        );
+        )
       }
     }
   } else if (arguments.length === 3) {
-    const vectorComponents = [...arguments];
-    if (vectorComponents.every(element => Number.isFinite(element))) {
+    const vectorComponents = [...arguments]
+    if (vectorComponents.every((element) => Number.isFinite(element))) {
       if (vectorComponents.length === 3) {
         calculateRemainder3D.call(
           this,
           vectorComponents[0],
           vectorComponents[1],
           vectorComponents[2]
-        );
+        )
       }
     }
   }
-};
+}
 
 /**
  * Subtracts x, y, and z components from a vector, subtracts one vector from
@@ -1950,22 +1948,22 @@ p5.Vector.prototype.rem = function rem(x, y, z) {
  */
 p5.Vector.prototype.sub = function sub(x, y, z) {
   if (x instanceof p5.Vector) {
-    this.x -= x.x || 0;
-    this.y -= x.y || 0;
-    this.z -= x.z || 0;
-    return this;
+    this.x -= x.x || 0
+    this.y -= x.y || 0
+    this.z -= x.z || 0
+    return this
   }
   if (x instanceof Array) {
-    this.x -= x[0] || 0;
-    this.y -= x[1] || 0;
-    this.z -= x[2] || 0;
-    return this;
+    this.x -= x[0] || 0
+    this.y -= x[1] || 0
+    this.z -= x[2] || 0
+    return this
   }
-  this.x -= x || 0;
-  this.y -= y || 0;
-  this.z -= z || 0;
-  return this;
-};
+  this.x -= x || 0
+  this.y -= y || 0
+  this.z -= z || 0
+  return this
+}
 
 /**
  * Multiplies the vector by a scalar, multiplies the x, y, and z components from a vector, or multiplies
@@ -2093,71 +2091,71 @@ p5.Vector.prototype.mult = function mult(x, y, z) {
       typeof x.y === 'number' &&
       typeof x.z === 'number'
     ) {
-      this.x *= x.x;
-      this.y *= x.y;
-      this.z *= x.z;
+      this.x *= x.x
+      this.y *= x.y
+      this.z *= x.z
     } else {
       console.warn(
         'p5.Vector.prototype.mult:',
         'x contains components that are either undefined or not finite numbers'
-      );
+      )
     }
-    return this;
+    return this
   }
   if (x instanceof Array) {
     if (
-      x.every(element => Number.isFinite(element)) &&
-      x.every(element => typeof element === 'number')
+      x.every((element) => Number.isFinite(element)) &&
+      x.every((element) => typeof element === 'number')
     ) {
       if (x.length === 1) {
-        this.x *= x[0];
-        this.y *= x[0];
-        this.z *= x[0];
+        this.x *= x[0]
+        this.y *= x[0]
+        this.z *= x[0]
       } else if (x.length === 2) {
-        this.x *= x[0];
-        this.y *= x[1];
+        this.x *= x[0]
+        this.y *= x[1]
       } else if (x.length === 3) {
-        this.x *= x[0];
-        this.y *= x[1];
-        this.z *= x[2];
+        this.x *= x[0]
+        this.y *= x[1]
+        this.z *= x[2]
       }
     } else {
       console.warn(
         'p5.Vector.prototype.mult:',
         'x contains elements that are either undefined or not finite numbers'
-      );
+      )
     }
-    return this;
+    return this
   }
 
-  const vectorComponents = [...arguments];
+  const vectorComponents = [...arguments]
   if (
-    vectorComponents.every(element => Number.isFinite(element)) &&
-    vectorComponents.every(element => typeof element === 'number')
+    vectorComponents.every((element) => Number.isFinite(element)) &&
+    vectorComponents.every((element) => typeof element === 'number')
   ) {
     if (arguments.length === 1) {
-      this.x *= x;
-      this.y *= x;
-      this.z *= x;
+      this.x *= x
+      this.y *= x
+      this.z *= x
     }
     if (arguments.length === 2) {
-      this.x *= x;
-      this.y *= y;
+      this.x *= x
+      this.y *= y
     }
     if (arguments.length === 3) {
-      this.x *= x;
-      this.y *= y;
-      this.z *= z;
+      this.x *= x
+      this.y *= y
+      this.z *= z
     }
   } else {
     console.warn(
       'p5.Vector.prototype.mult:',
       'x, y, or z arguments are either undefined or not a finite number'
-    );
+    )
   }
 
-  return this;
-};
+  return this
+}
 
 /**
  * Divides the vector by a scalar, divides a vector by the x, y, and z arguments, or divides the x, y, and
@@ -2285,85 +2283,85 @@ p5.Vector.prototype.div = function div(x, y, z) {
       typeof x.z === 'number'
     ) {
       if (x.x === 0 || x.y === 0 || x.z === 0) {
-        console.warn('p5.Vector.prototype.div:', 'divide by 0');
-        return this;
+        console.warn('p5.Vector.prototype.div:', 'divide by 0')
+        return this
       }
-      this.x /= x.x;
-      this.y /= x.y;
-      this.z /= x.z;
+      this.x /= x.x
+      this.y /= x.y
+      this.z /= x.z
     } else {
       console.warn(
         'p5.Vector.prototype.div:',
         'x contains components that are either undefined or not finite numbers'
-      );
+      )
     }
-    return this;
+    return this
   }
   if (x instanceof Array) {
     if (
-      x.every(element => Number.isFinite(element)) &&
-      x.every(element => typeof element === 'number')
+      x.every((element) => Number.isFinite(element)) &&
+      x.every((element) => typeof element === 'number')
     ) {
-      if (x.some(element => element === 0)) {
-        console.warn('p5.Vector.prototype.div:', 'divide by 0');
-        return this;
+      if (x.some((element) => element === 0)) {
+        console.warn('p5.Vector.prototype.div:', 'divide by 0')
+        return this
       }
 
       if (x.length === 1) {
-        this.x /= x[0];
-        this.y /= x[0];
-        this.z /= x[0];
+        this.x /= x[0]
+        this.y /= x[0]
+        this.z /= x[0]
       } else if (x.length === 2) {
-        this.x /= x[0];
-        this.y /= x[1];
+        this.x /= x[0]
+        this.y /= x[1]
       } else if (x.length === 3) {
-        this.x /= x[0];
-        this.y /= x[1];
-        this.z /= x[2];
+        this.x /= x[0]
+        this.y /= x[1]
+        this.z /= x[2]
       }
     } else {
       console.warn(
         'p5.Vector.prototype.div:',
         'x contains components that are either undefined or not finite numbers'
-      );
+      )
     }
 
-    return this;
+    return this
   }
 
-  const vectorComponents = [...arguments];
+  const vectorComponents = [...arguments]
   if (
-    vectorComponents.every(element => Number.isFinite(element)) &&
-    vectorComponents.every(element => typeof element === 'number')
+    vectorComponents.every((element) => Number.isFinite(element)) &&
+    vectorComponents.every((element) => typeof element === 'number')
   ) {
-    if (vectorComponents.some(element => element === 0)) {
-      console.warn('p5.Vector.prototype.div:', 'divide by 0');
-      return this;
+    if (vectorComponents.some((element) => element === 0)) {
+      console.warn('p5.Vector.prototype.div:', 'divide by 0')
+      return this
     }
 
     if (arguments.length === 1) {
-      this.x /= x;
-      this.y /= x;
-      this.z /= x;
+      this.x /= x
+      this.y /= x
+      this.z /= x
     }
     if (arguments.length === 2) {
-      this.x /= x;
-      this.y /= y;
+      this.x /= x
+      this.y /= y
     }
     if (arguments.length === 3) {
-      this.x /= x;
-      this.y /= y;
-      this.z /= z;
+      this.x /= x
+      this.y /= y
+      this.z /= z
     }
   } else {
     console.warn(
       'p5.Vector.prototype.div:',
       'x, y, or z arguments are either undefined or not a finite number'
-    );
+    )
   }
 
-  return this;
-};
+  return this
+}
 /**
  * Calculates the magnitude (length) of the vector and returns the result as
  * a float (this is simply the equation sqrt(x\*x + y\*y + z\*z).)
@@ -2409,8 +2407,8 @@ p5.Vector.prototype.div = function div(x, y, z) {
  * </div>
  */
 p5.Vector.prototype.mag = function mag() {
-  return Math.sqrt(this.magSq());
-};
+  return Math.sqrt(this.magSq())
+}
 
 /**
  * Calculates the squared magnitude of the vector and returns the result
@@ -2460,11 +2458,11 @@ p5.Vector.prototype.mag = function mag() {
  * </div>
  */
 p5.Vector.prototype.magSq = function magSq() {
-  const x = this.x;
-  const y = this.y;
-  const z = this.z;
-  return x * x + y * y + z * z;
-};
+  const x = this.x
+  const y = this.y
+  const z = this.z
+  return x * x + y * y + z * z
+}
 
 /**
  * Calculates the dot product of two vectors. The version of the method
@@ -2503,10 +2501,10 @@ p5.Vector.prototype.magSq = function magSq() {
  */
 p5.Vector.prototype.dot = function dot(x, y, z) {
   if (x instanceof p5.Vector) {
-    return this.dot(x.x, x.y, x.z);
+    return this.dot(x.x, x.y, x.z)
   }
-  return this.x * (x || 0) + this.y * (y || 0) + this.z * (z || 0);
-};
+  return this.x * (x || 0) + this.y * (y || 0) + this.z * (z || 0)
+}
 
 /**
  * Calculates and returns a vector composed of the cross product between
@@ -2540,15 +2538,15 @@ p5.Vector.prototype.dot = function dot(x, y, z) {
  * </div>
  */
 p5.Vector.prototype.cross = function cross(v) {
-  const x = this.y * v.z - this.z * v.y;
-  const y = this.z * v.x - this.x * v.z;
-  const z = this.x * v.y - this.y * v.x;
+  const x = this.y * v.z - this.z * v.y
+  const y = this.z * v.x - this.x * v.z
+  const z = this.x * v.y - this.y * v.x
   if (this.p5) {
-    return new p5.Vector(this.p5, [x, y, z]);
+    return new p5.Vector(this.p5, [x, y, z])
   } else {
-    return new p5.Vector(x, y, z);
+    return new p5.Vector(x, y, z)
   }
-};
+}
 
 /**
  * Calculates the Euclidean distance between two points (considering a
@@ -2616,11 +2614,8 @@ p5.Vector.prototype.cross = function cross(v) {
  * </div>
  */
 p5.Vector.prototype.dist = function dist(v) {
-  return v
-    .copy()
-    .sub(this)
-    .mag();
-};
+  return v.copy().sub(this).mag()
+}
 
 /**
  * Normalize the vector to length 1 (make it a unit vector).
@@ -2685,12 +2680,12 @@ p5.Vector.prototype.dist = function dist(v) {
  * </div>
  */
 p5.Vector.prototype.normalize = function normalize() {
-  const len = this.mag();
+  const len = this.mag()
   // here we multiply by the reciprocal instead of calling 'div()'
   // since div duplicates this zero check.
-  if (len !== 0) this.mult(1 / len);
-  return this;
-};
+  if (len !== 0) this.mult(1 / len)
+  return this
+}
 
 /**
  * Limit the magnitude of this vector to the value used for the <b>max</b>
@@ -2742,13 +2737,13 @@ p5.Vector.prototype.normalize = function normalize() {
  * </div>
  */
 p5.Vector.prototype.limit = function limit(max) {
-  const mSq = this.magSq();
+  const mSq = this.magSq()
   if (mSq > max * max) {
     this.div(Math.sqrt(mSq)) //normalize it
-      .mult(max);
+      .mult(max)
   }
-  return this;
-};
+  return this
+}
 
 /**
  * Set the magnitude of this vector to the value used for the <b>len</b>
@@ -2803,8 +2798,8 @@ p5.Vector.prototype.limit = function limit(max) {
  * </div>
  */
 p5.Vector.prototype.setMag = function setMag(n) {
-  return this.normalize().mult(n);
-};
+  return this.normalize().mult(n)
+}
 
 /**
  * Calculate the angle of rotation for this vector(only 2D vectors).
@@ -2873,10 +2868,10 @@ p5.Vector.prototype.setMag = function setMag(n) {
  * </div>
  */
 p5.Vector.prototype.heading = function heading() {
-  const h = Math.atan2(this.y, this.x);
-  if (this.p5) return this.p5._fromRadians(h);
-  return h;
-};
+  const h = Math.atan2(this.y, this.x)
+  if (this.p5) return this.p5._fromRadians(h)
+  return h
+}
 
 /**
  * Rotate the vector to a specific angle (only 2D vectors), magnitude remains the
@@ -2897,11 +2892,11 @@ p5.Vector.prototype.heading = function heading() {
  */
 
 p5.Vector.prototype.setHeading = function setHeading(a) {
-  let m = this.mag();
-  this.x = m * Math.cos(a);
-  this.y = m * Math.sin(a);
-  return this;
-};
+  let m = this.mag()
+  this.x = m * Math.cos(a)
+  this.y = m * Math.sin(a)
+  return this
+}
 
 /**
  * Rotate the vector by an angle (only 2D vectors), magnitude remains the
@@ -2964,13 +2959,13 @@ p5.Vector.prototype.setHeading = function setHeading(a) {
  * </div>
  */
 p5.Vector.prototype.rotate = function rotate(a) {
-  let newHeading = this.heading() + a;
-  if (this.p5) newHeading = this.p5._toRadians(newHeading);
-  const mag = this.mag();
-  this.x = Math.cos(newHeading) * mag;
-  this.y = Math.sin(newHeading) * mag;
-  return this;
-};
+  let newHeading = this.heading() + a
+  if (this.p5) newHeading = this.p5._toRadians(newHeading)
+  const mag = this.mag()
+  this.x = Math.cos(newHeading) * mag
+  this.y = Math.sin(newHeading) * mag
+  return this
+}
 
 /**
  * Calculates and returns the angle between two vectors. This function will take
@@ -3038,20 +3033,20 @@ p5.Vector.prototype.rotate = function rotate(a) {
  */
 
 p5.Vector.prototype.angleBetween = function angleBetween(v) {
-  const dotmagmag = this.dot(v) / (this.mag() * v.mag());
+  const dotmagmag = this.dot(v) / (this.mag() * v.mag())
   // Mathematically speaking: the dotmagmag variable will be between -1 and 1
   // inclusive. Practically though it could be slightly outside this range due
   // to floating-point rounding issues. This can make Math.acos return NaN.
   //
   // Solution: we'll clamp the value to the -1,1 range
-  let angle;
-  angle = Math.acos(Math.min(1, Math.max(-1, dotmagmag)));
-  angle = angle * Math.sign(this.cross(v).z || 1);
+  let angle
+  angle = Math.acos(Math.min(1, Math.max(-1, dotmagmag)))
+  angle = angle * Math.sign(this.cross(v).z || 1)
   if (this.p5) {
-    angle = this.p5._fromRadians(angle);
+    angle = this.p5._fromRadians(angle)
   }
-  return angle;
-};
+  return angle
+}
 /**
  * Linear interpolate the vector to another vector
  *
@@ -3133,13 +3128,13 @@ p5.Vector.prototype.angleBetween = function angleBetween(v) {
  */
 p5.Vector.prototype.lerp = function lerp(x, y, z, amt) {
   if (x instanceof p5.Vector) {
-    return this.lerp(x.x, x.y, x.z, y);
+    return this.lerp(x.x, x.y, x.z, y)
   }
-  this.x += (x - this.x) * amt || 0;
-  this.y += (y - this.y) * amt || 0;
-  this.z += (z - this.z) * amt || 0;
-  return this;
-};
+  this.x += (x - this.x) * amt || 0
+  this.y += (y - this.y) * amt || 0
+  this.z += (z - this.z) * amt || 0
+  return this
+}
 
 /**
  * Reflect the incoming vector about a normal to a line in 2D, or about a normal to a plane in 3D
@@ -3192,9 +3187,9 @@ p5.Vector.prototype.lerp = function lerp(x, y, z, amt) {
  * </div>
  */
 p5.Vector.prototype.reflect = function reflect(surfaceNormal) {
-  surfaceNormal.normalize();
-  return this.sub(surfaceNormal.mult(2 * this.dot(surfaceNormal)));
-};
+  surfaceNormal.normalize()
+  return this.sub(surfaceNormal.mult(2 * this.dot(surfaceNormal)))
+}
 
 /**
  * Return a representation of this vector as a float array. This is only
@@ -3225,8 +3220,8 @@ p5.Vector.prototype.reflect = function reflect(surfaceNormal) {
  * </div>
  */
 p5.Vector.prototype.array = function array() {
-  return [this.x || 0, this.y || 0, this.z || 0];
-};
+  return [this.x || 0, this.y || 0, this.z || 0]
+}
 
 /**
  * Equality check against a <a href="#/p5.Vector">p5.Vector</a>
@@ -3264,22 +3259,22 @@ p5.Vector.prototype.array = function array() {
  * @return {Boolean}
  */
 p5.Vector.prototype.equals = function equals(x, y, z) {
-  let a, b, c;
+  let a, b, c
   if (x instanceof p5.Vector) {
-    a = x.x || 0;
-    b = x.y || 0;
-    c = x.z || 0;
+    a = x.x || 0
+    b = x.y || 0
+    c = x.z || 0
   } else if (x instanceof Array) {
-    a = x[0] || 0;
-    b = x[1] || 0;
-    c = x[2] || 0;
+    a = x[0] || 0
+    b = x[1] || 0
+    c = x[2] || 0
   } else {
-    a = x || 0;
-    b = y || 0;
-    c = z || 0;
+    a = x || 0
+    b = y || 0
+    c = z || 0
   }
-  return this.x === a && this.y === b && this.z === c;
-};
+  return this.x === a && this.y === b && this.z === c
+}
 
 // Static Methods
 
@@ -3329,10 +3324,10 @@ p5.Vector.prototype.equals = function equals(x, y, z) {
  */
 p5.Vector.fromAngle = function fromAngle(angle, length) {
   if (typeof length === 'undefined') {
-    length = 1;
+    length = 1
   }
-  return new p5.Vector(length * Math.cos(angle), length * Math.sin(angle), 0);
-};
+  return new p5.Vector(length * Math.cos(angle), length * Math.sin(angle), 0)
+}
 
 /**
  * Make a new 3D vector from a pair of ISO spherical angles
@@ -3367,21 +3362,21 @@ p5.Vector.fromAngle = function fromAngle(angle, length) {
  * </code>
  * </div>
  */
-p5.Vector.fromAngles = function(theta, phi, length) {
+p5.Vector.fromAngles = function (theta, phi, length) {
   if (typeof length === 'undefined') {
-    length = 1;
+    length = 1
   }
-  const cosPhi = Math.cos(phi);
-  const sinPhi = Math.sin(phi);
-  const cosTheta = Math.cos(theta);
-  const sinTheta = Math.sin(theta);
+  const cosPhi = Math.cos(phi)
+  const sinPhi = Math.sin(phi)
+  const cosTheta = Math.cos(theta)
+  const sinTheta = Math.sin(theta)
 
   return new p5.Vector(
     length * sinTheta * sinPhi,
     -length * cosTheta,
     length * sinTheta * cosPhi
-  );
-};
+  )
+}
 
 /**
  * Make a new 2D unit vector from a random angle
@@ -3433,8 +3428,8 @@ p5.Vector.fromAngles = function(theta, phi, length) {
  * </div>
  */
 p5.Vector.random2D = function random2D() {
-  return this.fromAngle(Math.random() * constants.TWO_PI);
-};
+  return this.fromAngle(Math.random() * constants.TWO_PI)
+}
 
 /**
  * Make a new random 3D unit vector.
@@ -3455,13 +3450,13 @@ p5.Vector.random2D = function random2D() {
  * </div>
  */
 p5.Vector.random3D = function random3D() {
-  const angle = Math.random() * constants.TWO_PI;
-  const vz = Math.random() * 2 - 1;
-  const vzBase = Math.sqrt(1 - vz * vz);
-  const vx = vzBase * Math.cos(angle);
-  const vy = vzBase * Math.sin(angle);
-  return new p5.Vector(vx, vy, vz);
-};
+  const angle = Math.random() * constants.TWO_PI
+  const vz = Math.random() * 2 - 1
+  const vzBase = Math.sqrt(1 - vz * vz)
+  const vx = vzBase * Math.cos(angle)
+  const vy = vzBase * Math.sin(angle)
+  return new p5.Vector(vx, vy, vz)
+}
 
 // Adds two vectors together and returns a new one.
 /**
@@ -3475,19 +3470,19 @@ p5.Vector.random3D = function random3D() {
 
 p5.Vector.add = function add(v1, v2, target) {
   if (!target) {
-    target = v1.copy();
+    target = v1.copy()
     if (arguments.length === 3) {
       p5._friendlyError(
         'The target parameter is undefined, it should be of type p5.Vector',
         'p5.Vector.add'
-      );
+      )
     }
   } else {
-    target.set(v1);
+    target.set(v1)
   }
-  target.add(v2);
-  return target;
-};
+  target.add(v2)
+  return target
+}
 
 // Returns a vector remainder when it is divided by another vector
 /**
@@ -3505,11 +3500,11 @@ p5.Vector.add = function add(v1, v2, target) {
  */
 p5.Vector.rem = function rem(v1, v2) {
   if (v1 instanceof p5.Vector && v2 instanceof p5.Vector) {
-    let target = v1.copy();
-    target.rem(v2);
-    return target;
+    let target = v1.copy()
+    target.rem(v2)
+    return target
   }
-};
+}
 
 /*
  * Subtracts one <a href="#/p5.Vector">p5.Vector</a> from another and returns a new one.  The second
@@ -3526,19 +3521,19 @@ p5.Vector.rem = function rem(v1, v2) {
 
 p5.Vector.sub = function sub(v1, v2, target) {
   if (!target) {
-    target = v1.copy();
+    target = v1.copy()
     if (arguments.length === 3) {
       p5._friendlyError(
         'The target parameter is undefined, it should be of type p5.Vector',
         'p5.Vector.sub'
-      );
+      )
     }
   } else {
-    target.set(v1);
+    target.set(v1)
   }
-  target.sub(v2);
-  return target;
-};
+  target.sub(v2)
+  return target
+}
 
 /**
  * Multiplies a vector by a scalar and returns a new vector.
@@ -3578,19 +3573,19 @@ p5.Vector.sub = function sub(v1, v2, target) {
  */
 p5.Vector.mult = function mult(v, n, target) {
   if (!target) {
-    target = v.copy();
+    target = v.copy()
     if (arguments.length === 3) {
       p5._friendlyError(
         'The target parameter is undefined, it should be of type p5.Vector',
         'p5.Vector.mult'
-      );
+      )
     }
   } else {
-    target.set(v);
+    target.set(v)
   }
-  target.mult(n);
-  return target;
-};
+  target.mult(n)
+  return target
+}
 
 /**
  * Rotates the vector (only 2D vectors) by the given angle, magnitude remains the same and returns a new vector.
@@ -3605,19 +3600,19 @@ p5.Vector.mult = function mult(v, n, target) {
  */
 p5.Vector.rotate = function rotate(v, a, target) {
   if (arguments.length === 2) {
-    target = v.copy();
+    target = v.copy()
   } else {
     if (!(target instanceof p5.Vector)) {
       p5._friendlyError(
         'The target parameter should be of type p5.Vector',
         'p5.Vector.rotate'
-      );
+      )
     }
-    target.set(v);
+    target.set(v)
   }
-  target.rotate(a);
-  return target;
-};
+  target.rotate(a)
+  return target
+}
 
 /**
  * Divides a vector by a scalar and returns a new vector.
@@ -3657,20 +3652,20 @@ p5.Vector.rotate = function rotate(v, a, target) {
  */
 p5.Vector.div = function div(v, n, target) {
   if (!target) {
-    target = v.copy();
+    target = v.copy()
 
     if (arguments.length === 3) {
       p5._friendlyError(
         'The target parameter is undefined, it should be of type p5.Vector',
         'p5.Vector.div'
-      );
+      )
     }
   } else {
-    target.set(v);
+    target.set(v)
   }
-  target.div(n);
-  return target;
-};
+  target.div(n)
+  return target
+}
 
 /**
  * Calculates the dot product of two vectors.
@@ -3683,8 +3678,8 @@ p5.Vector.div = function div(v, n, target) {
  * @return {Number}     the dot product
  */
 p5.Vector.dot = function dot(v1, v2) {
-  return v1.dot(v2);
-};
+  return v1.dot(v2)
+}
 
 /**
  * Calculates the cross product of two vectors.
@@ -3697,8 +3692,8 @@ p5.Vector.dot = function dot(v1, v2) {
  * @return {Number}     the cross product
  */
 p5.Vector.cross = function cross(v1, v2) {
-  return v1.cross(v2);
-};
+  return v1.cross(v2)
+}
 
 /**
  * Calculates the Euclidean distance between two points (considering a
@@ -3712,8 +3707,8 @@ p5.Vector.cross = function cross(v1, v2) {
  * @return {Number}     the distance
  */
 p5.Vector.dist = function dist(v1, v2) {
-  return v1.dist(v2);
-};
+  return v1.dist(v2)
+}
 
 /**
  * Linear interpolate a vector to another vector and return the result as a
@@ -3730,19 +3725,19 @@ p5.Vector.dist = function dist(v1, v2) {
  */
 p5.Vector.lerp = function lerp(v1, v2, amt, target) {
   if (!target) {
-    target = v1.copy();
+    target = v1.copy()
     if (arguments.length === 4) {
       p5._friendlyError(
         'The target parameter is undefined, it should be of type p5.Vector',
         'p5.Vector.lerp'
-      );
+      )
     }
   } else {
-    target.set(v1);
+    target.set(v1)
   }
-  target.lerp(v2, amt);
-  return target;
-};
+  target.lerp(v2, amt)
+  return target
+}
 
 /**
  * Calculates the magnitude (length) of the vector and returns the result as
@@ -3757,10 +3752,10 @@ p5.Vector.lerp = function lerp(v1, v2, amt, target) {
 p5.Vector.mag = function mag(vecT) {
   const x = vecT.x,
     y = vecT.y,
-    z = vecT.z;
-  const magSq = x * x + y * y + z * z;
-  return Math.sqrt(magSq);
-};
+    z = vecT.z
+  const magSq = x * x + y * y + z * z
+  return Math.sqrt(magSq)
+}
 
 /**
  * Normalize the vector to length 1 (make it a unit vector).
@@ -3774,17 +3769,17 @@ p5.Vector.mag = function mag(vecT) {
  */
 p5.Vector.normalize = function normalize(v, target) {
   if (arguments.length < 2) {
-    target = v.copy();
+    target = v.copy()
   } else {
     if (!(target instanceof p5.Vector)) {
       p5._friendlyError(
         'The target parameter should be of type p5.Vector',
         'p5.Vector.normalize'
-      );
+      )
     }
-    target.set(v);
+    target.set(v)
   }
-  return target.normalize();
-};
+  return target.normalize()
+}
 
-export default p5.Vector;
+export default p5.Vector

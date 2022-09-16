@@ -5,7 +5,6 @@
 import '/portfolio/portfolio.data.js'
 import { CinematicBackground } from '/portfolio/display/main.js'
 import { CharacterClass, ActorClass, NormalBeeActor } from '/ai/bees/bees.js'
-import { Flowers } from '/ai/bees/flowers.js'
 
 const CINEMATIC_BACKGROUND = new CinematicBackground()
 
@@ -251,7 +250,36 @@ const beeConverse = (iteration = 0) => {
   }, 5000)
 }
 
-setTimeout(beeConverse, 5000)
+const introSpeech = [
+  () =>
+    (eunbyeul.speech =
+      'Bees are important for the sustainability of the environment'),
+  () => (doungdoungei.speech = 'Why is sustainability important?'),
+  () =>
+    (eunbyeul.speech =
+      'Environmental sustainability is important because of how much energy, food, and human-made resources people use every day'),
+  () => (doungdoungei.speech = 'So how can bees help?'),
+  () => (eunbyeul.speech = 'Well... bees like flowers!'),
+  () => (doungdoungei.speech = 'Yeah!!'),
+  () =>
+    (eunbyeul.speech =
+      'And they do a great job at keeping our eycosystem alive and pollen freshly planted'),
+  () =>
+    (doungdoungei.speech =
+      'Click around to plant some flowers for us... we love them'),
+  () =>
+    (eunbyeul.speech =
+      "Try planting some flowers outside your house. It's pretty and helpful for everyone!"),
+  () => {
+    eunbyeul.speech = null
+    doungdoungei.speech = null
+  },
+  beeConverse,
+]
+
+setTimeout(() => {
+  introSpeech.forEach((f, i) => setTimeout(f, i * 4000))
+}, 5000)
 
 const flowers = []
 const bees = [eunbyeul, doungdoungei]
@@ -303,12 +331,12 @@ window.addEventListener('click', (e) => {
     e.clientY - offsetY,
     flowers
   )
-  flower.__movement_slide_off = true
   flower.__window_offset = {
     x: window.scrollX,
     y: window.scrollY,
   }
   flower.move()
+  flower.__movement_slide_off = true
 })
 
 setInterval(() => {
@@ -323,19 +351,11 @@ setInterval(() => {
 
     setTimeout(() => {
       bee.run()
-    }, Math.random() * bees.length * 1000)
+    }, Math.random() * bees.length * (flowers.length == 0 ? 1000 : 250))
   })
 
   flowers.forEach((f) => f.run())
-}, bees.length * 1500)
-
-function timestamp() {
-  var str = ''
-  for (var i in arguments) {
-    str += arguments[i] + ' '
-  }
-  console.log(new Date().toLocaleTimeString(), '->', str)
-}
+}, bees.length * (flowers.length == 0 ? 1500 : 250))
 
 document
   .querySelectorAll('input, textarea, .w3-button, button')

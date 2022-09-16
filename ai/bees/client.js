@@ -6,7 +6,6 @@ import { Canvas } from '/ai/bees/canvas.js'
 import {
   BeeTypes,
   CharacterClass,
-  ActorClass,
   NormalBeeActor,
   HoneycombActor,
   EnemyWaspActor,
@@ -14,7 +13,6 @@ import {
   EnemyAbstractHoneycombActor,
 } from '/ai/bees/bees.js'
 import { Flowers } from '/ai/bees/flowers.js'
-
 ;('use strict')
 
 const FRAMES_PER_SECOND = 1

@@ -1,43 +1,39 @@
-
-'use strict';
+'use strict'
 
 export class ActorDialog {
   constructor(
     actor,
     options = {
       idle: false,
-    },
+    }
   ) {
-
-    this.#_actor = actor;
+    this.#_actor = actor
 
     if (options.idle) {
-      this.#_timer = setInterval(this.#_idle_function, 15000);
+      this.#_timer = setInterval(this.#_idle_function, 15000)
     }
-
   }
 
-  #_actor;
-  #_timer;
+  #_actor
+  #_timer
 
   #_idle_function = () => {
-    const actor = this.#_actor;
+    const actor = this.#_actor
 
     if (actor.speech) {
-      actor.speech = null;
-      return;
+      actor.speech = null
+      return
     }
 
-    actor.speech = RANDOM_IDLE_DIALOG[
-      Math.floor(Math.random() * RANDOM_IDLE_DIALOG.length)
-    ];
-  };
+    actor.speech =
+      RANDOM_IDLE_DIALOG[Math.floor(Math.random() * RANDOM_IDLE_DIALOG.length)]
+  }
 
   dispose = () => {
     if (this.#_timer != null) {
-      clearInterval(this.#_timer);
+      clearInterval(this.#_timer)
     }
-  };
+  }
 }
 
 const RANDOM_IDLE_DIALOG = [
@@ -223,4 +219,4 @@ const RANDOM_IDLE_DIALOG = [
   'I love you not only for your beauty but for your soul. Our love will be alive forever because I love the way you are.',
   'You have become more than just a friend or just a lover: you are my soulmate, the reason for my happiness and the person with whom I want to share my life. I love you.',
   'You feed my heart and my soul with your love. I love you more than anything in this world!',
-];
+]
