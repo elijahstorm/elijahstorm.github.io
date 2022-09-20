@@ -245,12 +245,18 @@ const beeConverse = (iteration = 0) => {
 
     setTimeout(
       () => beeConverse(Math.min(iteration + 1, 10)),
-      Math.random() * 5000 * iteration + 5000
+      Math.random() * 5000 * iteration + 10000
     )
-  }, 5000)
+  }, 10000)
 }
 
 const introSpeech = [
+  bees.forEach((bee) => {
+    bee.onclick = () => {
+      window.location = 'https://www.planetbee.org/why-we-need-bees'
+    }
+    bee.sight_distance = 1000
+  }),
   () =>
     (eunbyeul.speech =
       'Bees are important for the sustainability of the environment'),
@@ -270,10 +276,15 @@ const introSpeech = [
   () =>
     (eunbyeul.speech =
       "Try planting some flowers outside your house. It's pretty and helpful for everyone!"),
-  () => {
-    eunbyeul.speech = null
-    doungdoungei.speech = null
-  },
+  () => (doungdoungei.speech = null),
+  () => (eunbyeul.speech = null),
+  () =>
+    bees.forEach((bee) => {
+      bee.onclick = () => {
+        window.location = '/ai/bees'
+      }
+      bee.sight_distance = 1000
+    }),
   beeConverse,
 ]
 
@@ -286,21 +297,8 @@ const bees = [eunbyeul, doungdoungei]
 const flower_types = ['tulip', 'windmill', 'sunflower', 'trumpet']
 
 document.body.onscroll = () => {
-  bees.forEach((bee) => {
-    bee.__window_offset = {
-      x: window.scrollX,
-      y: window.scrollY,
-    }
-  })
   CINEMATIC_BACKGROUND.update_camera()
 }
-
-bees.forEach((bee) => {
-  bee.onclick = () => {
-    window.location = '/ai/bees'
-  }
-  bee.sight_distance = 1000
-})
 
 const chase_flowers = (bee) => {
   return () => {
@@ -317,13 +315,8 @@ const chase_flowers = (bee) => {
 const search_function = (bee) => bee.search
 
 window.addEventListener('click', (e) => {
-  let offsetX = 15
-  let offsetY = 85
-
-  if (window.innerWidth < 600) {
-    offsetX = 20
-    offsetY = 60
-  }
+  let offsetX = 20
+  let offsetY = 60
 
   const flower = new Flower(
     flower_types[Math.floor(Math.random() * flower_types.length)],
@@ -331,10 +324,7 @@ window.addEventListener('click', (e) => {
     e.clientY - offsetY,
     flowers
   )
-  flower.__window_offset = {
-    x: window.scrollX,
-    y: window.scrollY,
-  }
+
   flower.move()
   flower.__movement_slide_off = true
 })

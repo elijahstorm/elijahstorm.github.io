@@ -488,7 +488,10 @@
       </div>
     </div>
 
-    <div id="bees"></div>
+    <div
+      id="bees"
+      style="position: fixed; top: 0; left: 0; right: 0; bottom: 0"
+    ></div>
 
     <!-- Modal for full size images on click-->
     <div
@@ -567,6 +570,16 @@
     <script defer>
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
+          if (entry.target.id == 'portfolio') {
+            if (entry.isIntersecting) {
+              document.getElementById('bees').classList.add('hide-bee-dialog')
+            } else {
+              document
+                .getElementById('bees')
+                .classList.remove('hide-bee-dialog')
+            }
+            return
+          }
           if (entry.isIntersecting) {
             entry.target.classList.add('shown')
           } else {
@@ -577,6 +590,7 @@
 
       const hiddenElements = document.querySelectorAll('.lazy-slide-in')
       hiddenElements.forEach((el) => observer.observe(el))
+      observer.observe(document.getElementById('portfolio'))
 
       // Modal Image Gallery
       function onClick(element) {

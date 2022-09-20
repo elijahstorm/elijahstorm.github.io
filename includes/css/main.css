@@ -269,6 +269,13 @@ textarea {
   }
 }
 
+#bees.hide-bee-dialog .actor-dialog-text {
+  opacity: 0.7;
+}
+#bees.hide-bee-dialog .actor-dialog-text:hover {
+  opacity: 1;
+}
+
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 100em) {
   .bgimg-1,
