@@ -147,5 +147,5 @@
 .actor-dialog.show-tip .actor-dialog-text {
   opacity: 1;
   visibility: visible;
-  transform: scale(1.6) translate(-22%, 35px);
+  transform: scale(1.1) translate(-33%, 15px);
 }

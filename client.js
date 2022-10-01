@@ -251,12 +251,13 @@ const beeConverse = (iteration = 0) => {
 }
 
 const introSpeech = [
-  bees.forEach((bee) => {
-    bee.onclick = () => {
-      window.location = 'https://www.planetbee.org/why-we-need-bees'
-    }
-    bee.sight_distance = 1000
-  }),
+  () =>
+    bees.forEach((bee) => {
+      bee.onclick = () => {
+        window.location = 'https://www.planetbee.org/why-we-need-bees'
+      }
+      bee.sight_distance = 1000
+    }),
   () =>
     (eunbyeul.speech =
       'Bees are important for the sustainability of the environment'),

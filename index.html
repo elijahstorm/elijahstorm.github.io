@@ -61,6 +61,22 @@
 
   <script defer type="module" src="client.js"></script>
 
+  <head>
+    <style>
+      #bees {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+      }
+      #bees * {
+        pointer-events: unset;
+      }
+    </style>
+  </head>
+
   <body>
     <!-- Navbar (sit on top) -->
     <div class="w3-top" style="background: #00000022">
@@ -488,10 +504,7 @@
       </div>
     </div>
 
-    <div
-      id="bees"
-      style="position: fixed; top: 0; left: 0; right: 0; bottom: 0"
-    ></div>
+    <div id="bees"></div>
 
     <!-- Modal for full size images on click-->
     <div
