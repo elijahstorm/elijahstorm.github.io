@@ -297,6 +297,9 @@ textarea {
   padding: 0;
   margin: 0;
 }
+#logo-image p.short-info {
+  color: white;
+}
 @media (max-width: 62.5em) {
   #logo-image .short-info {
     font-size: 0.9em;

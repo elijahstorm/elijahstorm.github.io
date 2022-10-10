@@ -233,21 +233,24 @@ const quotes = [
   },
 ]
 
-const beeConverse = (iteration = 0) => {
+const beeConverse = async (iteration = 0) => {
+  await new Promise((resolve) => setTimeout(resolve, 5000))
+
   const bee = Math.random() > 0.5 ? eunbyeul : doungdoungei
 
   const quote = quotes[Math.floor(quotes.length * Math.random())]
   bee.speech =
     quote.person == 'Unknown' ? quote.quote : `${quote.quote} - ${quote.person}`
 
-  setTimeout(() => {
-    bee.speech = null
+  await new Promise((resolve) => setTimeout(resolve, 10000))
 
-    setTimeout(
-      () => beeConverse(Math.min(iteration + 1, 10)),
-      Math.random() * 5000 * iteration + 10000
-    )
-  }, 10000)
+  bee.speech = null
+
+  await new Promise((resolve) =>
+    setTimeout(resolve, Math.random() * 5000 * iteration + 10000)
+  )
+
+  beeConverse(Math.min(iteration + 1, 10))
 }
 
 const introSpeech = [
