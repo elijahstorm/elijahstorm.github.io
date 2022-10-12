@@ -95,18 +95,9 @@ window.onload = function () {
 // NormalBeeActor.dialog_options = {
 // 	idle: true,
 // };
-const eunbyeul = new NormalBeeActor(
-  CharacterClass.random_x(),
-  CharacterClass.random_y()
-)
-const doungdoungei = new NormalBeeActor(
-  CharacterClass.random_x(),
-  CharacterClass.random_y()
-)
-// const kimchi = new NormalBeeActor(
-// 	CharacterClass.random_x(),
-// 	CharacterClass.random_y(),
-// );
+const eunbyeul = new NormalBeeActor(300, 400)
+const doungdoungei = new NormalBeeActor()
+// const kimchi = new NormalBeeActor()
 
 NormalBeeActor.start_ai()
 
@@ -203,7 +194,7 @@ const quotes = [
   },
   {
     quote: 'Just keep swimming, just keep swimming.',
-    person: 'Dory, Finding Nemo',
+    person: 'Dory',
   },
   {
     quote: "It always seems impossible until it's done.",
@@ -217,10 +208,6 @@ const quotes = [
   {
     quote: 'Life is either a great adventure or nothing.',
     person: 'Helen Keller',
-  },
-  {
-    quote: "If you're not part of the solution, be part of the problem!",
-    person: 'Unknown',
   },
   {
     quote: 'The first five days after the weekend are always the hardest.',
@@ -282,13 +269,6 @@ const introSpeech = [
       "Try planting some flowers outside your house. It's pretty and helpful for everyone!"),
   () => (doungdoungei.speech = null),
   () => (eunbyeul.speech = null),
-  () =>
-    bees.forEach((bee) => {
-      bee.onclick = () => {
-        window.location = '/ai/bees'
-      }
-      bee.sight_distance = 1000
-    }),
   beeConverse,
 ]
 

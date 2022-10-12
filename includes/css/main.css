@@ -11,6 +11,24 @@ html {
   line-height: 1.8;
 }
 
+.skip-content-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgb(20, 20, 20);
+  color: rgb(219, 219, 219);
+  text-align: center;
+  padding: 10px;
+  translate: 0 -100%;
+  transition: translate 0.3s ease-in-out;
+}
+.skip-content-link:focus {
+  translate: 0;
+  outline: red;
+}
+
 .top-border-highlight-background {
   background: white;
   border-bottom-style: solid;
@@ -217,7 +235,7 @@ textarea {
 .bgimg-1 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
     url('../img/backgrounds/bg0.jpg');
-  min-height: 100%;
+  min-height: 425px;
   background-position-y: bottom;
 }
 
@@ -267,13 +285,6 @@ textarea {
   .lazy-slide-in {
     transition: none;
   }
-}
-
-#bees.hide-bee-dialog .actor-dialog-text {
-  opacity: 0.7;
-}
-#bees.hide-bee-dialog .actor-dialog-text:hover {
-  opacity: 1;
 }
 
 /* Turn off parallax scrolling for tablets and phones */
@@ -465,6 +476,9 @@ footer .button {
   }
 }
 @media (min-width: 100.0625em) {
+  .bgimg-1 {
+    min-height: 650px;
+  }
   .portfolio-icon-header-main > a {
     padding: 12px 8px;
     font-size: 40px;

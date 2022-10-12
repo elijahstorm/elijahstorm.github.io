@@ -15,11 +15,23 @@ const BeeTypes = {
 }
 
 class CharacterClass {
-  constructor(type, x, y, link = '', dialog_options) {
+  static get element() {
+    return document.getElementById('bees')
+  }
+
+  constructor(
+    type,
+    x = CharacterClass.random_x(),
+    y = CharacterClass.random_y(),
+    link = '',
+    dialog_options
+  ) {
+    this.containerElement = CharacterClass.element
+
     this.#dialog = new ActorDialog(this, dialog_options)
 
     const casing = document.createElement('div')
-    casing.className = `actor-casing actor-${type} no-select`
+    casing.className = `actor-casing actor-${type} no-select loading`
 
     const filter = document.createElement('div')
     filter.className = 'actor-filter'
@@ -45,9 +57,20 @@ class CharacterClass {
 
     this.#display = casing
 
+    this.containerElement?.appendChild(casing)
+
     this.move(x, y, 1)
 
-    document.getElementById('bees').appendChild(casing)
+    setTimeout(() => casing.classList.remove('loading'), 5)
+  }
+
+  containerElement
+
+  get containerWidth() {
+    return this.containerElement?.clientWidth ?? 100
+  }
+  get containerHeight() {
+    return this.containerElement?.clientHeight ?? 100
   }
 
   #dialog
@@ -77,16 +100,16 @@ class CharacterClass {
   __movement_slide_off = false
 
   move = (x = this.x, y = this.y, scale = Math.random() / 2 + 0.5) => {
-    if (!this.__movement_slide_off) {
-      x = Math.min(
-        Math.max(x, this.wall_buffer),
-        window.innerWidth - this.wall_buffer
-      )
-      y = Math.min(
-        Math.max(y, this.wall_buffer),
-        window.innerHeight - this.wall_buffer
-      )
-    }
+    console.log({ x, y })
+
+    x = Math.min(
+      Math.max(x, this.wall_buffer),
+      this.containerWidth - this.wall_buffer
+    )
+    y = Math.min(
+      Math.max(y, this.wall_buffer),
+      this.containerHeight - this.wall_buffer
+    )
 
     let transform = ''
 
@@ -241,7 +264,7 @@ class CharacterClass {
     display.classList.add(Speech.className)
 
     setTimeout(() => {
-      if (this.y + tip.clientHeight > window.innerHeight - 100) {
+      if (this.y + tip.clientHeight > this.containerHeight - 100) {
         tip.classList.add(Speech.topTextClassName)
         tip.style.transform = `scale(1)translate(-30%, -${
           tip.clientHeight + 50
@@ -264,34 +287,34 @@ class CharacterClass {
   death_action = () => {}
 
   static random_x = () => {
-    const width = window.innerWidth
+    const width = CharacterClass.element.clientWidth ?? 100
 
     return Math.floor(Math.random() * width * 0.8) + width * 0.1
   }
   static random_y = () => {
-    const height = window.innerHeight
+    const height = CharacterClass.element.clientHeight ?? 100
 
     return Math.floor(Math.random() * height * 0.6) + height * 0.2
   }
   static middle_x = () => {
-    const width = window.innerWidth
+    const width = CharacterClass.element.clientWidth ?? 100
 
     return Math.floor(Math.random() * width * 0.3) + width * 0.35
   }
   static middle_y = () => {
-    const height = window.innerHeight
+    const height = CharacterClass.element.clientHeight ?? 100
 
     return Math.floor(Math.random() * height * 0.3) + height * 0.35
   }
   static random_left = () => {
-    const width = window.innerWidth
+    const width = CharacterClass.element.clientWidth ?? 100
 
     return (
       Math.floor(Math.random() * Math.max(0, width * 0.2 - 200)) + width * 0.1
     )
   }
   static random_right = () => {
-    const width = window.innerWidth
+    const width = CharacterClass.element.clientWidth ?? 100
 
     return (
       Math.floor(Math.random() * Math.max(0, width * 0.2 - 200)) +
