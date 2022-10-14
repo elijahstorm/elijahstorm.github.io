@@ -49,6 +49,8 @@
 #portfolio-content > div > div.arrow-left {
   text-align: right;
   filter: invert(1);
+  flex: 1;
+  min-width: 50px;
 }
 #portfolio-content > div > div.arrow-left.flip {
   text-align: left;
@@ -60,6 +62,7 @@
 }
 #portfolio-content .flex {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
 }
@@ -69,6 +72,18 @@
 }
 #portfolio-content > div > div:nth-child(2) {
   line-height: 28px;
+  flex: 8;
+  min-width: 300px;
+}
+#portfolio-content > div > div:nth-child(4) {
+  line-height: 28px;
+  flex: 10;
+  min-width: 300px;
+}
+@media only screen and (max-width: 777px) {
+  #portfolio-content > div > div:nth-child(4) {
+    margin: 0 8%;
+  }
 }
 #portfolio-content > div > div > h6 > span.darken {
   color: #e3e3e3a8;

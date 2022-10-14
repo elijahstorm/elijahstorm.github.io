@@ -85,6 +85,9 @@ class CharacterClass {
       bottom: display.getBoundingClientRect().bottom,
     }
   }
+  style = (attribute, style) => {
+    this.#display.style[attribute] = style
+  }
 
   #_x
   get x() {
@@ -100,8 +103,6 @@ class CharacterClass {
   __movement_slide_off = false
 
   move = (x = this.x, y = this.y, scale = Math.random() / 2 + 0.5) => {
-    console.log({ x, y })
-
     x = Math.min(
       Math.max(x, this.wall_buffer),
       this.containerWidth - this.wall_buffer
@@ -120,7 +121,7 @@ class CharacterClass {
     this.#display.children[0].style.transform = `${transform}`
     this.#display.style.transform = `translate(${
       x + this.__window_offset.x
-    }px, ${y + this.__window_offset.y}px)scale(${scale})`
+    }px, ${y + this.__window_offset.y}px) scale(${scale})`
 
     this.#_x = x
     this.#_y = y
@@ -398,6 +399,8 @@ class NormalBeeActor extends ActorClass {
       this.#_get_enemies = parent.get_enemies
       this.#_get_bees = parent.get_bees
     }
+
+    this.style('zIndex', '2')
   }
 
   #_flowers = () => []
