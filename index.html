@@ -37,7 +37,7 @@
       content="https://elijahstorm.github.io/includes/img/me/korea/small.korea.photoshoot.jpg"
     />
 
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="/backup-w3schools.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Lato"
@@ -78,8 +78,8 @@
         pointer-events: auto;
       }
       #bees .actor-casing {
-        filter: drop-shadow(5px 5px 5px #222);
-        -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter: drop-shadow(4px 4px 10px #222);
+        -webkit-filter: drop-shadow(4px 4px 10px #222);
       }
       #bees.hide-bee-dialog .actor-dialog-text {
         opacity: 0.4;
@@ -91,6 +91,7 @@
         min-height: 100% !important;
       }
     </style>
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
   </head>
 
   <body>
@@ -216,7 +217,7 @@
       <div class="w3-content w3-padding-64 w3-row">
         <div class="w3-col m2">&nbsp;</div>
         <div class="w3-col l8 m8 s12">
-          <h5 class="showcase bee-color">my web ai projects</h5>
+          <h5 class="showcase bee-color">Games and AI things</h5>
           <hr
             style="
               color: #ffb400;
@@ -228,44 +229,80 @@
 
           <div class="ai-showcase-container">
             <div class="lazy-slide-in color-1">
-              <div
-                class="showcase glass-card"
-                onclick="window.location = 'simul-city';"
-              >
+              <div class="project" onclick="window.location = 'simul-city';">
                 <img src="simul-city/logo/logo_main.png" />
-                <p>SimulCity</p>
+                <div class="text">
+                  <h6>SimulCity</h6>
+                  <p>
+                    This ai controlled, auto-generated city is a true test of ai
+                    capabilities.
+                  </p>
+                  <p class="info">&#x2022; 3d option needs more optimization</p>
+                </div>
+                <p class="quick-tip">wip</p>
+                <iconify-icon
+                  icon="fluent:brain-circuit-20-filled"
+                  class="red"
+                ></iconify-icon>
               </div>
             </div>
 
             <div class="lazy-slide-in delay-1 color-2">
-              <div
-                class="fade-imgs showcase glass-card"
-                onclick="window.location = 'ai/bees';"
-              >
+              <div class="project" onclick="window.location = 'ai/bees';">
                 <img src="ai/bees/showcase.png" />
                 <img src="ai/bees/showcase2.png" />
-                <p>bees</p>
+                <div class="text">
+                  <h6>look out, Bees!</h6>
+                  <p>
+                    Boid implementation with non-linear flying movement. Watch
+                    the AI survive!
+                  </p>
+                </div>
+                <p class="quick-tip">wip</p>
+                <iconify-icon
+                  icon="fluent:brain-circuit-20-filled"
+                  class="red"
+                ></iconify-icon>
               </div>
             </div>
 
             <div class="lazy-slide-in color-3">
-              <div
-                class="showcase glass-card"
-                onclick="window.location = 'ai/snake';"
-              >
+              <div class="project" onclick="window.location = 'ai/snake';">
                 <img src="ai/snake/showcase.png" />
-                <p>snake</p>
+                <div class="text">
+                  <h6>WikiRace</h6>
+                  <p>
+                    Play with a group of friends to be the first to navigate to
+                    your destination through wikipedia articles.
+                  </p>
+                  <p class="info">Player vs Player</p>
+                </div>
+                <p class="quick-tip">wip</p>
+                <iconify-icon
+                  icon="carbon:game-console"
+                  class="green"
+                ></iconify-icon>
               </div>
             </div>
 
             <div class="lazy-slide-in delay-1 color-4">
-              <div
-                class="fade-imgs showcase glass-card"
-                onclick="window.location = 'ai/chess';"
-              >
+              <div class="project" onclick="window.location = 'ai/chess';">
                 <img src="ai/chess/showcase.png" />
                 <img src="ai/chess/showcase2.png" />
-                <p>chess ai</p>
+                <div class="text">
+                  <h6>chess ai</h6>
+                  <p>
+                    Non-neural network implementation of specialized heuristics
+                    on a min-max algorithm.
+                  </p>
+                  <p class="info">Player vs AI</p>
+                  <p class="info">&#x2022; Occasionally crashes</p>
+                </div>
+                <p class="quick-tip">wip</p>
+                <iconify-icon
+                  icon="carbon:game-console"
+                  class="green"
+                ></iconify-icon>
               </div>
             </div>
           </div>
