@@ -197,8 +197,6 @@
   border-radius: 0;
   display: flex;
   flex-wrap: wrap;
-  /* display: grid;
-  grid-template: repeat(2, 1fr) / repeat(2, 1fr); */
   gap: 4rem 3rem;
   text-align: left;
   align-items: start;
@@ -210,11 +208,12 @@
 }
 .ai-showcase-container .project {
   display: grid;
-  grid-template: 1fr 3fr 1fr 100px / 1fr 4fr 1fr;
+  grid-template: 30px 1fr 25px 100px / 4rem 1fr 3rem;
   gap: 0.5rem;
   width: 100%;
   transition: scale 0.3s ease;
   cursor: pointer;
+  line-height: 1.25rem;
 }
 @media only screen and (min-width: 600px) {
   .ai-showcase-container .project:hover {
@@ -231,9 +230,10 @@
 .ai-showcase-container .text p {
   font-size: 0.8rem;
 }
-.ai-showcase-container h6 {
+.ai-showcase-container .project h6 {
   text-transform: capitalize;
   font-weight: bold;
+  padding: 0.5rem 0;
 }
 .ai-showcase-container .quick-tip {
   text-transform: uppercase;
@@ -248,11 +248,15 @@
 }
 .ai-showcase-container iconify-icon {
   grid-area: 4 / 1 / 4 / 1;
-  min-width: 2rem;
-  max-width: 2rem;
-  max-height: 2rem;
+  min-width: 3rem;
+  max-width: 3rem;
+  max-height: 3rem;
   border-radius: 50%;
   margin-top: 0.25rem;
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  color: white;
+  font-size: 2rem;
 }
 .ai-showcase-container iconify-icon.red {
   background-color: tomato;

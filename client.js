@@ -304,8 +304,8 @@ window.addEventListener('click', (e) => {
 
   const flower = new Flower(
     flower_types[Math.floor(Math.random() * flower_types.length)],
-    e.clientX - offsetX,
-    e.clientY - offsetY,
+    e.clientX - offsetX - 60,
+    e.clientY - offsetY - 60,
     flowers
   )
 
