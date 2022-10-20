@@ -5,6 +5,17 @@
 .fab {
   font-family: 'Font Awesome 6 Brands' !important;
 }
+.fa {
+  font-family: var(--fa-style-family, 'Font Awesome 6 Free') !important;
+}
+.fa-classic,
+.fa-regular,
+.fa-solid,
+.far,
+.fas {
+  font-family: 'Font Awesome 6 Free' !important;
+}
+
 strong {
   font-weight: 700;
 }
@@ -121,7 +132,7 @@ html {
     margin-top: 32px;
   }
 }
-#about .showcase {
+#about .showcase:not(button) {
   letter-spacing: normal;
 }
 #about .my-photo-circle img {
@@ -308,6 +319,7 @@ textarea {
   color: white;
 }
 #logo-image .my-name {
+  font-style: italic;
   font-size: 5rem;
   font-weight: bold;
   margin: 0;
