@@ -1,5 +1,5 @@
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
 }
 strong {
   font-weight: 700;
@@ -303,10 +303,28 @@ textarea {
   align-items: center;
   color: white;
 }
+#logo-image .my-name {
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 0;
+}
+@media only screen and (max-width: 650px) {
+  #logo-image .my-name {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #logo-image .my-name {
+    font-size: 3rem;
+  }
+}
 #logo-image .short-info {
   opacity: 0.65;
   padding: 0;
   margin: 0;
+}
+#logo-image .caption {
+  display: none;
 }
 #logo-image p.short-info {
   color: white;
@@ -456,49 +474,16 @@ footer .button {
 }
 
 .portfolio-icon-header-main {
-  position: absolute;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  top: 80px;
-  right: 0px;
+  display: flex;
+  gap: 1rem;
+  margin-top: 4rem;
 }
-.portfolio-icon-header-main {
-  color: #d3d3d3;
-}
-.portfolio-icon-header-main a {
-  display: block;
-  padding: 8px;
-  margin: 18px;
-}
-@media (max-width: 25em) {
-  .portfolio-icon-header-main a {
-    margin: 0px;
-  }
-}
-@media (min-width: 100.0625em) {
-  .bgimg-1 {
-    min-height: 650px;
-  }
+@media (min-width: 600px) {
   .portfolio-icon-header-main > a {
     padding: 12px 8px;
     font-size: 40px;
   }
   .portfolio-icon-header-main {
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
     font-size: 64px !important;
-    float: none;
-    position: absolute;
-    right: unset;
-    top: calc(50% + 250px);
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: inline-block;
-    padding: 8px 16px;
-  }
-  .portfolio-icon-header-main a {
-    display: inline;
-    padding: 4px;
-    margin: 0;
   }
 }

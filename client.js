@@ -248,28 +248,28 @@ const introSpeech = [
       }
       bee.sight_distance = 1000
     }),
-  () =>
-    (eunbyeul.speech =
-      'Bees are important for the sustainability of the environment'),
-  () => (doungdoungei.speech = 'Why is sustainability important?'),
-  () =>
-    (eunbyeul.speech =
-      'Environmental sustainability is important because of how much energy, food, and human-made resources people use every day'),
-  () => (doungdoungei.speech = 'So how can bees help?'),
-  () => (eunbyeul.speech = 'Well... bees like flowers!'),
-  () => (doungdoungei.speech = 'Yeah!!'),
-  () =>
-    (eunbyeul.speech =
-      'And they do a great job at keeping our eycosystem alive and pollen freshly planted'),
-  () =>
-    (doungdoungei.speech =
-      'Click around to plant some flowers for us... we love them'),
-  () =>
-    (eunbyeul.speech =
-      "Try planting some flowers outside your house. It's pretty and helpful for everyone!"),
-  () => (doungdoungei.speech = null),
-  () => (eunbyeul.speech = null),
-  beeConverse,
+  // () =>
+  //   (eunbyeul.speech =
+  //     'Bees are important for the sustainability of the environment'),
+  // () => (doungdoungei.speech = 'Why is sustainability important?'),
+  // () =>
+  //   (eunbyeul.speech =
+  //     'Environmental sustainability is important because of how much energy, food, and human-made resources people use every day'),
+  // () => (doungdoungei.speech = 'So how can bees help?'),
+  // () => (eunbyeul.speech = 'Well... bees like flowers!'),
+  // () => (doungdoungei.speech = 'Yeah!!'),
+  // () =>
+  //   (eunbyeul.speech =
+  //     'And they do a great job at keeping our eycosystem alive and pollen freshly planted'),
+  // () =>
+  //   (doungdoungei.speech =
+  //     'Click around to plant some flowers for us... we love them'),
+  // () =>
+  //   (eunbyeul.speech =
+  //     "Try planting some flowers outside your house. It's pretty and helpful for everyone!"),
+  // () => (doungdoungei.speech = null),
+  // () => (eunbyeul.speech = null),
+  // beeConverse,
 ]
 
 setTimeout(() => {

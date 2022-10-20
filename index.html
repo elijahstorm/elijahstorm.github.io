@@ -58,6 +58,13 @@
     <link rel="stylesheet" href="portfolio/display/style.css" />
     <link rel="stylesheet" href="includes/css/main.css" />
     <link rel="stylesheet" href="glass_card.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,500&display=swap"
+      rel="stylesheet"
+    />
 
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
@@ -88,7 +95,10 @@
         opacity: 1;
       }
       .bgimg-1 {
-        min-height: 100% !important;
+        min-height: 140% !important;
+      }
+      #logo-image {
+        translate: 0 -50%;
       }
     </style>
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
@@ -183,31 +193,32 @@
       <div
         id="logo-image"
         class="w3-center w3-display-middle"
-        style="white-space: nowrap; width: 40%"
+        style="white-space: nowrap; width: 80%"
       >
-        <img src="includes/img/logo/tor-logo.png" />
+        <!-- <img src="includes/img/logo/tor-logo.png" /> -->
+        <p class="my-name showcase">Elijah Storm</p>
         <p class="short-info showcase">Frontend Specialist</p>
-        <p class="short-info">
-          Making the end-user experience look great and feel great.
+        <p class="short-info caption">
+          Making the user's experience look and feel great.
         </p>
-      </div>
 
-      <div
-        class="w3-xlarge w3-opacity w3-hover-opacity-off portfolio-ease portfolio-icon-header-main"
-      >
-        <!-- <a href="https://www.facebook.com/elijah.s.houk/"><i class="fab fa-facebook" style="margin: 5px;"></i></a> -->
-        <a href="https://github.com/elijahstorm/"
-          ><i class="fab fa-github" style="margin: 5px"></i
-        ></a>
-        <a href="https://angel.co/u/elijah-storm/"
-          ><i class="fab fa-angellist" style="margin: 5px"></i
-        ></a>
-        <a href="https://www.instagram.com/elijah.storm/"
-          ><i class="fab fa-instagram" style="margin: 5px"></i
-        ></a>
-        <a href="https://www.linkedin.com/in/elijah-storm/"
-          ><i class="fab fa-linkedin" style="margin: 5px"></i
-        ></a>
+        <div
+          class="w3-xlarge w3-opacity w3-hover-opacity-off portfolio-ease portfolio-icon-header-main"
+        >
+          <!-- <a href="https://www.facebook.com/elijah.s.houk/"><i class="fab fa-facebook" style="margin: 5px;"></i></a> -->
+          <a href="https://github.com/elijahstorm/"
+            ><i class="fab fa-github" style="margin: 5px"></i
+          ></a>
+          <a href="https://angel.co/u/elijah-storm/"
+            ><i class="fab fa-angellist" style="margin: 5px"></i
+          ></a>
+          <a href="https://www.instagram.com/elijah.storm/"
+            ><i class="fab fa-instagram" style="margin: 5px"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/elijah-storm/"
+            ><i class="fab fa-linkedin" style="margin: 5px"></i
+          ></a>
+        </div>
       </div>
     </div>
 
@@ -273,7 +284,7 @@
                     Play with a group of friends to be the first to navigate to
                     your destination through wikipedia articles.
                   </p>
-                  <p class="info">Player vs Player</p>
+                  <p class="info">&#x2022; Player vs Player</p>
                 </div>
                 <p class="quick-tip">done</p>
                 <iconify-icon
@@ -293,7 +304,7 @@
                     Non-neural network implementation of specialized heuristics
                     on a min-max algorithm.
                   </p>
-                  <p class="info">Player vs AI</p>
+                  <p class="info">&#x2022; Player vs AI</p>
                   <p class="info">&#x2022; Occasionally crashes</p>
                 </div>
                 <p class="quick-tip">done</p>
