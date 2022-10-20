@@ -1,4 +1,4 @@
-.fade-imgs img {
+. img {
   /* position: absolute; */
   -webkit-animation-name: fade;
   -webkit-animation-iteration-count: infinite;
