@@ -9,7 +9,7 @@ import { CharacterClass, ActorClass, NormalBeeActor } from '/ai/bees/bees.js'
 const CINEMATIC_BACKGROUND = new CinematicBackground()
 
 function validateEmail(email) {
-  ;/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+  ;/^[a-zA-Z0-9.!#$%&`*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 }
 function CONTACT() {
   const err = (msg) => {
@@ -98,6 +98,9 @@ window.onload = function () {
 const eunbyeul = new NormalBeeActor(300, 400)
 const doungdoungei = new NormalBeeActor()
 // const kimchi = new NormalBeeActor()
+
+eunbyeul.sight_distance = 1000
+doungdoungei.sight_distance = 1000
 
 NormalBeeActor.start_ai()
 
@@ -240,41 +243,62 @@ const beeConverse = async (iteration = 0) => {
   beeConverse(Math.min(iteration + 1, 10))
 }
 
+const talkingPoints = [
+  () =>
+    (eunbyeul.speech =
+      'Bees are important for the sustainability of the environment'),
+  () => (doungdoungei.speech = 'Why is sustainability important?'),
+  () =>
+    (eunbyeul.speech =
+      'Environmental sustainability is important because of how much energy, food, and human-made resources people use every day'),
+  () => (doungdoungei.speech = 'So how can bees help?'),
+  () => (eunbyeul.speech = 'Well... bees like flowers!'),
+  () => (doungdoungei.speech = 'Yeah!!'),
+  () =>
+    (eunbyeul.speech =
+      'And they do a great job at keeping our eycosystem alive and pollen freshly planted'),
+  () =>
+    (doungdoungei.speech =
+      'Click around to plant some flowers for us... we love them'),
+  () =>
+    (eunbyeul.speech =
+      "Try planting some flowers outside your house. It's pretty and helpful for everyone!"),
+  () => (doungdoungei.speech = null),
+  () => (eunbyeul.speech = null),
+  beeConverse,
+]
+
+let introSkipped = false
 const introSpeech = [
   () =>
-    bees.forEach((bee) => {
-      bee.onclick = () => {
-        window.location = 'https://www.planetbee.org/why-we-need-bees'
-      }
-      bee.sight_distance = 1000
-    }),
-  // () =>
-  //   (eunbyeul.speech =
-  //     'Bees are important for the sustainability of the environment'),
-  // () => (doungdoungei.speech = 'Why is sustainability important?'),
-  // () =>
-  //   (eunbyeul.speech =
-  //     'Environmental sustainability is important because of how much energy, food, and human-made resources people use every day'),
-  // () => (doungdoungei.speech = 'So how can bees help?'),
-  // () => (eunbyeul.speech = 'Well... bees like flowers!'),
-  // () => (doungdoungei.speech = 'Yeah!!'),
-  // () =>
-  //   (eunbyeul.speech =
-  //     'And they do a great job at keeping our eycosystem alive and pollen freshly planted'),
-  // () =>
-  //   (doungdoungei.speech =
-  //     'Click around to plant some flowers for us... we love them'),
-  // () =>
-  //   (eunbyeul.speech =
-  //     "Try planting some flowers outside your house. It's pretty and helpful for everyone!"),
-  // () => (doungdoungei.speech = null),
-  // () => (eunbyeul.speech = null),
-  // beeConverse,
+    introSkipped
+      ? 0
+      : (eunbyeul.speech = 'We have a lot to say. Click on us to know it!'),
+  () =>
+    introSkipped
+      ? 0
+      : (doungdoungei.speech =
+          'And you can click to plant flowers anywhere; we love flowers!'),
+  () => (introSkipped ? 0 : (eunbyeul.speech = null)),
+  () => (introSkipped ? 0 : (doungdoungei.speech = null)),
 ]
 
 setTimeout(() => {
+  bees.forEach(
+    (bee) =>
+      (bee.onclick = () => {
+        introSkipped = true
+        bees.forEach((bee) => {
+          bee.onclick = () => {
+            window.location = 'https://www.planetbee.org/why-we-need-bees'
+          }
+        })
+        talkingPoints.forEach((f, i) => setTimeout(f, i * 4000))
+      })
+  )
+
   introSpeech.forEach((f, i) => setTimeout(f, i * 4000))
-}, 5000)
+}, 1000)
 
 const flowers = []
 const bees = [eunbyeul, doungdoungei]

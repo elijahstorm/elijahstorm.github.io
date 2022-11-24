@@ -224,10 +224,11 @@ class CharacterClass {
       return
     }
 
-    display.onclick = () => {
+    display.onclick = (e) => {
+      e.stopPropagation()
+      e.preventDefault()
       event(this)
     }
-
     display.style.cursor = 'pointer'
   }
   get speech() {
@@ -238,10 +239,10 @@ class CharacterClass {
   set speech(speech) {
     const display = this.#display
 
-    if (speech == null) {
+    if (speech === null) {
       display.classList.remove(Speech.activeClassName)
       setTimeout(() => {
-        display.querySelector(`.${Speech.textClassName}`).remove()
+        display.querySelector(`.${Speech.textClassName}`)?.remove()
       }, Speech.ANIMATION_TIMEOUT)
       return
     } else if (this.speech) {
