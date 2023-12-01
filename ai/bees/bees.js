@@ -18,6 +18,7 @@ class CharacterClass {
   static get element() {
     return document.getElementById('bees')
   }
+  static all = []
 
   constructor(
     type,
@@ -26,6 +27,7 @@ class CharacterClass {
     link = '',
     dialog_options
   ) {
+    CharacterClass.all.push(this)
     this.containerElement = CharacterClass.element
 
     this.#dialog = new ActorDialog(this, dialog_options)
@@ -239,6 +241,8 @@ class CharacterClass {
   set speech(speech) {
     const display = this.#display
 
+    CharacterClass.all.forEach((char) => char.style('zIndex', '2'))
+
     if (speech === null) {
       display.classList.remove(Speech.activeClassName)
       setTimeout(() => {
@@ -256,6 +260,8 @@ class CharacterClass {
     if (typeof speech === 'string') {
       speech = new Speech(speech)
     }
+
+    this.style('zIndex', '5')
 
     const tip = document.createElement('span')
     tip.classList.add(Speech.textClassName, speech.color_class)

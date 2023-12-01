@@ -4,7 +4,7 @@
 
 import '/portfolio/portfolio.data.js'
 import { CinematicBackground } from '/portfolio/display/main.js'
-import { CharacterClass, ActorClass, NormalBeeActor } from '/ai/bees/bees.js'
+import { ActorClass, NormalBeeActor } from '/ai/bees/bees.js'
 
 const CINEMATIC_BACKGROUND = new CinematicBackground()
 
@@ -262,7 +262,7 @@ const talkingPoints = [
       'Click around to plant some flowers for us... we love them'),
   () =>
     (eunbyeul.speech =
-      "Try planting some flowers outside your house. It's pretty and helpful for everyone!"),
+      "Try planting some flowers outside your house. It's pretty, and helpful for everyone!"),
   () => (doungdoungei.speech = null),
   () => (eunbyeul.speech = null),
   beeConverse,
@@ -273,12 +273,13 @@ const introSpeech = [
   () =>
     introSkipped
       ? 0
-      : (eunbyeul.speech = 'We have a lot to say. Click on us to know it!'),
+      : (eunbyeul.speech =
+          'We have a lot to say. Click on one of us to learn it!'),
   () =>
     introSkipped
       ? 0
       : (doungdoungei.speech =
-          'And you can click to plant flowers anywhere; we love flowers!'),
+          'Or click anywhere to plant flowers; we love flowers!'),
   () => (introSkipped ? 0 : (eunbyeul.speech = null)),
   () => (introSkipped ? 0 : (doungdoungei.speech = null)),
 ]
@@ -293,7 +294,7 @@ setTimeout(() => {
             window.location = 'https://www.planetbee.org/why-we-need-bees'
           }
         })
-        talkingPoints.forEach((f, i) => setTimeout(f, i * 4000))
+        talkingPoints.forEach((f, i) => setTimeout(f, i * 5000))
       })
   )
 
